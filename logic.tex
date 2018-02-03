@@ -1,0 +1,131 @@
+\documentclass[If.tex]{subfiles}
+
+\begin{document}
+
+%\newcommand{\IF}[2]{\text{If }#1, #2}
+\newcommand{\IF}[2]{#1\to#2}
+\newcommand{\A}{A}
+\newcommand{\B}{B}
+\newcommand{\C}{C}
+\newcommand{\D}{D}
+
+\chapter*{Table of logical principles}\addcontentsline{toc}{chapter}{Table of logical principles} 
+
+\setlength{\tabcolsep}{2pt}
+\begin{longtable}{r@{\hskip 5pt}NEM}
+\multicolumn{4}{l}{\emph{Metarules:}} \\
+RCEA* %(Substitutivity in antecedents) 
+	& \multicolumn{3}{l}{If  $⊦\A ≡ \B$ then $⊦(\IF{\A}{\C} ⊃ \IF{\B}{\C})$} \\
+???*
+	& \multicolumn{3}{l}{If $⊦\B ⊃ \C$ then $⊦(\IF{\A}{\B} ⊃ \IF{\A}{\C})$} \\
+RN*
+	& \multicolumn{3}{l}{If $⊦\B$ then $⊦\IF{\A}{\B}$} \\
+???*
+	& \multicolumn{3}{l}{If $⊦\A$ then $⊦\IF{¬\A}{\B}$} \\
+\\
+\multicolumn{4}{l}{\emph{Least controversial principles:}} \\
+CC* %(‘Conditional Conjunction’) 
+	& (\IF{\A}{\B}) ∧ (\IF{\A}{\C}) &⊃& (\IF{\A}{(\B∧\C)}) \\
+ID** %(‘Identity’) 
+	& A &\to& A \\ %\IF{\A}{\A} \\ 
+MP** %(‘Modus Ponens’) 
+	& (\IF{\A}{\B}) &⊃& (\A ⊃ \B) \\
+CK* 
+	& (\IF{\A}{(\B ⊃ \C)}) &⊃& (\IF{\A}{\B} ⊃ \IF{\A}{\C}) \\
+\\
+\multicolumn{4}{l}{\emph{Antecedent equivalence principles:}} \\
+CSO** 
+	& ((\IF{\A}{\B}) ∧ (\IF{\B}{\A}) ∧ (\IF{\A}{\C})) &⊃& (\IF{\B}{\C}) \\
+RCV* %(‘Very Limited Antecedent Strengthening’) 
+	& (\IF{\A}{\B}) ∧ (\IF{\A}{\C}) &⊃& (\IF{(\A ∧ \B)}{\C}) \\
+RT* %(‘Cumulative Transitivity’) 
+	& (\IF{\A}{\B}) ∧ (\IF{(\A∧\B)}{\C}) &⊃& (\IF{\A}{\C}) \\
+CA* %(‘Disjunction’) 
+	& (\IF{\A}{\C}) ∧ (\IF{\B}{\C}) &⊃& (\IF{(\A ∨ \B)}{\C}) \\
+RCA* 
+	& (\IF{(\A ∨ \B)}{\C}) &⊃& ((\IF{\A}{\C}) ∨ (\IF{\B}{\C})) \\
+Cases* 
+	& (\IF{(\A∧\B)}{\C}) ∧ (\IF{(\A ∧ ¬\B)}{\C}) &⊃& (\IF{\A}{\C})\\
+CV %(‘Limited Antecedent Strengthening’) 
+	& ¬(\IF{\A}{¬\B}) ∧ (\IF{\A}{\C}) &⊃& (\IF{(\A ∧ \B)}{\C}) \\
+\\
+\multicolumn{4}{l}{\emph{Principles valid for strict conditionals:}} \\
+AS 
+	& (\IF{\A}{\C}) &⊃& (\IF{(\A ∧ \B)}{\C}) \\
+Contraposition 
+	& (\IF{\A}{\B}) &⊃& (\IF{¬\B}{¬\A}) \\
+Transitivity
+	& (\IF{\A}{\B}) ∧ (\IF{\B}{\C}) &⊃& (\IF{\A}{\C}) \\
+Simplification
+	& (\IF{(\A ∨ \B)}{\C}) &⊃& (\IF{\A}{\C}) \\
+\\
+\multicolumn{4}{l}{\emph{Principles valid for material conditionals:}} \\
+Or-to-if 
+	& (\A ∨ \B) &⊃& (\IF{¬\A}{\B}) \\
+Import-Export 
+	& (\IF{\A}{(\IF{\B}{\C})}) &≡& (\IF{(\A ∧ \B)}{\C}) \\
+First ‘paradox’
+	& ¬\A &⊃& (\IF{\A}{\B}) \\
+Second ‘paradox’ 
+	& \B &⊃& (\IF{\A}{\B}) \\
+Third ‘paradox’ 
+	& (\IF{\A}{\B}) &∨& (\IF{\B}{\A}) \\
+\\
+\multicolumn{4}{l}{\emph{Other additions:}} \\
+CEM* 
+	& (\IF{\A}{\B}) &∨& (\IF{\A}{¬\B}) \\
+And-to-if (CS)** 
+	& (\A ∧ \B) &⊃& (\IF{\A}{\B}) \\
+RIE 
+	& (\IF{\A}{(\IF{(\A ∧ \B)}{\C})}) &≡& \IF{(\A ∧ \B)}{\C} \\
+CNC
+	& ¬((\IF{\A}{\B}) &∧& (\IF{\A}{¬\B}))
+\end{longtable}
+
+\emph{Principles about the interaction of conditionals with modals:}
+\begin{center}
+\begin{tabular}{r@{\hskip 5pt}NEM}
+MOD* 
+	& □\A &⊃& (\IF{\B}{\A}) \\
+C0* 
+	& □(\A ≡ \B) &⊃& ((\IF{A}{C}) ≡ (\IF{B}{C})) \\
+CT*
+	& (\IF{¬\A}{¬\B}) &⊃& (□\B ⊃ □\A) \\
+CAS*
+	& □(\A∧\B) &⊃& □\A \\
+CRCA*
+	& □(\A∧\B) &⊃& □\A ∨ □\B\\
+CRCV
+	& (\IF{¬\A}{¬\B}) &⊃& □\A ⊃ □(\A∨\B) \\
+CRT
+	& (\IF{¬\A}{¬\B}) &⊃& □(\A∨\B) ⊃ □\A \\
+CCA
+	& □\A ∧ □\B &⊃& □(\A ∧ \B)\\
+4
+	& □\A &⊃& □□\A \\
+B 
+	& ¬\A &⊃& □¬□\A
+\end{tabular}
+\end{center}
+% MOD*
+% 	& (\IF{\A}{⊥}) &⊃& (\IF{\B}{¬\A}) \\
+% C0*
+% 	& (\IF{A}{⊥}) &⊃& ((\IF{B}{C}) ≡ \IF{(A∨B)}{C}) \\
+% CT*
+% 	& (\IF{A}{B}) ∧ (\IF{B}{⊥}) &⊃& (\IF{A}{⊥}) \\
+% CAS*
+% 	& (\IF{A}{⊥}) &⊃& (\IF{(A∧B)}{⊥}) \\
+% CRCA*
+% 	& (\IF{(\A ∨ \B)}{⊥}) &⊃& ((\IF{\A}{⊥}) ∨ (\IF{\B}{⊥})) \\
+% C4
+% 	& (\IF{\A}{⊥}) &⊃& (\IF{\B}{(\IF{\A}{⊥})})\\
+% CB
+% 	& A &⊃& \IF{(\IF{\A}{⊥})}{⊥}
+We can consider the above principles on all manner of different interpretations of $□$: we indicate which interpretation is in question by adding a subscript to the name of the principle.  Of particular interest is the operator $⊡$ defined in terms of the conditional as $⊡\A \equalsdef (\IF{¬\A}{⊥})$.  
+
+
+Principles marked ** are guaranteed simply by the form of our favoured analysis, together with the claim that the worlds are well-ordered by ‘closer than’ with the actualised world in first place, and that $\A$ is true at the actualised world iff $\A$.  
+
+Principles marked * are guaranteed by the form of our favoured analysis, together with the principles capturing the following standard role for truth at a world: $\A ∧ \B$ is true at a world iff $\A$ and $\B$ both are, $\A ∨ \B$ is true at a world iff either $\A$ or $\B$ is, and $¬\A$ is true at a world if $\A$ is not.  (Chapter 4 takes seriously the idea that there are impossible worlds that do not obey these principles.)
+
+\end{document}

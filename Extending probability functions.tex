@@ -1,0 +1,12 @@
+$\prob$ is a de Finetti measure over functions from some set $\universe$ to the reals
+
+We inductively define $\newprob_{\alpha}$, over the functions to the reals from the set of $\alpha$-sequences of members of $\universe$.
+
+$\newprob_0(f)$ = $f(\seq{})$ (the domain here is just the unit set of the null sequence.)
+
+$\newprob_{\alpha+1}(f) = \newprob_\alpha(\lambda \sigma_\alpha(\prob(\lambda w(f(\sigma \concatenate w)|\lambda w(w \nin \sigma_\alpha))))|)$
+
+$\newprob_\lambda (S) = \lim_{\alpha \rightarrow \lambda} \newprob_\alpha (\set{\sigma_\alpha|some sequence in S begins with \sigma_\alpha})$
+
+extend $\newprob_\lambda$ to general functions in the usual way.
+

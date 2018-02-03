@@ -1,0 +1,902 @@
+\documentclass[If.tex]{subfiles}
+
+\begin{document}
+\chapter{Conditionals, probabilities, and conditional probabilities}
+\label{chap:prob}
+\label{sect:equations}
+\Autoref{chap:cem}'s central arguments (in favour of Conditional Excluded Middle, and against similarity-based accounts of closeness) turned on judgments about the chances of conditionals, and the appropriate levels of confidence in conditionals, in simple toy examples involving coin-tosses and the like. Although these arguments did not involve appealing to general principles, it is plausible that there should be some general principles about the chances of conditionals and the credences we should assign them under which these judgments can be subsumed. The task of the present chapter is to figure out what these principles are.  We will begin in sections *** by articulating some tempting principles which provide a very natural reconstruction of the thinking that drives the relevant judgments about particular cases.  These principles are, however, excessively strong, and lead to absurdities; sections *** will consider how they can be restricted to avoid the absurdities.  
+%chapter we will introduce some natural-looking principles, trace the connections between them, and see how they might be derived from underlying assumptions about the relevant notions of accessibility and the probabilistic features of the closeness ordering. The general principles we will isolate will then be further refined in \autoref{sect:triviality}.
+
+\section{Chances of counterfactuals}\label{sect:chance}
+Let's begin with the judgment that when a coin is fair, the objective chance that it would land Heads if it were tossed (once) during the next hour is 50\%. Plausibly, this judgment is based on something we know about the chances of certain \emph{other} propositions, namely that the chance that the coin will be tossed during the next hour is twice as big as the chance that it will be tossed and land Heads during that hour. In general, it's natural to think that the chance that Q would be true if P were true is equal to the chance that P and Q are true, divided by the chance that P is true: what is standardly, and suggestively, known as the “conditional chance” of Q given P. Making the time relativity explicit, we get the following:
+\begin{prop}
+	\litem[Chance Equation] \label{chanceq}
+	When the chance at $t$ that $P$ is positive, the chance at $t$ that if $P$ it would be that $Q$ equals the conditional chance at $t$ of $Q$ given~$P$.%
+	\footnote{\textbf{If needs be, restrict to the case where the chance of $Q$ is defined.}}
+\end{prop}
+
+To get a grip on what this is saying, it is helpful to observe that we already know, thanks to Modus Ponens and And-to-if, that the conditional chance at $t$ of $Q$ given $P$ equals the conditional chance at $t$ of the counterfactual \emph{if $P$ it would be that $Q$} given $P$, since the conjunction of $Q$ with $P$ is logically equivalent to the conjunction of the counterfactual with $P$.  Thus, the \ref{chanceq} is in effect telling us that the unconditional chance of the counterfactual is equal to its chance conditional on $P$---or in other words, that the counterfactual is probabilistically independent of its antecedent, $P$.  This of course also means that the counterfactual is probabilistically independent of not-$P$, the negation of its antecedent.%
+\footnote{To see that $\prob(A|B) = \prob(A)$ then $\prob(A|\negate{B}) = \prob(A)$, note that by the total probability formula, whenever $0 < \prob(B) < 1$, 
+	$
+		\prob(A) = \prob(A|B)\prob(B) + \prob(A|\negate{B})\prob(\negate{B})
+	$.
+	So if $\prob(A|B) = \prob(A)$,
+	$
+		\prob(A) &= \prob(A)\prob(B) + \prob(A|\negate{B})\prob(\negate{B})
+	$, and hence 
+		$\prob(A)(1 - \prob(B)) &= \prob(A|\negate{B})\prob(\negate{B})$.
+	But since $1-\prob(B) = \prob(\negate{B}) > 0$, we can divide across to deduce that
+	$\prob(A) &= \prob(A|\negate{B})$.}
+	% Here is a formal derivation corresponding to the above remarks
+	% \begin{align*}
+	% \prob(A→B) & = \prob(A→B|A)\prob(A) + \prob(A→B|¬A)\prob(¬A) \intertext{(probability theory)}
+	% &= \prob(B|A)\prob(A) + \prob(A→B|¬A)\prob(¬A) \\\intertext{MP, And-to-If}
+	% &= \prob(A→B)\prob(A) + \prob(A→B|¬A)\prob(¬A) \\\intertext{since $→$ bears the CCCP-relation to $\prob$}
+	% \intertext{and so}
+	% \prob(A→B)(1-\prob(A)) &= \prob(A→B|¬A)\prob(¬A)\\
+	% \intertext{and since $\prob(¬A) = 1-\prob(A) > 0$}
+	% \prob(A→B) &= \prob(A→B|¬A)
+	% \end{align*}
+We can see what's going on in \autoref{fig:venn}, where areas correspond to chances.  For concreteness, suppose $P$ is the proposition that Fred plays and $Q$ is the proposition that he plays and wins; the chance of $P$ is 1/3 and that of $Q$ is 1/6.  According to the \ref{chanceq}, the proportion of the total area of the diagram taken up by worlds where he would have won if he had played equals the proportion of the $P$-area that is occupied by $Q$, i.e. 1/2.  But by Modus Ponens and And-to-if, within the $P$-area, the counterfactual coincides with $Q$; so the upshot is that it needs to split the not-$P$ area in the same 50-50 ratio that $Q$ splits the $P$ area.  So the \ref{chanceq} area rules out scenarios like the following: while a half of the playing words are winning worlds, nearly all the not-playing worlds are such that the closest playing worlds to them are losing worlds, and thus worlds at which it's true to say that if he had played he would have lost.  
+
+Of course, counterfactuals are context-sensitive, and there is no temptation to think that \ref{chanceq} is true no matter how this context-sensitivity is resolved. For example, consider the counterfactual ‘If I had finished the book in 2016, that would have been because I worked hard on it all through 2015’, which cries out for an interpretation where accessibility does not require match with respect to 2015. Suppose that I didn't in fact work on the book in 2015, with the result that at the beginning of 2016 the chance of my finishing it in 2016 was tiny (although not zero). Since the truth about 2015 has chance 1 at the beginning of 2016, the conditional chance then of my having worked hard on the book in 2015, given that I finish it in 2016, was zero. But on its natural interpretation, the counterfactual in question seems plausibly true; and while it's not very clear what its chance exactly was at the beginning of 2016, the judgment that it's plausibly true does not fit well with the claim that its chance at the beginning of 2016 was zero.  So, if we want to endorse \ref{chanceq}, it would be a good idea to be explicit about the intended resolution of context-sensitivity.  Recall from \autoref{chap:accessibility} that on our account, the primary source of context sensitivity in counterfactuals is the accessibility parameter, and that on one prominent family of interpretations for counterfactuals, the accessibility relation is the one that $w_1$ bears to $w_2$ just in case $w_2$ is nomically possible relative to $w_1$ and the histories of $w_1$ and $w_2$ match up to some particular time $t$.  The most natural way of interpreting \ref{chanceq} in our framework is to use accessibility relations from this family, so that the accessible worlds are those nomically possible worlds that match actuality with respect to the time $t$ with respect to which we are considering the chances.  Using our closeness-theoretic analysis to spell out the truth conditions of the counterfactual on this interpretation, we get the following:
+\begin{prop}
+	\item
+	When $P$ has a positive chance at $t$, the chance at $t$ that (either there is no nomically possible $P$-world that is accurate with respect to history up to $t$, or the closest nomically possible $P$-world that is accurate with respect to history up to $t$ is a $Q$-world) equals the conditional chance at $t$ of $Q$ given~$P$.	
+\end{prop}
+We can slightly simplify this formulation given some plausible assumptions about how chances work.  First, we assume that necessarily, for any time $t$ and proposition $P$, if $P$ is nomically necessary or entirely about history up to $t$, then $P$ has chance 1 at $t$.  Second we assume that necessarily, for any time $t$ and proposition $P$, if $P$ is nomically consistent with the truth about history up to $t$, then the proposition that $P$ is nomically consistent with the truth about history up to $t$ has chance 1 at $t$.  It follows from the first assumption that whenever $P$ has a positive chance at $t$, $P$ is nomically consistent with the truth about history up to $t$; so by the second assumption, the proposition that there is no nomically possible $P$-world that is accurate with respect to history up to $t$ has chance 0.  This lets us eliminate the first disjunct of the embedded disjunction in the above principle, yielding the following:  
+\begin{prop}
+	\litem[Chance-Eq] \label{closeq}
+	When $P$ has a positive chance at $t$, the chance at $t$ that the closest nomically possible $P$-world that is accurate with respect to history up to $t$ is a $Q$-world equals the conditional chance at $t$ of $Q$ given~$P$.	
+\end{prop}
+
+Note that this gloss on \ref{chanceq} does not commit us to there being a \emph{single} interpretation of ‘If $P$, $Q$’ whose chance is equal to the conditional chance of $Q$ on $P$ at \emph{every} time at which $P$'s chance is positive: the relevant interpretation of ‘If $P$, $Q$’ will be different depending on which time $t$ is under consideration.  Since the time variable $t$ in instances of \ref{chanceq} is a bound variable, this means that that in order to read these instances in such a way that they follow from \ref{closeq}, we have to engage in the kind of ‘binding into context sensitivity’ that we discussed in \autoref{chap:accessibility} with reference to the example of ‘local’.  In a framework where context-sensitivity is represented as a matter of assigning values to free variables, this means that at the relevant level of logical form, the type of the relevant free variable is not that of accessibility relations (properties of possible worlds), but that of functions from times to accessibility relations.  ***
+
+% that $P$ can only have a positive chance at $t$ if there is some nomically possible $P$-world that is accurate with respect to history up to $t$---the laws and truths about history automatically have chance 1.    Given this, when $P$ has a positive chance at $t$, the chance at $t$ that there is no nomically possible $P$-world accurate with respect to history up to $t$ is zero.  Thus the chance of the disjunction that it is our official analysis of ‘If $P$, $Q$’ on the relevant reading---either there is no nomically possible $P$-world accurate with respect to history up to $t$, or the closest suc world is a $Q$-world---is equal to the chance of its second disjunct, and thus according to \ref{closeq}, to the conditional chance at $t$ of $Q$ given $P$.
+
+The time-relative notion of chance is standardly understood to be governed by the principle that the chances at a later time can be derived from the chances at any earlier time by conditionalisation on the complete truth about the course of history between the two times (assuming that complete truth had a chance greater than zero at the earlier time).  For example, if the only chancy process in the world is a person wandering around a maze, then the chance at 11am of them reaching the exit by noon is the conditional chance at 10am of them reaching the exit by noon, given how they in fact wandered between 10 and 11.  Evolution by conditionalisation is a problem for the the stronger kind of interpretation of \ref{chanceq} on which the interpretation of the conditional is not allowed to vary with the time.  For there are some famous results, due (in essence) to David Lewis, from which it follows that for certain choices of antecedent and consequent, it will be impossible to find any single interpretation of the conditional whose chance is equal to the conditional chance of the consequent on the antecedent at two different times.  The result---actually a stronger version of what Lewis proved---is as follows.  
+\begin{prop}
+	\litem[Lewisian Lemma]
+	Suppose that $\prob_H$ is derived from $\prob$ by conditionalising on some proposition $H$ such that $0<\prob(H)<1$, and $0<\prob_H(A)<1$.  Then there is no proposition $C$ such that $\prob(C) = \prob(¬H|A∨¬H)$ and $\prob_H(C) = \prob_H(¬H|A∨¬H)$.  
+%	Suppose that for some propositions $A$ and $B$ such that $0<\prob(A)<1$ and $0<\prob_X(A)<1$, $\prob(C) = \prob(B|A) > 0$ and $\prob_X(C) = \prob'(B|A) = 0$, where $\prob_X$ is a probability function derived from $\prob$ by conditionalising on some proposition $X$.  Then $\prob(¬X∧¬(A∧B))>0$.
+\end{prop}
+\begin{proof}
+	Suppose otherwise.  Since $\prob_H(A)<1$, $\prob(A∨¬H)<1$, so $\prob(C) = \prob(¬H|A∨¬H) = \prob(¬H)/\prob(A∨¬H) > \prob(¬H)$.  So $\prob(C ∧ H) > 0$, and so $\prob_H(C) = \prob(C∧H)/\prob(H) >0$.  But by hypothesis, $\prob_H(C)$ = $\prob_H(¬H|A∨¬H) = 0$ since $\prob_H(¬H) = 0$.  Contradiction.  
+%	$\prob(C) = \prob(B|A) = \prob(A∧B)/\prob(A) > \prob(A∧B)$.  So $\prob(C ∧ ¬(A∧B)) > 0$.  Since $\prob(C|X)$ = 0, $\prob(C ∧ X)$ = 0.  So $\prob(C ∧ ¬X ∧ ¬(A∧B)) > 0$, and thus $\prob(¬X ∧ ¬(A∧B)) > 0$.  
+\end{proof}
+In the case we are interested in, $\prob$ is the chance function at some time $t$, and $H$ is the complete truth about the course of history between some time $t$ and some later time $t'$, so that $\prob_H$ is the chance function at $t'$.  The upshot of the theorem is then that if we substitute for the schematic letter $Q$ some sentence expressing the negation of $H$, and substitute for the schematic letter $P$ some sentence expressing the disjunction of the negation of $H$ with some proposition $A$ whose chance is neither 0 nor 1 at $t$ or $t'$, \ref{chanceq} cannot be true on any interpretation on which ‘If it were the case that $P$ it would be the case that $Q$’ is taken to express a single proposition (as opposed to expressing different propositions relative to different assignments to the variable $t$).  This is bad news for the invariantist approach to \ref{chanceq}, but poses no problem for claims like \ref{closeq}.  
+
+%the chance function at $t'$ is derived from the chance function at $t$ by conditionalising on some proposition $X$, and $A$ and $B$ are some propositions such that the chance at $t$ of $X∨(A∧B)$ is 1, the chance at $t'$ of $A∧B$ is 0, and the chance of $A$ is not 1 or 0 at either time, there is no way to interpret ‘If $A$ were true $B$ would be true’ as expressing a proposition whose chance at both $t$ and $t'$ is equal to the conditional chance of $B$ on $A$, since there is no such proposition.  But according to the usual conception of objective chance, \emph{chances evolve by conditionalisation}: we can derive the chance function at $t'$ from the chance function at any earlier time $t$ by conditionalising on the complete truth about history from $t$ up to $t'$, assuming that its chance at $t$ was positive.  So we can find an appropriate pair of propositions by choosing $B$ to be the negation of the complete truth about history from $t$ to $t'$, and choose $A$ to be the disjunction of $B$ with some proposition whose chance was not 0 or 1 at either time.  This would be a problem for someone who wanted to identify a single, non-time-relative interpretation for counterfactuals that makes all instances of \ref{chanceq}---or even just this particular instance---true.  But results of this kind pose no problem for claims like \ref{closeq}.
+
+The fact that later chance functions come from earlier chance functions by conditionalisation naturally prompts the question whether the truth of \ref{closeq} for one time entails its truth for later times.  The answer turns out to be no.  Suppose for simplicity that the only chancy event between 10~am and 11~am is the tossing of a fair coin out of sight of Sally, which as a matter of fact lands Heads.  After 11, two further chancy processes take place: first Sally decides whether or not to bet on the coin landing Heads, and second, having found out how the coin landed, she is in a good mood or not.  AT 10am the chance distribution looks like this:
+\begin{prop}
+	\item
+	\begin{tabular}{ll}
+		Heads, bet on Heads, happy & 9\% \\
+		Heads, bet on Heads, sad & 1\% \\
+		Heads, no bet on Heads & 40\% \\
+		Tails, bet on Heads, happy & 1\% \\
+		Tails, bet on Heads, sad & 9\% \\
+		Tails, no bet on Heads &40\%
+	\end{tabular}
+\end{prop}
+\textbf{***Have a Venn diagram instead***} \\
+Let $A$ be the proposition that the closest world matching up to 10am where the coin lands Heads and Sally bets is one where she is happy.  Given the $t$=10 instance of \ref{closeq}, the unconditional chance of A at 10 is 90\%, which is also its conditional chance given that the coin lands Heads and Sally bets (because of Modus Ponens and And-to-if).  For the $t$=11 instance of \ref{closeq} to be true, the chance at 11 of A must still be 90\%: this means that at 10, the conditional chance of A given Heads must be 90\%.  But this is not guaranteed by the facts about the unconditional chance of A and its chance given Heads-and-bet.  For all those tell us, the 90\% of worlds where A is true could be distributed unevenly across Heads and Tails.  Consistently with \ref{closeq} holding at 10, the combination of Heads and no bet could even guarantee the truth of A - for example, we could get this result by having A be true in all and only worlds in regions *** on the diagram---i.e.\ all worlds where she doesn't bet or bets and ends up happy.  If the chances were distributed like that, then at 11am \ref{closeq} wouldn't hold, since rather than being independent of its antecedent, A would have chance 1 conditional on the falsity of its antecedent, and an unconditional chance of 98\%.  This also means that \ref{chanceq} will be false at 11am when its context-sensitivity is resolved in the natural way as requiring match up to 11am, since given the facts this is equivalent to match up to 10 together with Heads.  
+
+
+
+What we have learned from this is that the claim that \ref{closeq} is necessarily true at all times places a stronger independence constraint on the chances at any one time $t$ than the mere requirement that a conditional be independent of its antecedent.  At least in some cases, a conditional whose antecedent is a conjunction has to be independent not only of its antecedent, but of one of the conjuncts of its antecedent.  This must at least happen when the conjunct in question is a complete specification of history between $t$ and some later time---in our example, the proposition that the coin landed Heads played this role, since this was the only chancy event between 10 and 11.  That is:
+\begin{prop}
+	\litem[Chance-Hist] \label{historyind}
+	When $H$ is complete with respect to history between $t$ and $t'$ and the chance at $t$ of $P$-and-$H$ is positive, the conditional chance at $t$ that the closest nomically possible $P$-and-$H$ world that is accurate with respect to history up to $t$ is a $Q$-world, given $H$, equals the conditional chance at $t$ of $Q$, given $P$-and-$H$.	
+\end{prop}
+When $t = t'$, we can stipulate that any tautology counts as “complete with respect to history between $t$ and $t'$”; this lets us recover \ref{closeq} as a special case of \ref{historyind}.  
+
+Having got to this point it is natural to wonder whether something much more general than \ref{historyind} is true: namely, that all counterfactuals are probabilistically independent of each of the conjuncts in their antecedents, and not just of those conjuncts that are complete descriptions of a segment of history.  In the closeness-theoretic framework, this proposal can be spelled out as follows:
+\begin{prop}
+	\litem[Chance-Gen] \label{conjind}
+	If chance at $t$ of $P$-and-$R$ is positive, the conditional chance at $t$ that the closest nomically possible $P$-and-$R$ world that is accurate with respect to history up to $t$ is a $Q$-world, given $R$, equals the conditional chance at $t$ of $Q$, given $P$-and-$R$.	
+\end{prop}
+The \ref{closeq} can be derived from this by taking $R$ to be some tautology $\top$.  This explains why \ref{conjind} entails the probabilistic independence of ‘If $P$ and $R$, then $Q$’ (on the relevant interpretation) from $R$: given \ref{closeq}, the \emph{unconditional} chance of the counterfactual equals the conditional chance of $Q$ given $P$-and-$R$; given \ref{conjind}, this also equals the \emph{conditional} chance of the counterfactual given $R$; the upshot is that the counterfactual is probabilistically independent of $R$.  
+
+Given only the logic for conditionals guaranteed by the closeness analysis [on an orthodox conception of “worlds”]---namely, Stalnaker's logic C1***?---there is no prospect of deriving the full generality of \ref{conjind} from \ref{closeq}.  However, there is a somewhat attractive logical schema which, when added to that logic, does allow for such a derivation, namely the following ‘Restricted Import-Export Schema’:
+\begin{prop}
+	\sitem[RIE]
+	(If A, then if A and B, C) ≡ (If A and B, C) 
+\end{prop}
+\ref{closeq} yields that the chance of $Q$ conditional on $P$ and $R$ equals the unconditional chance of ‘If $P$ and $R$, then $Q$’.  Given the logical truth of RIE and the principle that logical equivalents have the same chance, it follow that this is the same as the chance of ‘If $R$, then if $P$ and $R$, then $Q$’; by \ref{closeq} again, this is the conditional chance of ‘If $P$ and $R$, then $Q$’ conditional on $R$, as required by \ref{conjind}.  We will have to say about RIE, and the further constraints on the closeness ordering that would be required to validate it, in \autoref{sect:triviality}.
+
+Whether or not you want the full generality of \ref{conjind}---and as we mentioned at the outset, we will eventually discuss some considerations that require placing some restriction or other on every probabilistic principle introduced in this section---there is reason to want something more than the special case of \ref{historyind}.  So far we have been talking about interpretations of counterfactuals on which accessibility amounts to nomic possibility together with match of some initial segment of history. Back in chapter 1, we suggested that this kind of interpretation is widespread, but by no means universal, for counterfactuals. The example of Morgenbesser's Coin served as a paradigm case of a context governed by a different kind of accessibility restriction: plausibly ‘If I had bet on Heads, I would have won’ favours an interpretation where the accessible worlds are required not only to match with respect to history prior to the time of betting, but also to match with respect to the (later) outcome of the coin toss (and perhaps also with respect to various other facts conceived of as causally isolated from the bet on Heads). What is the chance of the conditional, before the decision whether to bet, under this interpretation? The mere fact that the coin was \emph{in fact} going to land Heads, so that all of the accessible worlds were in fact Heads worlds, is neither here nor there: since there was a 50\% chance that the coin would land Tails, there was a 50\% chance that all of the accessible worlds---and so in particular, the closest accessible world where I bet on Heads---would instead be Tails worlds.%
+\footnote{It's important here that we are thinking of accessibility as requiring a match with regard to how the coin lands, rather than simply imposing a \emph{de jure} restriction to Heads worlds.}
+If we conceive of “winning” in such a way that there are no nomically possible worlds where I bet on Heads and the coin lands Heads but I fail to win, and no nomically possible worlds where I bet on Heads and the coin doesn't land Heads and I still win, this is all we need to derive the intuitive result that the chance of the conditional, under the relevant interpretation, is 50\%.  However, things become more subtle if we switch instead to something like ‘If I had bet on Heads, I would be in a good mood’. Suppose that at a certain pre-betting time $t$, the conditional chance of my being in a good mood given that I bet on Heads and the coin lands Heads is 90\%, and the conditional chance of my being in a good mood given that I bet on Heads and the coin lands Tails is 10\%.  In a context where accessibility is just match up to $t$, \ref{chanceq} secures the judgment that the chance that I would be in a good mood if I bet on Heads was 50\%.  But the judgment also seems natural even when the conditional is evaluated in the way that is made salient by Morgenbesser-style speeches.  On this interpretation, the conditional is equivalent, under the assumption that some but not all nomically possible worlds matching history up to the relevant pre-betting time are Heads world, to the following disjunction:
+\begin{quote} 
+	Either Heads and the closest (history-and-law-matching) Heads world where I bet on Heads is one where I am in a good mood, or not-Heads and the closest not-Heads world where I bet on Heads is one where I am in a good mood. 
+\end{quote}
+It doesn't follow from \ref{closeq} alone that the chance of this disjunction is 50\%: the two closeness claims have chances 90\% and 10\% respectively, but there is no guarantee that they are independent of Heads and Tails, and thus no guarantee that the chances of the two disjuncts are 45\% and 5\% respectively. For example, there is nothing to rule out the possibility that conditional on my not betting on Heads and the coin not landing Heads, there is no chance at all that I'm in a good mood in the closest not-Heads world where I bet on Heads, in which case the second disjunct has chance 0.  What's needed, then, is that the chance of each of the closeness claims is independent of Heads.  \ref{historyind} doesn't secure this, since---by contrast with our earlier toy example where the  betting took place after the toss and the toss was the only chance event during a certain period of history---Heads is not equivalent to any complete description of any post-$t$ segment of history.  Thus there is some pressure here to at least take some further steps in the direction of \ref{conjind}.  
+
+\plainfancybreak{}%
+So far we have been working with the ideology of time-relative chance. Some have proposed analysing this notion in terms of a notion of chance not relativised to times, what is sometimes called ‘ur-chance’.  The idea is that for the chance of $P$ at $t$ to be $x$ is just for the ur-chance of $P$ conditional on the truth about history up to $t$ to be $x$.
+\footnote{The question what the ur-chances are is supposed to be a contingent, empirical matter just like questions about chances at times---the idea is that a great deal of science can be reconstructed as an investigation of the character of the ur-chance distribution.} 
+\footnote{A worry about this analysis comes from the possibility that the ur-chance of the complete truth about history up to $t$ is zero.  ***}
+All three of the principles we have been considering have analogues for ur-chances:
+\begin{prop}
+	\litem[Ur-chance-$\emptyset$] \label{urcloseq}
+	When the ur-chance that $P$ is positive, the ur-chance that the closest nomically possible $P$-world is a $Q$-world equals the conditional ur-chance of $Q$ given~$P$.	
+	\litem[Ur-chance-Hist] \label{urhistoryind}
+	When $H$ is complete with respect to some initial segment of history and the ur-chance of $P$-and-$H$ is positive, the conditional ur-chance that the closest nomically possible $P$-and-$H$ world is a $Q$-world, given $H$, equals the conditional ur-chance of $Q$ given $P$-and-$H$.	
+	\litem[Ur-chance-Gen] 
+	\label{urconjind}
+	If the ur-chance of $P$-and-$R$ is positive, the conditional ur-chance that the closest nomically possible $P$-and-$R$ world is a $Q$-world, given $R$, equals the conditional ur-chance of $Q$ given $P$-and-$R$.	
+\end{prop}
+Each straightforwardly entails its predecessor.  Given the analysis of time-relative chance in terms of ur-chance, these stand in the following relations to the principles about time-relative chance:
+\begin{prop}
+	\ritem
+	\ref{urconjind} implies \ref{conjind} (and hence also \ref{historyind} and \ref{closeq}).  
+	\ritem
+	\ref{urhistoryind} implies \ref{historyind} (and hence also \ref{closeq}).  
+	\ritem
+	\ref{urcloseq} doesn't imply any of the other principles.  
+\end{prop}
+The latter two facts help to support the general moral we have been drawing about ***
+
+\begin{itemize}
+\item
+  Add something about the question whether, in conditionalising on
+  “history up to $t$”, we are merely conditionalising on the
+  categorical facts, or also on facts about the closeness ordering.
+\end{itemize}
+
+\section{Credences in indicatives}
+In arguing for CEM, we also relied on some judgments concerning the appropriate credences for indicative conditionals: for example, that when you have no special evidence favouring the hypothesis that a certain coin was tossed and landed Heads over the hypothesis that it was tossed and landed Tails, you should be about 50\% confident that if it was tossed, it landed Heads.  What general principles might underlie such judgments?  There is a much discussed generalisation in this vicinity, namely:
+\begin{prop}
+	\litem[CREDENCE EQUATION] \label{credenceq}
+	If your credences are they should be and you have positive credence in $P$, then your credence that if $P$, $Q$ equals your conditional credence in $Q$ given $P$. 
+\end{prop}
+(Recall that as we are using ‘conditional credence’, your conditional credence in $Q$ given $P$ is just your credence in $P$-and-$Q$ divided by your credence in $P$ whenever the latter is positive.%
+\footnote{mention Edgington on conditional credence as a \emph{sui generis} mental state})
+
+Of course, given the context-sensitivity of conditionals, principles like the \ref{credenceq} need to be treated with some care. The most we could reasonably expect is that the principle will be true when its context-sensitivity is resolved in a certain particular, salient way.  Presumably, this will be one where the condition for accessibility is a matter of what is epistemically live from the perspective of the person whose credences are in question.  Moreover, if we really wanted \ref{credenceq} to be true as an exceptionless generalisation, we will be under pressure to conceive of the relevant notion of liveness in a rather Cartesian fashion, where we should not be subject to certain kinds of uncertainty as regards what is live.  For example, suppose it could happen that someone appropriately assigned credence 1/3 to the proposition \emph{it's raining and raining in all worlds live for them}, 1/3 to \emph{it's raining and there are some live worlds where it isn't raining}, and 1/3 to \emph{it's not raining}, while also having a very low credence that they won the lottery that is independent of which of these three possibilities obtains.  Let $P$ be the proposition that either it's not raining or they won the lottery, and $Q$ be that it's not raining.  Their conditional credence in $Q$ given $P$ is very high.  But their credence in the conditional can be at most 2/3, since on the assumption that there are no live worlds where it isn't raining, the closest live world where $P$ is true has to be one where it is raining.
+
+Is there a notion of liveness such that no-one should ever be uncertain about what is live for them?  We doubt that there is, and as a result we suggest that the \ref{credenceq} should be viewed through the lens of a certain idealisation or pretence, on which the contours of liveness are conceived to be as Cartesian as they need to be for the purposes at hand.  (We'll return to this issue later in this section.)  At least within the scope of this idealisation, it is also natural to adopt an account of appropriate credence according to which the appropriate credence-distributions for a given agent at a given time are just those that result from conditionalising a \emph{reasonable prior credence function} on that agent's “total evidence”---the conjunction of all propositions that are true throughout all the worlds that are live for that agent.  Perhaps the most pressing concern for this Bayesian vision is that it requires an excessive amount of certainty, since all differences in reasonable credence have to be accompanied by differences in certainty; but the idealisation about liveness already requires a rich body of certainties, including certainty of every proposition that is true throughout the live worlds.%
+\footnote{Given the reflexivity of accessibility, if one should be certain what the live worlds are, one should be certain of every proposition that is true in every live world.}    
+
+Given the Bayesian picture, the \ref{credenceq} on the relevant liveness-related interpretation is equivalent to a claim about how reasonable prior credence functions treat closeness-theoretic propositions.  This can be spelled out as follows:
+\begin{prop}
+	\litem[Prior-Ev] \label{prioreq}
+	If $\prior$ is a rational prior credence function, then for any proposition $E$ which could be someone's total evidence, and any $P$ such that $\prior$($P$ and $E$) is positive, $\prior$(the closest $P$-and-$E$ world is a $Q$ world|$E$) = $\prior(Q|P$-and-$E)$. 
+\end{prop}
+Given the idealisation, if someone's evidence is $E$, their credences are appropriate, and their credence in $P$ is positive, they should be certain both that the live worlds for them are exactly the $E$-worlds and that at least one of them is a $P$-world, so their credence in the proposition expressed by ‘If $P$ then $Q$’ on the relevant interpretation---namely, that either there are no live $P$-worlds or the closest live $P$-world is a $Q$-world---should equal their credence in its second disjunct, which should in turn equal their credence that the closest $P$-and-$E$ world is a $Q$-world.  Note the parallel with \ref{urhistoryind}: just as chances at a time are generated by conditionalisation of ur-chances on history-propositions, appropriate credences are generated from priors by conditionalisation on total evidence.  And for reasons exactly analogous to those discussed in the previous subsection, the mere satisfaction of the \ref{credenceq} by the priors would not be enough (without further constraints on the closeness ordering) to guarantee the \ref{credenceq} by posterior credence functions derived from the priors by conditionalising on evidence.
+
+As before, it's natural to consider strengthening \ref{prioreq} by removing the restriction to propositions that could be someone's total evidence:
+\begin{prop}
+	\litem[Prior-Gen] \label{priorind}
+	If $\prior$ is a rational prior credence function, then for any proposition $R$, and any $P$ such that $\prior$($P$ and $R$) is positive, $\prior$(the closest $P$-and-$R$ world is a $Q$ world|$R$) = $\prior(Q|P$-and-$R)$. 
+\end{prop}
+While this follows from \ref{prioreq} given RIE (for reasons analogous to those already provided in the case of chance), without some such further constraints on closeness it is strictly stronger than \ref{prioreq}.  
+
+Kaufmann (***) has observed some interesting facts about the credences that seem to be appropriate for conditionals in certain contexts which are problematic for views on which the \ref{credenceq} holds in all reasonable contexts, and which are especially pertinent here in that they motivate going quite a long way in the direction of \ref{priorind}.  Here is an illustrative case.  Suppose that at some point in the past Janet was on the roof of a burning building; within ten minutes, the flames would have reached where she is, and she had to choose between jumping (risking injury) and risking the stairs.  It was unlikely she would jump unless a safety net were in place, and unlikely she would risk the stairs if there were a safety net.  We know (but she doesn't) that jumping without a net would kill her.  A fire engine with a net was rushing to the building; unfortunately, due to an unanticipated traffic jam, its chances of making it in time were poor.  Watching a documentary about these events, it is quite natural to react to finding out about the traffic jam by saying ‘It's beginning to look like she died if she jumped’.  This doesn't fit with the Equation: even knowing about the traffic, your credences are such that even conditional on her having jumped, you are quite confident that the fire brigade made it in time with the net.  What's going on?  We suggest that in the context of the speech, the operative accessibility relation is a “constrained” one that requires not merely epistemic liveness (for you or your group), but match with respect to whether or not the fire engine made it in time.  So what you're saying, in effect, is that the following disjunction is beginning to look to be true: either the fire engine didn't make it in time and the closest live world where it didn't make it in time and she jumped is one where she died, or the fire engine did make it in time and the closest live world where it made it in time and she jumped is one where she died.  Here the second disjunct is vanishingly unlikely, but the first disjunct is likely conditional on the fire engine not having made it, so your level of confidence is the disjunction will be close to your level of confidence that the fire engine didn't make it.  
+
+Another example: there is a game where you pick a coin from a bucket with 20 double-headed coins and 80 fair coins and toss it; you win a prize if it is fair and landed heads.  Before you've looked at the coin, how confident are you that you flipped a coin that won you a prize if it landed Heads?  If you're thinking 80\%---as is natural---you're interpreting the conditional in a constrained way; the \ref{credenceq} doesn't work on this interpretation, since your conditional credence that you won a prize given that the coin landed Heads is only 2/3.  
+
+In this simple example it is really easy to see what the credence should be when the conditional is interpreted in the constrained way.  But to fully understand the significance of constrained readings for the debate about credences of conditionals, we need to look at numerical assignments in a slightly more complicated example.  An example due to Kaufmann will serve our purposes.  In the example, someone chose a ball either from bag X or from bag Y.  We are not sure which bag it was, but we have some evidence favouring bag Y, with the result that our credence that it was bag Y is 75\%.  Bag X contains 10 red balls, nine of which have a black spot, and two white balls; bag Y contains 10 red balls, only only of which has a black spot, and 50 white balls.  How confident should we be that if a red ball was picked it had a black spot?%
+\footnote{We have shifted Kaufmann's example into the past tense, in line with our policy of sticking as much as possible with conditionals whose classification as indicative or counterfactual is uncontroversial.}  
+According to Kaufmann---and we agree---there is a salient way of understanding the question where the answer is that our degree of confidence should be fairly low, given our evidence favouring bag Y.  Kaufmann plausibly argues that when the question is taken in this way, the level of confidence should be $(9/10 × 1/4) + (1/10 × 3/4) = 12/40 = 3/10$: our expectation value for the proportion of red balls in the bag from which the choice was made.  (By contrast, the \ref{credenceq} recommends a higher credence---$6/10$: see Kaufmann p.\ 586---for the basic reason that picking a red ball is strong evidence in favour of it being bag X that is in play.)  We suggest that the reading of the conditional that Kaufmann and his informants are accessing is one where accessibility consists in epistemic liveness together with accuracy with respect to which bag is chosen, so that the conditional is equivalent to the following disjunction of conjunctions:
+\begin{prop}
+	\nitem \label{disjunction_of_conjunctions}
+	Either the ball was chosen from bag X and a ball with a black spot was chosen in the closest live world where a red ball was chosen from bag X, or the ball was chosen from bag Y and a ball with a black spot was chosen in the closest live world where a red ball was chosen from bag Y.  
+\end{prop}
+How does this analysis explain the reasonability of assigning a credence of $3/10$?  The idea, unsurprisingly, is that the first disjunct deserves credence $9/10 × 1/4$, while the second deserves $1/10 × 3/4$.  To explain this, we must assume that you should treat the two conjuncts of each disjunct of \ref{disjunction_of_conjunctions} as independent: for example, learning that bag X was in play is neither good nor bad news for the proposition that a spotted ball was chosen in the closest live world where a red ball was chosen from bag X.  Thus, the explanation turns on a conjunct-independence requirement for your posterior credences.  This can be derived in turn from the instances of \ref{priorind} where the conditioning propositions $R$ are, respectively, the conjunction of your total evidence with the proposition that the ball was chosen from bag $X$, and the conjunction of your total evidence with the proposition that the ball was chosen from bag $Y$.  It is not at all obvious that these propositions could themselves be someone's total evidence: after all, your total evidence presumably entails that you can't see which bag was chosen, that you weren't told which bag was chosen, and so forth, and perhaps it also entails that your total evidence does not settle which bag was chosen.  Thus \ref{prioreq} on its own is not strong enough to explain why the credences should work in the way prescribed by Kaufmann.%
+\footnote{By contrast, in the double-headed coin example, we can derive the relevant credence judgment without assuming anything at all about credences concerning closeness.  Given the idealising assumption that you are certain about what the live possibilities are, you are certain that you don't get a prize in any live world where you toss a double-headed coin---and a fortiori that you don't get a prize in the closest of those worlds---and that you get a prize in every live world where you toss Heads on a fair coin---and a fortiori that you get a prize in the closest of these worlds.  In the burning building example, on the other hand, since you're not certain Janet didn't jump and live without a net, we will need to appeal to conjunct independence to properly account for the numerical probabilities that seem appropriate on the constrained reading.}
+
+**cite paper by McGee**
+
+Confronted simply with Kaufmann's original example, it is tempting to think that people who say that the probability of the conditional is 3/10 are simply making a mistake, so that there is nothing of semantic interest going on.  One possible reason for such scepticism is the mathematical complexity of the example; however, the coin game example suggests that the phenomenon arises even in cases that require no arithmetical computation at all.  Another possible reason for scepticism is people's well-documented proneness to fallacies when reasoning using the concepts of probability and likelihood, as when they rate the hypothesis that Linda is a bank teller active in the feminist movement as more likely than the hypothesis that she is a bank teller (Tversky ***).  But note that the burning building case doesn't really make any significant use of such concepts.  We are further encouraged by the fact that very similar ‘constrained’ readings seem to be available for modals, where probabilistic reasoning has no role at all.  For example, in a case where one has without looking picked a coin from a bucket with a mixture of double headed and fair coins, ‘The coin might land tails’ seems to have a reading on which it is false if the coin is in fact double-headed, a reading which is natural when we consider speeches like ‘I'm not sure whether the coin might land tails’, ‘I'm pretty confident that the coin might land tails’, ‘It's starting to look like the coin might land tails’ (when one is getting evidence against double-headedness), etc.  Similarly for ‘must land heads’, ‘must have landed heads’, etc.  We will have more to say about this phenomenon in chapter \ref{chap:nonprop}; for now, the important point is just that given the connections between modals and conditionals argued for in \autoref{chap:accessibility}, it is to be expected that conditionals will be context sensitive in all the ways modals are, and thus will have constrained readings insofar as modals do.%
+\footnote{Remember however that because of the presupposition of non-vacuity some of the readings that would be possible for a modal in a certain context will not be natural for a conditional.  Given evidence for double-headedness, ‘It's starting to look like it must land heads’ is natural enough, but ‘It's starting to look like if it lands tails…’ will not naturally be read in the constrained way.}  
+
+These examples suggest that constrained interpretations of indicative conditionals are a fairly pervasive phenomenon, so that the \ref{credenceq} is very far from being universally correct---a further nail in the coffin for views like that of Edgington (***) on which the whole point of indicative conditionals is simply that of expressing conditional credence.  A properly general account of the credences of conditionals should explain why, in constrained contexts, it is appropriate to assign credences to conditionals according to Kaufmann's method of taking a weighted average of conditional probabilities across all the cells of the relevant partition.  And one upshot of this will be that even in unconstrained contexts, something stronger than the \ref{credenceq} is true: not only should we treat conditionals as probabilistically independent of their antecedents, but also, in some wide range of cases, we should treat conditionals whose antecedents are conjunctions as probabilistically independent of the conjuncts of their antecedents.  Against the background of our closeness-theoretic account of conditionals, this amounts to the requirement that our priors about the closeness ordering should, in some similarly wide range of cases, conform to \ref{priorind}.  
+
+\begin{itemize}
+	\item
+	Complain about the way that people introducing the topic of credences and conditionals often are loose about propositions versus sentences in ways that really matter given contextualism.  
+	\item
+	We think that assertions of indicative conditionals very often involve non-egocentric notions of liveness; and as a result, they may often express propositions the speaker's (and hearer's) credence in which comes apart from their corresponding conditional credences.  Give an example?  
+	\item
+	Is there a worry here?  (Think about this while also thinking about what we'd say against Kratzer-style views on which ‘if’ combines directly with ‘confident’…)  
+\end{itemize}
+
+Evidential probability:
+\begin{itemize}
+	\item
+	Another arena where it often seems good to make a close connection between the probabilities of conditionals and conditional probabilities is that of evidential probability.  
+	\item
+	Simple picture: there's one ideal prior credence function, and claims like ‘it's likely that P’, ‘probably P’, etc. express that the result of conditionalising it on the evidence of the relevant person or group---perhaps with some further matching constraint, or perhaps not---is high.  
+	\item
+	Note that the body of evidence will often be that of a group, whereas when you say ‘I am confident that P’ or ‘He should be confident that P’ or what, that tends to be an individualistic accessibility relation.  So what we said about credence doesn't carry over completely straightforwardly.  
+	\item
+	Even if you accepted luminosity for a notion of the evidence of an individual, there are obvious cases where it's not at all plausible to think of the accessibility relation relevant to a group interpretation of ‘likely’ (or ‘must’ or ‘might’) as transitive or symmetric.  
+	\item
+	Worry: do these kinds of truth conditions make modals (including likelihood claims) and conditionals too risky?  
+\end{itemize}
+
+
+
+\begin{itemize}
+	\item
+  restrict to ‘a priori possible’ worlds?
+	\item
+   How failures of introspection can make for failures of the Credence
+   Equation, and why we shouldn't worry about this.
+ 	\item
+	Note that even if unembedded indicatives and ‘might’s are often evaluated with respect to some relevant group, it's still plausible that in the context of a quantified attitude report, like ‘For any rational person x, if x is confident to such and such degree that if P then Q that\ldots{} then\ldots{}’, there is a tendency to resolve it so that just that person's evidence is what matters.
+	\item
+	Address worries having to do with people whose credences aren't as they should be.  
+\end{itemize}
+
+
+
+
+We will have more to say on ways in which the context-sensitivity of indicatives can be resolved in ways that are unfriendly to THE EQUATION in section ???. And as we shall discuss in section ???, there are obstacles, whatever the context, to endorsing the the pattern captured by THE EQUATION in full generality. But as we see things, these worries about the principle in full generality does nothing much to overturn the plausibility of judgments about what credences are appropriate in particular simple cases, or the problems that such judgments pose for CEM-unfriendly approaches to indicatives.
+
+
+
+
+\section{Credences in counterfactuals}\label{sect:cfcredence}
+In arguing for CEM, we also relied on judgments about the appropriate credences in counterfactuals: for example, we said that when you are sure that a coin is fair, your degree of confidence that it would land Heads if it were tossed (once, during the next hour) should be 50\%.  Since the accessibility relation relevant to the interpretation of counterfactuals does not generally have much to do with considerations of epistemic liveness, our account of credences for indicative conditionals does not explain these judgments.  However, they can be quite straightforwardly explained by appeal to the principles about the chances of counterfactuals from \autoref{sect:chance}, together with general principles linking chance and credence.  In particular, the judgment about the coin can be explained by combining the claim that when a coin is fair the chance that it would land Heads if tossed is 50\%---a consequence of the \ref{chanceq}---with the following chance-credence principle: when you should be certain that the current chance of a proposition is $x$, your credence in that proposition should be $x$.%
+\footnote{\textbf{Two worries about this principle: (a) Lucky; (b) if you think you can know non-chance-1 things about the future and that you may be certain of what you know, you may have inadmissible evidence about the future, e.g.~in the cases from the coins paper.}} 
+This is a special case of the following equally attractive general principle linking chance and credence, which applies even when you are not certain about the current chances:
+\begin{prop}
+	\litem[Current Principal Principle] \label{currentpp}
+	Whenever your credence in the the proposition that the current objective chance of $P$ is $x$ is positive, your credence in $P$, conditional on the proposition that the current objective chance of $P$ is $x$ should be $x$.
+\end{prop}
+Together with the assumption that you should be certain of the relevant
+instances of the \ref{chanceq} (concerning the present time), this
+yields the following generalisation about the appropriate credences for
+counterfactuals:
+\begin{prop}
+	\litem[Current Skyrms Principle] \label{currentskyrms}
+	When your credence that the current conditional chance of $Q$ given $P$ is $x$ is positive, your credence that $Q$ would be true if $P$ were true, conditional on the proposition that the current conditional chance of $Q$ given $P$ is $x$, should be $x$. 
+\end{prop}
+If we bracket worries about infinity, this constraint on your
+conditional credences allows us to calculate what your
+\emph{unconditional} credence in a counterfactual ought to be when you are certain that its antecedent has a positive current hance:
+\begin{prop}
+	\item
+	If you are certain that the chance of $P$ is positive, your credence that $Q$ would be true if $P$ were true should equal the expected value, according to your credences, of the current conditional objective chance of $Q$ given $P$.
+\end{prop}
+\textbf{(EXPLAIN)}
+
+The \ref{currentpp} is clearly not general enough to capture all of the ways in which our credences concerning the chances of propositions should constrain our credences in those propositions.  In a Bayesian setting, it is natural to formulate the more general principle in this vicinity as a constraint on reasonable priors:  
+\begin{prop}
+	\litem[Principal Principle] \label{pp}
+	If $\prior$ is a reasonable prior credence function, then for every probability function $\prob$ such that $\prior$(the chance function at $t$ is $\prob$) is positive, and every proposition $A$, $\prior$(A|the chance function at $t$ is $\prob$) = $\prob(A)$.  
+\end{prop}
+To recover the \ref{currentpp} from this, we need the following two supplementary assumptions: (a) whenever $\prior$ is a reasonable prior and $\prior$(the chance function at $t$ is $\prob$) is positive and $A$ is entirely about history up to $t$, $\prob(A) = 1$ or $\prob(A) = 0$; and (b) whenever $E$ is entailed by someone's evidence at $t$, $E$ is entirely about history up to $t$.  Given (b), we have that if $E$ is someone's total evidence at $E$, $\prior$(the chance function at $t$ is $\prob$|$E$) is positive only when $\prob(E) = 1$, in which case $\prob(AE) = \prob(A)$ for every $A$, so if your credences are appropriate, your credence in $A$ conditional on $\prob$ being the chance function at $t$ equals $\prob(A)$. To get from this to \ref{currentpp}, we make the simplifying assumption that there are only finitely many probability functions which have a nonzero prior probability of being the chance function at any time: in that case, the proposition that the chance of $A$ at $t$ is $x$ is equivalent to the disjunction of \emph{the chance function at $t$ is $\prob$} for all candidates $\prob$ such that $\prob(A) = x$, and your credence in $A$ conditional on this disjunction must be $x$ given that this is your credence in $A$ conditional on each disjunct.  
+
+What does \ref{pp} together with \ref{conjind} get us?  
+
+***
+
+
+
+
+
+% What about cases where the relevant propositions about objective chance concern the chances at some time other than the present, for example when I assign a credence of 50\% to the proposition that a certain coin (which was not in fact tossed yesterday) would have landed Heads if it had been tossed, on the basis of my knowledge of the pattern of conditional chances two days ago?  One might be tempted to simply generalise \ref{currentskyrms} to arbitrary times:
+% \begin{prop}
+% 	\litem[SKYRMS PRINCIPLE] \label{skyrms}
+% 	Conditional on the proposition that at $t$, the conditional objective chance of $Q$ given $P$ is $x$, your credence that $Q$ would be true if $P$ were true should equal $x$.
+% \end{prop}
+% But this is no good. The most obvious problem concerns counterfactuals
+% whose antecedents deserve substantial credence. Suppose I am very
+% confident that a certain coin was tossed and landed Heads; then given
+% \emph{Modus Ponens} and \emph{And-to-if}, I should also be confident
+% that it would have landed Heads if it had been tossed---and this is true
+% even if I am sure that the coin is fair, and hence that before it was
+% tossed, the chance of its landing Heads conditional on its being tossed
+% was only a half. The obvious way to get around this problem for SKYRMS
+% as written is to revise it so that it is only taken as a guide to
+% credence in counterfactuals conditional on the falsity of their
+% antecedents:
+% \begin{prop}
+% 	\litem[SKYRMS*] \label{false_antecedent_skyrms}
+% 	Your credence that $Q$ would be true if $P$ were true, conditional on the hypothesis that \emph{$P$ is false and} the conditional objective chance at $t$ of $Q$ given $P$ is $x$, should equal $x$.%
+% 	\footnote{\textbf{Something here about inadmissibility???}}
+% \end{prop}
+% But even \ref{false_antecedent_skyrms} seems quite tendentious. Suppose you are now certain that you didn't go to the movies yesterday, and also that two days ago the chance of the proposition that you enjoy your trip to the movies, conditional on the proposition that you do go to the movies yesterday, was high. \ref{false_antecedent_skyrms} says you should now be confident that you would have had a good time if you had gone to the movies yesterday. This prescription applies even if you discover that the projector broke halfway through the showing of the film that you would have gone to see, where this breakdown was a low chance eventuality two days ago. It's tempting to think that this discovery should lead you to decrease your level of confidence that you would have enjoyed the movie if you had gone to it below the level recommended by \ref{false_antecedent_skyrms}. It is not clear that this refutes \ref{false_antecedent_skyrms} on the intended interpretation where the accessibility constraint for the counterfactual is simply match with respect to history up to $t$: perhaps what we are doing is evaluating the counterfactual using one of the more complex accessibility constraints discussed in section \textbf{Morgenbesser}, where being accessible amounts to matching actuality both with respect to history up to yesterday, and with respect to certain matters causally independent of whether you go to the movies or not. That said, it remains quite natural to suppose that the discovery about the projector is evidentially relevant even on in the intended interpretation---certainly on many ways of thinking about closeness, the discovery would be strong evidence that the closest worlds where one goes to the movies are also projector-breakdown worlds.
+%
+% Even if the foregoing concerns made us suspicious of \ref{false_antecedent_skyrms}, we can at least fall back on the following more guarded generalisation of \ref{currentskyrms}:
+% \begin{prop}
+% 	\litem[ADMISSIBLE SKYRMS] \label{admissible_skyrms}
+% 	If none of your evidence concerning history subsequent to $t$ is “inadmissible” with respect to the proposition that Q would have been true if P had been true, then conditional on the hypothesis that the conditional chance at $t$ of $Q$ given $P$ was $x$, your credence that Q would have been true if P had been true should equal x.
+% \end{prop}
+% Here “inadmissible” evidence just means whatever kinds of evidence about subsequent history \emph{do} have a bearing on the counterfactual. In the case of a counterfactual with a true antecedent we have a clear sense of what this is, while as we have just explained, questions about the evidential bearing of facts about post-$t$ history (such as the projector breakdown) on counterfactuals with false antecedents entirely about history prior to $t$ are much harder to adjudicate. Just as CURRENT SKYRMS can be derived from the CHANCE EQUATION together with CURRENT PP, so ADMISSIBLE SKYRMS can be derived from the CHANCE EQUATION together with
+% \begin{prop}
+% 	\litem[PRINCIPAL PRINCIPLE] \label{pp}
+% 	If none of your evidence concerning history subsequent to $t$ is inadmissible with respect to the proposition that $P$, then conditional on the hypothesis that the chance at $t$ of $P$ is $x$, your credence in $P$ should be $x$.
+% \end{prop}
+%
+% The CURRENT PP follows from PP given the further premise that we never have, at any time, evidence about later history that is inadmissible with respect to any proposition $P$. Depending on how one thinks of the relevant notion of evidence, this may in fact be a problematic premise. In the literature, people sometimes raise this worry by appeal to exotic possibilities involving crystal balls. But there may be more mundane versions of the worry. Some have the view that anything that one knows counts as a piece of evidence. Suppose you know that you had dinner last night and that you will have dinner tonight, despite the fact that there is currently a small chance that you will die before tonight. In this case, on the relevant view of evidence, your evidence logically entails the counterfactual ‘If you had had dinner yesterday, you would have dinner tonight’. One might take this to show that it's rationally permissible for your credence in the counterfactual to be 1, rather than somewhat less than 1 as recommended by CURRENT SKYRMS. Even more obviously, if one simply simply knew a certain counterfactual about the future (\textbf{refer to discussion of knowledge of counterfactuals not based on knowledge of categorical stuff}), that might be taken to license a credence out of kilter with CURRENT SKYRMS. Insofar as we don't want to pre-judge these issues, ADMISSIBLE SKYRMS provides a relatively safe fallback.
+
+\footnote{Three different conceptions of “history propositions”: (i) purely categorical; (ii) includes conditionals whose antecedent and consequent are entirely about history; (iii) also includes conditionals whose antecedent is false and entirely about history.  Be careful to track which of the things we are saying turn turn on this --- assumption is that not much does.}
+
+\begin{itemize}
+\item
+  in this case there is a serious worry about the fact that the priors
+  will assign credence 0 to some things that have positive chance at t,
+  so you maybe can't get by straightforward conditionalisation from the
+  priors to the chances at t. Deal with this in the first instance by
+  confining attention to “macro” chances?\\
+\end{itemize}
+
+
+\begin{itemize}
+ 	\item
+	If you have a view where counterfactuals entirely about pre-t
+    matters have chance 1 or 0 at t, then (given our general strategy of
+    letting accessibility rather than closeness do this kind of work)
+    you're going to need also to say that accessibility involves a
+    matching constraint on such counterfactuals. And similarly, if you
+    have a view where counterfactuals whose antecedents have chance 0 at
+    t all have chance 1 or 0 at t (the ‘freezing’ view), you'll want a
+    correspondingly demanding accessibility restriction. (Note: the van
+    Fraassen thing still seems to work even in this case!)
+    \begin{itemize}
+        \item
+      A natural way of doing it has the most basic PP-style principle be
+      about priors and ur-chances. Principles about posteriors that have
+      a ‘no inadmissible evidence’ clause are pretty much tantamount to
+      principles about priors.
+    \end{itemize}
+\end{itemize}
+
+
+\section{Static triviality results}
+***ALSO SOMEWHERE: mention Hajek's result you can only have a CCCP relation if the range of the probability function is an infinite subset of $[0,1]$.
+
+***Also have an example where you have a probabilistic (rather than entailment-driven) counterexample to the Equation.  P = Either there's a moderately close world where the P-coin is tossed, or it comes up Heads in the closest world where it's tossed.  [General strategy: exploit the fact that if P is false the closest world where that coin is tossed is miles away...]
+
+The last three sections surveyed some generalisations concerning probabilities and conditionals that seem to nicely systematise a range of compelling judgments.  We have been hinting all along that these principles stand in need of some restriction; it's time to articulate why restrictions are needed.  
+
+The place where the need for restriction is especially manifest is in the conjunct independence principles.  
+
+\begin{definition} \label{def:conjeq}
+	When $→$ is any binary operator on propositions, $X$ is any set of propositions, and $\prob$ is any probability function,  $→$ is \emph{conjunct-equational} for $X$ in $\prob$ iff $→$ obeys substitutivity of logical equivalents and for any propositions $A, B, C ∈ X$ with $\prob(A∧B)>0$, $\prob((A∧B)→C|A) = \prob(C|A∧B)$.  
+\end{definition}
+
+\begin{definition} \label{def:equational}
+	When $→$ is any binary operator on propositions, $X$ is any set of propositions, and $\prob$ is any probability function,  $→$ is \emph{equational} for $X$ in $\prob$ iff $→$ obeys substitutivity of logical equivalents and for any propositions $A, B ∈ X$ with $\prob(A)>0$, $\prob(A→B) = \prob(B|A)$.  
+\end{definition}
+
+\begin{lemma}
+	If $→$ is conjunct-equational for $X$ in $\prob$ and $X$ contains at least one logically necessary proposition, $→$ is equational for $X$ in $\prob$.  
+\end{lemma}
+\begin{proof}
+	Let $A,B∈X$ be such that $\prob(A)>0$, and let $⊤$ be some logically necessary proposition that belongs to $X$.  Then for any $A$, $A$ is logically equivalent to $A∧⊤$, so by substitutivity $A→B$ is logically equivalent to $(A∧⊤)→B$, so $\prob(A→B) = \prob((A∧T)→B) = \prob((A∧⊤)→B|⊤)$ (since $\prob$ is a probability function and thus assigns probability 1 to all logical necessities) = $\prob(B|A∧⊤)$ (by the assumption that $→$ is conjunct-equational for $X$ in $\prob$) = $\prob(B|A)$.  
+\end{proof}
+
+\begin{lemma} \label{conjunctindependencelemma}
+	If $→$ is conjunct-equational for $X$ in $\prob$ and $X$ contains a logical necessity and is closed under conjunction, then for any $A,B,C∈X$ with $\prob(A∧B)>0$, $\prob((A∧B)→C|A) = \prob((A∧B)→C)$.  Also if $\prob(A)<0$, $\prob((A∧B)→C|¬A) = \prob((A∧B)→C)$
+\end{lemma}
+\begin{proof}
+	Suppose $→$ is conjunct-equational for $X$ in $\prob$.  Then $\prob((A∧B)→C|A)$ = $\prob(C|A∧B)$. But by the previous lemma $→$ is also equational for $X$ in $\prob$, and since $X$ is closed under conjunction $A∧B∈X$, so $\prob(C|A∧B) = \prob((A∧B)→C)$.  The second part follows from the following theorem of the probability calculus: if $\prob(P) = \prob(P|Q)$ and $\prob(Q)<1$, $\prob(P)=\prob(P|¬Q)$.  
+\end{proof}
+
+\begin{lemma} \label{gettingbacklemma}
+	If $→$ obeys substitutivity and has the MP and And-to-if properties, $X$ contains at least one logical necessity, and for any $A,B,C∈X$ with $\prob(A∧B)>0$, $\prob((A∧B)→C|A) = \prob((A∧B)→C)$, then $→$ is conjunct-equational for $X$ in $\prob$.  
+\end{lemma}
+\begin{proof}
+	Let $⊤$ be a logical necessity in $X$.  By substitutivity, $(A∧B)→C$ is logically equivalent to $((A∧B)∧⊤)→C$, so $\prob((A∧B)→C|A) = \prob((A∧B)→C) = \prob((A∧B∧⊤)→C) = \prob((A∧B∧⊤)→C|A∧B) = \prob((A∧B)→C|A∧B)$.  But since $→$ has the MP and And-to-if properties, $((A∧B)→C)∧(A∧B)$ is logically equivalent to $A∧B∧C$, so $\prob((A∧B)→C|A∧B) = \prob(C|A∧B)$.  
+\end{proof}
+
+\begin{lemma} \label{othergettingbacklemma}
+	If $→$ obeys substitutivity and has the MP and And-to-if properties, $X$ contains at least one logical necessity, and for any $A,B,C∈X$ with $\prob(A∧B)>0$ and $\prob(A)<1$, $\prob((A∧B)→C|¬A) = \prob((A∧B)→C)$, then $→$ is conjunct-equational for $X$ in $\prob$.  
+\end{lemma}
+\begin{proof}
+	(*** This is really simple - better just have a general discussion of the meaning of probabilistic independence.)
+	Suppose $\prob(A∧B)>0$.  If $\prob(A)<1$, then 
+	\begin{align*}
+	\prob((A∧B)→C) &= \prob((A∧B)→C|A)\prob(A) + \prob((A∧B)→C|¬A)\prob(¬A) \\
+		&= \prob((A∧B)→C|A)\prob(A) + \prob((A∧B)→C)\prob(¬A) \\
+	\intertext{so}
+	\prob((A∧B)→C|A) &= \frac{\prob((A∧B)→C)(1-\prob(¬A))}{\prob(A)} = \prob((A∧B)→C)
+	\end{align*}
+	If on the other hand $\prob(A)=1$ then trivially $\prob((A∧B)→C|A) = \prob((A∧B)→C)$.  
+\end{proof}
+
+
+
+\begin{lemma}
+	Suppose $→$ is conjunct-equational for $X$ in $\prob$ and $X$ is closed under truth-functional operators.  Then for any $A,C,D∈X$ such that $D$ is logically incompatible with $A$ and $\prob(D)$ is positive, $\prob(A→C) = \prob(A→C|D)$.  
+\end{lemma}	
+\begin{proof}
+	When $D$ is incompatible with $A$,
+	\begin{equation*}
+		\prob(A→C|A∨D) = \prob(A→C|A)\prob(A|A∨D) + \prob(A→C|D)\prob(D|A∨D).
+	\end{equation*}
+	But $A$ is logically equivalent to $A∧(A∨D)$, so $A→C$ is logically equivalent to $(A∧(A∨D))→C$; since $A∨D∈X$, we can apply lemma \ref{conjunctindependencelemma} to establish $\prob(A→C|A∨D)$ = $\prob((A∧(A∨D))→C|A∨D)$ = $\prob((A∧(A∨D))→C)$ = $\prob(A→C)$.  Also, since $A$ is logically equivalent to $A∧⊤$ (where $⊤$ is some logical necessity belonging to $X$), $\prob(A→C|A) = \prob(A∧⊤→C|A) = \prob(A∧⊤→C) = \prob(A→C)$, using lemma \ref{conjunctindependencelemma} again.  So we have
+	\begin{equation*}
+		\prob(A→C) = \prob(A→C)\prob(A|A∨D) + \prob(A→C|D)\prob(D|A∨D)
+	\end{equation*}	
+	and hence	
+	\begin{equation*}
+		\prob(A→C)(1-\prob(A|A∨D)) =  \prob(A→C|D)\prob(D|A∨D)
+	\end{equation*}
+	But $1-\prob(A|A∨D) = \prob(\Not A|A∨D) = \prob(D|A∨D)$ since $A$ and $D$ are logically incompatible, and $\prob(D|A∨D)$ is positive since $\prob(D)$ is.  So we can divide across to get
+	\begin{equation*}
+		\prob(A→C) = \prob(A→C|D). \qedhere	
+	\end{equation*}
+\end{proof}
+
+%
+%
+% We can show that no connective can be conjunct-equational for a probability function unless that probability function is almost entirely trivial.
+\begin{theorem}
+%	\litem[Dynamic Triviality Theorem]
+	If $→$ is a binary operator, $X$ is a set of propositions closed under truth-functional operations and $→$, and $\prob$ is a probability function such that $0 < \prob(A∧B) < \prob(A) < 1$ for some propositions $A,B∈X$, $→$ is not conjunct-equational for $X$ in $\prob$.  
+\end{theorem}
+\begin{proof}
+	Suppose for contradiction that the assumptions of the theorem obtain and $→$ is conjunct-equational for $X$ in $\prob$.  Let $E$ be the proposition $¬A ∧ (A→B)$; note that $E$ is logically inconsistent with $A$ and belongs to $X$.  If $\prob(E)$ is positive, then by lemma ***, $\prob(A→B) = \prob(A→B|E)$.  But since $E$ logically entails $A→B$, $\prob(A→B|E)$ = 1 if defined, so $\prob(A→B) = 1$.  By lemma *** it follows that $\prob(B|A) = 1$, contradicting the assumption that $\prob(A∧B)<\prob(A)$.  So $\prob(E)$ cannot be positive; since $\prob(¬A)$ is positive, it follows that $\prob(A→B|¬A) = 0$.  By lemma *** it follows that $\prob(A→B) = 0$ and hence $\prob(B|A) = 0$, contradicting the assumption that $\prob(A∧B)>0$.  
+\end{proof}
+
+
+
+The result we have just been discussing has not been a focus in the literature, though for us it is extremely important given that, as we saw in sections ***, conjunct independence principles seem to play a starring role in the most helpful systematisations that we presented above.  As we have been arguing, the mere EQUATIONS are explanatorily inadequate by themselves, so even if one could endorse such principles in full generality without trivialisation many explanatory needs would remain unmet.  But in any case there is an important result in the literature, due to Stalnaker (???), that shows that even principles with the form of the EQUATIONS cannot hold unrestrictedly in a nontrivial probability functions, given certain plausible logical principles for the conditional which are in fact valid according to our closeness-theoretic analysis.  
+
+\begin{lemma} \label{independencelemma}
+	If $→$ is equational for $X$ in $\prob$ and obeys MP and And-to-if, then for any $A,B∈X$ such that $\prob(A)>0$, $\prob(A→B)$ = $\prob(A→B|A)$ = $\prob(A→B|¬A)$ if $\prob(A)<1$.  
+\end{lemma}
+\begin{proof}
+	Since $→$ obeys MP and And-to-if, $(A→B)∧A$ is logically equivalent to $A∧B$.  So $\prob(A→B|A)$ = $\prob((A→B)∧A)/\prob(A)$ = $\prob(A∧B)/\prob(A)$ = $\prob(B|A)$ = $\prob(A→B)$.  The second part follows from the general rule that if $\prob(Q) = \prob(Q|P)$ and $\prob(P)<1$ then $\prob(Q) = \prob(Q|¬P)$.  
+\end{proof}
+
+The following is the key lemma for proving Stalnaker's triviality theorem:
+\begin{lemma}
+	If $→$ is equational for $X$ in $\prob$ and $A, B∈X$ are such that $\prob(A∧B)$ and $\prob(A)$ are both strictly between 0 and 1, then $A→B$ does not logically entail $A$.  
+\end{lemma}
+\begin{proof}
+	Suppose for contradiction that $A→B$ logically entails $A$.  Then since $\prob(A)<1$, $\prob(A→B|¬A) = 0$, so by lemma ***, $\prob(A→B) = 0$, so $\prob(B|A) = 0$ since $\prob(A)>0$, contradicting the stipulation that $\prob(AB)>0$.  
+\end{proof}
+
+
+\begin{theorem}[Stalnaker's triviality theorem]
+	If $→$ obeys MP, And-to-if, (minimal logic) and RCV, $X$ is closed under truth-functional operators and $→$, and there are some $A,B∈X$ are such that $0 < \prob(A ∧ B) < \prob(A) < 1$, then $→$ is not equational for $X$ in $\prob$.
+\end{theorem}
+\begin{proof}
+	Given the previous result, it suffices to exhibit some conditional $C→D$ built out of $A$ and $B$ by truth functional operators and $→$ such that (i) $C→D$ logically entails $C$, and (ii) $\prob(C∧D)$ and $\prob(C)$ are both strictly between 0 and 1.  Here is Stalnaker's candidate:  
+	\begin{equation}
+		\tag{S} \label{stalnaker}
+		(A ∨ (A → B)) → (A ∧ B)
+	\end{equation}
+	Let's first see why condition (ii) has to be satisfied given our stipulations.  First of all, $\prob(A∨(A→B))>0$ since $\prob(A)>0$.  Suppose that $\prob(A∨(A→B)) = 1$; then $\prob(A→B|¬A) = 1$ (using the fact that $\prob(¬A)>0$), so by lemma *** $\prob(A→B) = 1$, so $\prob(B|A) = 1$ contradicting the stipulation that $\prob(A∧B)<\prob(A)$.  Notice next that the conjunction of the antecedent and consequent of \ref{stalnaker}, namely $(A∨(A→B))∧(A∧B)$, is logically equivalent to $(A∧(A∧B))∨((A→B)∧(A∧B))$ by distributivity.  But since $→$ obeys MP and And-to-if, $(A→B)∧(A∧B)$ is logically equivalent to $A∧B$; so both disjuncts are logically equivalent to $A∧B$; thus $\prob(C∧D)=\prob(A∧B)>0$.
+	
+	To see why $C→D$ logically entails $C$, note that by VLAS, $S$ logically entails 
+	\begin{equation}
+		\tag{S*} \label{vlasstalnaker}
+	((A∨(A→B))∧A) → B
+	\end{equation}
+	But the antecedent of \ref{vlasstalnaker}, $(A∨(A→B))∧A$, is logically equivalent to $A$, so \ref{vlasstalnaker} is logically equivalent to $A→B$.  So, $S$ logically entails $A→B$ and hence its antecedent $A∨(A→B)$.  
+\end{proof}
+
+***other things that give VLAS...
+
+%To get a feel for the kinds of divergences between probabilities of conditionals and conditional probabilities which are forced by this result, let $A$ be the proposition that a certain fair die was rolled and came up six, and $B$ the proposition that a certain other fair die was rolled and came up six.  How likely was it that if either die 1 had landed six, or die 2 would have landed six if die 1 had, then both dice would have landed six? 
+
+% If they are each n sided dice, then the probability of the conditional is 1/n^2, while the conditional probability is 1/n^2 / (2/n - 1/n^2) = 1/n^2 / (2n-1/n^2) = 1/2n-1.  
+
+To better understand the case for thinking that when $→$ is uniformly interpreted as ‘If … then …’ \ref{stalnaker} does in fact entail its own antecedent, it is helpful to think things through from the perspective of our closeness-theoretic analysis.  Suppose for reductio that \ref{stalnaker} is true with a false antecedent.  For the antecedent to be false, three conditions must obtain: first, the actual world must be a not-$A$ world; second there must be an accessible $A$-world; and third, the closest accessible $A$-world---call it $w$---must not be a $B$ world.  Since this entails that there is an accessible world where the antecedent $A ∨ (A → B)$ is true, \ref{stalnaker} can only be true in these circumstances if the closest world where the antecedent is true---call it $w'$---is an $A$-and-$B$ world.  But $w'$ cannot be closer than $w$ since $w$ is the closest $A$-world; it cannot be further than $w$ since then $w$ and not it would be the closest $A ∨ (A → B)$ world; and it cannot be identical to $w$ since $B$ is false at $w$.  Since closeness is a total ordering that rules out all of the possibilities.
+
+
+% To understand this result, we can begin by recalling that when $→$ obeys Modus Ponens and And-To-If, it is equational for $\prob$ just in case, for any propositions $A$ and $B$ for which $\prob(A)>0$, $\prob(A→B)=\prob(A→B|A)=\prob(A→B|\negate{A})$: a conditional is probabilistically independent of its antecedent.  (See p.\ for a proof of this).  Informally: the conditional splits the worlds where the antecedent is false in the same ratio that the consequent splits the worlds where the antecedent is true.
+%
+% Given such independence, there can't be any case where $\prob(A)$ and $\prob(AB)$ are both strictly between 0 and 1 and where $A→B$ logically implies $A$. For in that case, the logical implication will force $\prob(A→B|¬A)$ to be 0, so $\prob(A→B)=0$, so $\prob(B|A)=0$, contradicting the assumption that $\prob(A∧B)$ is positive. So, all Stalnaker needs to do is to exhibit some schema such that any instance of the schema is a conditional that logically entails its own antecedent, and such that in any nontrivial probability function we can find an instance of the schema where neither the antecedent, nor the conjunction of the antecedent and consequent, has probability 0 or 1.
+%
+%
+%
+%
+% Stalnaker gives the following example, which meets these conditions given logical principles that he and we endorse:
+% \begin{prop}
+% 	\sitem[S] \label{stalnaker}
+% 	$(A ∨ (A → B)) → (A ∧ B)$.
+% \end{prop}
+% Note first that if $→$ obeys MP and And-to-If, is equational for $\prob$, and $0 < \prob(A ∧ B) < \prob(A) < 1$, then both the antecedent of \ref{stalnaker}, and the conjunction of antecedent and consequent, must have intermediate probability.  For the antecedent is equivalent to the negation of the conjunction $¬(¬A ∧ ¬(A→B))$, whose conjuncts are probabilistically independent, so $\prob(A ∨ A→B)$ = $1 - \prob(¬A)(1 - \prob(A→B))$ = $1 - \prob(¬A)(1 - \prob(B|A))$ by the Equationality of $→$; this must be strictly between 0 an 1 since both $\prob(A)$ and $\prob(B|A)$ are.  Meanwhile, since the consequent entails the antecedent, the conjunction of the antecedent and consequent is logically equivalent to the consequent $A ∧ B$, and $\prob(A ∧ B)$ is strictly between 0 and 1 by hypothesis.
+%
+%
+%
+% Next we need to understand why \ref{stalnaker} logically entails its own antecedent.  Let's first think through how things go on our closeness-theoretic analysis.  Suppose for reductio that \ref{stalnaker} is true with a false antecedent.  For the antecedent to be false, the actual world must be a not-$A$ world, and also there must be an accessible $A$-world, and the closest accessible $A$-world---call it $w$---must be a not-$B$ world. Since this entails that there is an accessible world where the antecedent is true, \ref{stalnaker} can only be true in these circumstances if the closest world where $A ∨ (A → B)$ is true---call it $w'$---is an $A$-and-$B$ world. But $w'$ cannot be closer than $w$ since $w$ is the closest $A$-world; it cannot be further than $w$ since then $w$ and not it would be the closest $A ∨ (A → B)$ world; and it cannot be identical to $w$ since $B$ is false at $w$.  But since closeness is a total ordering that rules out all of the possibilities.
+%
+% % since the antecedent is logically weaker than $A$, $w'$ is either $w$, or a world that is closer than $w$. But the former case is incompatible with the truth of the conditional since $w$ is a not-$B$ world, while the latter case is similarly incompatible, since $w$ is the closest $A$-world.
+
+While the explanation just given relied on the closeness-theoretic analysis, we can also give an object language derivation from \ref{stalnaker} to its antecedent so long as we endorse VLAS (“Very Limited Antecedent Strengthening”), together with substitutivity (that logically equivalent sentences can be substituted salva veritate in conditionals).  For VLAS gives us \emph{If $A$ and (either $A$ or if $A$ then $B$), then $B$}, which is equivalent to \emph{if $A$ then $B$} given the substitution principle, which entails \emph{either $A$ or if $A$ then $B$} by disjunction introduction.  As we have already seen in chapter 1, VLAS is an extremely compelling principle, and we have already said why the denial of substitutivity seems a desparate move in this connection.  Moreover, as Bacon *** has shown, in the presence of CEM and a weak, almost undeniable principle concerning conditionals with contradictory consequent, VLAS is interderivable with several other compelling principles, namely CSO, WT (‘Cumulative Transitivity’), and---perhaps the most compelling of all---Cases.  
+
+***Add: put some numbers on $\prob(A)$ and $\prob(AB)$ that make for as high as possible a divergence between the probability of the conditional (i.e. of $AB$) and the conditional probability.  
+*** Good numbers: suppose $A$ and $B$ are independent with chance $1/10$.  Then $AB$ and hence the Stalnaker condiitonal has chance $1/100$, but assuming that the Equation holds for $A$ and $B$, the antecedent has chance $19/100$ so the relevant conditional probability is $1/19$.  
+
+
+It's also helpful to see that even in the case of conditionals that do not logically entail their antecedents, there can arise a tension between the Equation and certain very intuitive patterns of reasoning using conditionals, which principles such as VLAS can be seen as codifying.  Suppose that in fact the following three things are the case: (a) I will win the lottery today; (b) I won't have dinner today; (c) If I were not to win the lottery today, I (still) wouldn't have dinner today.  Conditional on this being the case, how likely is it that if any of (a)--(c) were false, (b) would be false and (a) true?  It's natural to think that the answer is that it's far from being very likely.  (After all, assuming that this is the case, it would also have to be true that if one of (a)--(c) were false, I would still have won the lottery.  ***)  But in that case, it must also be not so likely, conditional on A--C, that if any of (a)--(c) were false, (b) would be false.  For the following is licensed by VLAS and substitutivity:
+
+If one of A-C were false, I'd have dinner and not win the lottery
+So if one of A-C were false and I didn't win the lottery, I would have had dinner and not won the lottery
+So, if I didn't win the lottery, I would have had dinner
+
+which contradicts C.  But if we reasoned according to the Equation, we would have to say that it's very likely that if one of (a)--(c) were false, you would be having dinner and still winning the lottery.  For given the Equation, the following conditional
+\begin{prop}
+	\nitem \label{veryhard}
+	If either I had dinner tonight, or I didn't win the lottery today, or I would have dinner tonight if I didn't win the lottery today, then I would have dinner tonight.  
+\end{prop}
+Assuming there's a high chance right now that you'll have dinner tonight, the conditional chance of the consequent of \ref{veryhard} on the antecedent is high.  For the \ref{chanceq} to be true in this case, \ref{veryhard} must be probabilistically independent of its antecedent.  Now let's think about what the chances are like conditional on the antecedent being false: i.e.\ on it's being the case that I do win the lottery today, don't have dinner tonight, and still wouldn't have had dinner if I hadn't won the lottery today.  It really does seem quite bizarre to suppose that \ref{veryhard} still has the same high chance conditional on this being the case.  Thinking in terms of the closeness analysis: for \ref{veryhard} to be true with a false antecedent, at least one world where I have dinner and win the lottery---namely, the closest world where the antecedent is true---would have to be closer than the closest world where I don't win the lottery (which is a world where I don't have dinner).  But how could that be so very likely?  In a non-similarity based setting like ours, the natural to way to think of things is that, both unconditionally and conditionally on the falsehood of the antecedent, it's very probable (in view of the low chance of winning) that the first accessible world where I don't win the lottery is simply the first accessible world other than the actual world---i.e. that if things had been different in any way I would not have won the lottery---but if that's how it is, then there aren't any intermediate dinner worlds between that world and the actual world.  But no matter how one were thinking of closeness, the required probability claim is very mysterious.  
+
+
+
+%
+\footnote(Why bother with the first disjunct?  Without it, the conditional would entail its antecedent given RIE.)
+
+
+
+\begin{itemize}
+	\item
+	Andrew proposes keeping the Equation by giving up CSO (and also VLAS, WT, Cases…)
+	\item
+	We think this is a great cost, as we said back in chapter 1.  
+	\item
+	And paying the cost strikes us as especially excessive in the light of the fact that conjunct indepednence, which is the real driving principle, will still need to be qualified in any case.  
+	\item
+	Andrew's second construction could be seen as providing something of a response to that point, since it shows how the work of EVIDENTIAL CONJUNCT INDEPENDENCE could instead be done by having a multitude of unrelated selection functions (different ones for different people at different times…).  
+	\item
+	But this does not give a way of recovering Kaufmann-style credences for conditionals on constrained interpretations, which seems bad.  
+	\item
+	This point also apply to Morgenbesser.  This construction only spits out at most one → that is equational for any given probability function.  If → is equational for $\prob$, and $→^*$ comes from $→$ by ‘constraining’ on some nontrivial partition, then $→^*$ is not equational for $\prob$.  (If it's a binary partition $\set{P,\negate{P}}$, $A→^*B$ is $P ∧ ((A∧P)→B) ∨ (¬P ∧ (A∧¬P)→B)$). 
+\end{itemize}
+
+
+\section{Dynamic triviality results} \label{sect:triviality}
+***MOVE TO LATER.  MAYBE EVEN MUCH LATER?
+At least in the case of indicative conditionals, many readers will be nervous about the kinds of credence-theoretic judgments on which we have been relying in arguing for CEM and against similarity-theoretic accounts of closeness, at least when combined with the view that such conditionals express truth-evaluable propositions. The best-known worry here stems from certain “triviality theorems” due to \cite{LewisPCCP}.  kWe can state Lewis's central result as follows:
+\begin{theorem}
+	If $→$ is equational for $X$ in $\prob$ and $X$ is closed under truth functional operators, then $→$ is not equational for any other probability function derived from $\prob$ by conditionalisation on some member of $X$, except for “trivial” probability functions that assign 1 and 0 to every proposition in $X$. 
+\end{theorem}
+\begin{proof}
+	Assume for \emph{reductio} that $→$ is equational for $X$ in both $\prob$ and $\prob_C$, where $\prob_C$ is distinct from $\prob$, non-trivial, and derived from $\prob$ by conditionalisation on some proposition $C∈X$.  Note that for these conditions to be met $\prob(C)$ must be strictly between 0 and 1, since if it is 0 the operation of conditionalisation is not defined, while if it is 1, $\prob_C$ is not distinct from $\prob$. Let $D$ be some proposition in $X$ such that $\prob_C(D)$ is neither 0 nor 1: there must be some such proposition by the assumption that $\prob_C$ is nontrivial in $X$.  Let $E$ be the disjunction of $D$ with the negation of $C$: $E∈X$ since $X$ is closed under truth functions.  Since $\prob_C(¬C) = 0$, $\prob_C(E) = \prob_C(D)$; thus $\prob_C(E)$ is not 0 or 1, and hence $\prob(E)$ cannot be 0 or 1 either. Now consider the proposition $E→¬C$. We have that $\prob(E→¬C|C) = \prob_C(E→¬C) = \prob_C(¬C|E)$ (since $→$ is equational for $X$ in $\prob_C$ and $\prob_C(E)>0$) = $\prob(¬C|EC) = 0$.  Hence $\prob((E→¬C)∧C) = 0$, so $\prob(E→¬C) ≤ \prob(¬C)$.  But on the other hand, since $→$ is equational for $X$ in $\prob$ and $\prob(E)>0$, $\prob(E→¬C)$ = $\prob(¬C|E)$ = $\prob(¬C)/\prob(E)$ (since $¬C$ entails $E$), which is greater than $\prob(¬C)$ since $\prob(E)<1$: contradiction.
+%	So $\prob(¬C) = \prob(E)\prob(¬C|E)$ (since $E$ logically entails $¬C$) = $\prob(E)\prob(E→¬C)$ (since $→$ is equational for $X$ in $\prob$)= $\prob(E)(\prob(E→¬C|C)\prob(C) + \prob(E→¬C|¬C)\prob(¬C)) = \prob(E)(0 + \prob(E→¬C|¬C)\prob(¬C))$. But then $\prob(E)\prob(E→¬C|¬C)$ must be 1, which is impossible given that as we established earlier, $\prob(E)<1$.  
+\end{proof}
+
+
+Lewis's result will pose a challenge to anyone who thinks that there is a particular interpretation of the conditional as expressing a binary operator $→$ that bears the CCCP-relation to every reasonable credence function. For given the result, this claim commits one to the view that there are no two nontrivial reasonable credence functions both of which obey the probability axioms, such that one of them can be derived from the other by conditionalisation. This is inconsistent with the classical Bayesian position according to which reasonable people's credences always obey the probability axioms and evolve by conditionalisation.
+
+Of course, as we have already observed, this classical Bayesian position is controversial in many ways. The claim that credences evolve by conditionalisation, a process that always involves becoming \emph{absolutely certain} of some propositions of which one was previously not absolutely certain, is particularly tendentious, given that without a Cartesian philosophy of mind it seems hard to identify a sufficiently rich range of candidates to be the propositions deserving credence 1.  Starting with \citet{JeffreySILP}, many authors have wanted to allow for the possibility that one's credences might evolve reasonably without any change in the set of propositions to which one assigns credence 1.  But further generalisations of the theorem due to Lewis, Hajek and Hall (\textbf{cite}) suggest that worries about strict conditionalisation are not really to the point. One important generalisation is the ‘orthogonality’ result proved in Hall ???: if two nontrivial probability functions $\prob$ and $\prob'$ are both CCCP-related to single binary operator $→$, they must be “orthogonal” in the sense that for some proposition $A$, $\prob(A)=1$ and $\prob'(A)=0$. If one wanted to maintain that credences should evolve in such a way as to stay CCCP-related to a single binary operator, one would thus have to not only \emph{agree} with proponents of strict conditionalisation that rational changes of credence always involve coming to have credence 1 in some proposition in which one previously had credence less than 1, but maintain, even more surprisingly, that such changes always involve coming to have credence 1 in some proposition in which one previously had credence 0. This kind of ban on moderate revisions of one's credential state is hard to make palatable.
+
+\begin{itemize}
+\item
+  Lewis's result is also problematic for those who merely think that
+  credences ought to \emph{approximately} satisfy the probability
+  axioms, or that the relevant operator $→$ is one that
+  \emph{approximately} obeys the Equation\ldots{}
+\end{itemize}
+
+Since Lewis's result is just about the space of probability functions to which a particular binary operator bears the CCCP-relation, it does not turn on a credence-theoretic gloss on the relevant notion of probability. The result is thus, for example, also problematic for those who think that there is a particular interpretation of the conditional as expressing a binary operator → with the property that for any time $t$, the chance at $t$ of $A→B$ equals the conditional chance at $t$ of $B$ on $A$. For it is plausible that chances obey the probability axioms, and that the chance function at a later time $t'$ is always equal to the result of conditionalising the chance function at an earlier time $t$ on the complete truth about history between $t$ and $t'$ (at least in cases where that complete truth had a nonzero chance of obtaining at $t$).%
+\footnote{Note on determinism-friendly notions of chance\ldots{}}
+
+Lewis's result does not, however, pose any particular problem for our highly contextualist approach to both indicative and counterfactual conditionals. 
+
+
+(It's worth noting that there are several other expressions whose context-sensitivity tends to go hand in hand with that of the accessibility parameter for indicative conditionals: this includes the epistemic uses of ‘might’, ‘must’, ‘possible’, ‘have to’, ‘probably’, ‘likely’, and so on. These expressions also enter into generalisations that are at least as tempting as the Credence Equation. For example:
+\begin{prop}
+	\item
+	Conditional on the proposition that is probable that P, you should have high credence that P.
+	\item
+	Conditional on the proposition that it might be the case that P, you should have positive credence that P.
+\end{prop}
+But there are results similar in structure to Lewis's result (Hawthorne and Russell 20??) that threaten to reduce these principles to absurdity on any interpretation that assigns a single operator to ‘it is probable that’ or ‘it might be the case that’. Here again, we can give the principles a much better run for their money by appealing to the bindable context-sensitivity of ‘probable’, ‘might’, etc.)
+
+\section{van Fraassen to the rescue}
+But first, we would like to show how it is possible to maintain restricted but still very powerful versions of the Equations---principles that can explain and systematise the various case-by-case judgments about credences and chances that we have appealed to---within a CSO-friendly logical framework.
+
+Fortunately, the literature has provided us with what we need, in the form of a paper that Bas van Fraassen published in 1975. Our picture of how one ought to assign credences to hypotheses about the closeness ordering is inspired by one of the constructions that plays a starring role in that paper. To get something interesting out of this construction, we will need to suppose that we can somehow make sense of a contrast between “categorical” and “hypothetical” propositions, in such a way that typical sentences not involving conditionals express categorical propositions, and the truth values of hypothetical propositions do not supervene on the truth values of categorical propositions.  
+
+%(This is going to be important. Van Fraassen's results provide a way of vindicate the restriction of the Equations to conditionals with categorical antecedents; this won't provide much of a vindication of our judgments about the chances and credences of ordinary conditionals unless such conditionals typically have categorical antecedents.
+
+Suppose further that we can make sense of a countable sequence of operators $O_0, O_1, O_2…$ defined on categorical propositions, such that $O_0$ is the truth operator---it maps each categorical proposition to itself---and for $i>0$, $O_i$ is an operator commuting with negation, conjunction, and disjunction (finite and infinite), mapping all categorical propositions other than logical necessities onto hypothetical propositions.  This sequence of operators generates a sequence of \emph{categorical profiles} (maximally specific categorical propositions), which we will call the Sequence.  The $i$th categorical profile in the Sequence is the conjunction of all the categorical propositions $p$ such that $O_ip$ is true.  (Thus the 0th categorical profile in the Sequence is the conjunction of all true categorical propositions.)  Facts about the Sequence are guaranteed to relate in a certain distinctive way to facts about the closeness relation among possible worlds: necessarily, for any cateogorical propositions $A$ and $B$, such that $O_i(A ∧ B)$ and for no $j<i$ is it the case that $O_j(A ∧ ¬B)$, some $A ∧ B$-world is closer than any $A ∧ ¬B$ world.  The key further thing we need to assume is that rational prior credence functions and possible ur-chance functions treat propositions about different positions in the Sequence as probabilistically independent---that is, they have the ‘Sequence Independence’ property defined as follows:
+\begin{prop}
+	\litem[Sequence Independence]
+	$\prob$ is sequence-independent iff for any disjoint sets of numbers $X$ and $Y$ and propositions $A$ and $B$ such that $A$ is logically equivalent to a (finite or infinite) Boolean combination of propositions of the form $O_iC$ where $C$ is categorical and $i∈X$, and $B$ is logically equivalent to a Boolean combination of propositions of the form $O_iC$ where $C$ is categorical and $i∈X$, then $\prob(A∧B) = \prob(A)\prob(B)$.
+\end{prop}
+In addition, we want to require rational priors and possible ur-chance functions to treat propositions about different elements of the Sequence in exactly the same way.  That is to say, they should have the property of \emph{shift-invariance}, defined as follows:
+\begin{prop}
+	\litem[Shift-Invariance]
+	$\prob$ is shift-invariant iff for any proposition $A$ that is logically equivalent to a Boolean combination of propositions of the form $O_iC$ (for categorical $C$), $\prob(A) = \prob(TA)$, where $T$ is the “shift” function on such propositions, defined such that $T(O_iC) = O_{i+1}C$ and $T$ commutes with Boolean operations.  
+\end{prop}
+
+The following metaphysical just-so story can help get a grip on what this is saying.  
+
+The easiest way to get the picture on the table involves a somewhat colourful metaphysical just-so story. Given that not everything supervenes on the categorical, God's creative work wasn't over when he had decided on an assignment of truth values to categorical propositions.  He also needed to decide on a countably infinite Sequence of complete categorical profiles, headed by the actually instantiated categorical profile.  Truths about the composition of this Sequence are necessarily connected to certain truths about the closeness relation among worlds: necessarily, for any categorical propositions $A$ and $B$ if a profile entailing $A$-and-$B$ occurs earlier in the Sequence than any profile entailing $A$-and-not-$B$, then some $A$-and-$B$ world is closer than any $A$-and-not-$B$ world. %(Later on we will explain how this can be expanded into a complete account of closeness in terms of the composition of the list.)  
+The key to the story is to suppose that God decided which categorical profile to render true by using some random process---he rolled some dice, say---and He filled in the rest of the Sequence using exactly the same 
+
+ is that in advance of relevant evidence, we should think about questions about the composition of the Sequence as follows: 
+\begin{prop}
+	\ritem \label{truthrequirement}
+	We should be certain that the categorical profile in position 0 of the Sequence entails all and only the true categorical propositions.
+	\ritem \label{independencerequirement}
+	Reasonable priors regard questions about different positions in the Sequence as completely independent of each other: if $A$ is entirely about positions in set $X⊆\mathbb{N}$ and $B$ is entirely about positions in set $Y$ which does not overlap $X$, then $\prior(AB) = \prior(A)\prior(B)$. 
+	\ritem \label{invariancerequirement}
+	Our credences about the Sequence should be invariant under shifts of positions in the Sequence.  To be precise: define a function $T$ from propositions to propositions by setting $T$(\emph{there is a $P$-profile in position $n$ of the sequence}) = \emph{there is a $P$-profile in position $n+1$ of the Sequence}, and requiring that $T$ commute with all Boolean operations (finite and infinite).  We then require that for any proposition $P$ about the Sequence, and any reasonable prior credence function $\prior$, $\prior(P) = \prior(T(P))$.  	
+\end{prop}
+For now, we will not into the question what deeper explanation, if any, might be given for the claim that possible ur-priors and rational prior probability functions treat questions about the composition of the Sequence in this distinctive way.  (We will return to those foundational questions in the concluding chapter.)  For now, the important thing is to see how these claims get us results in the vicinity of \ref{conjind} and \ref{priorind}. 
+
+
+When $A$ and $B$ are categorical propositions, let $A⇒B$ be the proposition \emph{some $A$-and-$B$ profile occurs earlier in the Sequence than any $A$-and-not-$B$ profile}.  A key observation about this operation is that for any categorical $A$,$B$,$C$, $¬A ∧ ((A∧B)⇒C)$ is logically equivalent to $¬A ∧ T((A∧B)⇒C)$.  $(A∧B)⇒C$ says that the first $A$-and-$B$ profile in the Sequence is a $C$-profile, while $T((A∧B)→C)$ says that the first $A$-and-$B$ sequence at some position in the Sequence other than the first position (position 0 is a $C$-profile: these claims are equivalent given that the first element in the Sequence is a $¬A$-profile.  Thus for any probability function $\prob$ satisfying \ref{independencerequirement} and \ref{invariancerequirement}, and any categorical $A,B,C$,
+\begin{align*}
+\prob(¬A ∧ ((A∧B)⇒C)) &= \prob(¬A ∧ T((A∧B)⇒C)) \\	
+	&= \prob(¬A)\prob(T((A∧B)⇒C)) &&\text{by condition \ref{independencerequirement}} \\
+	&= \prob(¬A)\prob((A∧B)⇒C) &&\text{by condition \ref{invariancerequirement}}
+\end{align*}
+Thus if $\prob(¬A)$ is positive, $\prob((A∧B)⇒C) = \prob((A∧B)⇒C|¬A)$, and hence by lemma ***, $\prob((A∧B)⇒C) = \prob((A∧B)⇒C|A)$.  As a special case of this, we can substitute $A∧B$ for $A$ and some tautology for $B$ to get $\prob((A∧B)⇒C) = \prob((A∧B)⇒C|A∧B)$.  But $(A∧B) ∧ ((A∧B)→C)$ is logically equivalent to $A∧B∧C$, so $\prob((A∧B)⇒C|A∧B) = \prob(C|A∧B)$.  Putting this together, we have $\prob((A∧B)⇒C|A) = \prob(C|A∧B)$.  
+%But $→$ has both the MP property and the And-to-if property: if $A$ is true, then the first profile in the Sequence is the first $A$-profile in the sequence, so $B$ is true at the first $A$-profile in the sequence iff $B$ is true.  So we can appeal to lemma *** to conclude that when $\prob(A∧B)>0$, $\prob((A∧B)→C|A) = \prob(C|A∧B)$: $→$ is conjunct-equational for the class of categorical propositions in $\prob$.  
+
+This is clearly reminiscent of the Conjunct Equations; but what exactly does it have to do with the probabilities of conditionals, or of the closeness-theoretic-facts in terms of which we analyse them?  According to our Bridge Principle, $A⇒B$ entails that the closest $A$-world is a $B$-world; so we can conclude that if $\prob$ satisfies \ref{independencerequirement} and \ref{invariancerequirement} and $\prob(A∧B)>0$, $\prob$(the closest $A$-and-$B$ world is a $C$-world|$A$) ≥ $\prob(C|A∧B)$.  By the same, $\prob$(the closest $A$-and-$B$ world is a not-$C$ world|$A$) ≥ $\prob(¬C|A∧B)$.  Given that the proposition that the closest $A$-and-$B$ world is a not-$C$ world is inconsistent with the proposition that the closest $A$-and-$B$ world is a $C$-world and that $\prob(C|A∧B)+\prob(¬C|A∧B)=1$, it follows that $\prob$(the closest $A$-and-$B$ world is a $C$-world|$A$) = $\prob(C|A∧B)$.  
+
+%
+%
+% One might be puzzled by the fact that this reasoning would have gone through just as well if we had defined $A→B$ just to mean \emph{the first $A$-profile in the Sequence is a $B$-profile}, counting $A→B$ as false in the case where there are no $A$-profiles anywhere in the Sequence.  This puzzlement can be resolved by noting that if $\prob$ obeys conditions \ref{truthrequirement}--\ref{invariancerequirement}, then for any categorical $A$ such that $\prob(A)>0$, $\prob$(No $A$-profile occurs in the Sequence) = 0.  For by condition \ref{invariancerequirement}, $\prob$(the $n$th profile in the Sequence is an $A$-profile) = $\prob(A)$, and by condition \ref{independencerequiremet}, the question whether the $n$th profile in the Sequence is an $A$-profile is probabilistically independent of the question which other profiles in the Sequence are $A$-profiles.  Thus the probability that of the proposition that none of the first $n$ profiles in the Sequences is an $A$-profile is $(1 - \prob(A))^n$.  Since the proposition that there are no $A$-profiles anywhere in the Sequence entails all these propositions, its probability must be no greater than $(1 - \prob(A))^n$ for every $n$, and hence identical to $0$ so long as $\prob(A)$ is positive.%
+% \footnote{Note that this reasoning appeals only to the uncontroversial principle that when $P$ entails $Q$ $\prob(P)≤\prob(Q)$, not to the controversial principle of countable additivity.  There is another claim in the vicinity that does require countable additivity, namely that if $\prob(A)=0$, $\prob$(there is an $A$-profile in the Sequence) = 0 (since the proposition that there is an $A$-profile in the Sequence is equivalent to the disjunction of all the countably many probability-0 propositions \emph{there is an $A$-profile at position $n$ in the Sequence}).  Given countable additivity, then, we are forced to say that if $\prob(A)=0$ then $\prob(A→C) = 1$ for every categorical $C$.  This might not be such a welcome result if the goal is to base a theory of conditionals on the behaviour of $→$: for example, given two points $x$ and $y$ on a dartboard, we might want to say that the counterfactual \emph{if the dart had hit $x$ or $y$, it would have hit $x$}, interpreted so that accessibility is a matter of match of history up to $t$, has chance 1/2 at $t$.  But countable additivity is independently very controversial (see \cite{ArntzeniusElgaHawthorneBIDB} and Dorr and Arntzenius ***), and the pressure to say discriminating things about conditionals with probability-0 antecedents is anyhow not all that great.***}
+%
+% (In thinking about what it means for a proposition to have chance 0 or 1, or to be such that all rational priors assign it probability 0 or 1, we should beware of equating this status with some kind of “epistemic impossibility” or “epistemic necessity”, since there is good reason to take seriously the hypothesis that some true propositions---e.g.~about the precise landing point of a dart---deserve prior probability of 0 simply because of their extreme specificity.)
+  
+Thus, given the Bridge Principle, the claim that possible ur-chances and reasonable priors satisfy \ref{independencerequirement} and \ref{invariancerequirement} entails that \ref{urconjind} and \ref{priorind} are true when restricted to categorical propositions.  
+
+What use is this?  Two further assumptions: (a) history propositions are categorical.  (b) evidence propositions are categorical.  
+
+* How it works if we want to think about counterfactuals and indicatives together.  
+	- One option: think of the ur-chances as got from rational priors by conditionalising on the laws (which are categorical).  On this picture we automatically get the restriction of Ur-Chance Conjunct Independence to the categorical if we have it for the priors.  
+	- A worry: what about contingent truths that a priori deserve credence 1?  
+
+\begin{itemize}
+	\item
+  remember that the guise business will eventually make this more
+  complicated\ldots{}
+\item
+  An alternative construction: the Epistemic Sequence is a sequence of
+  Metaphysical Sequences, each of which comes from an epistemically
+  possible ur-chance die roll gizmo\ldots{}
+\end{itemize}
+
+We have seen how---at least if we set aside any foundational worries about what it is for the Sequence to be a certain way, or about why it is reasonable to reason about the Sequence in the way codified by \ref{independencerequirement} and \ref{invariancerequirement}---we can secure the restriction of \ref{priorind} to categorical propositions.  This is worth quite a lot so long as we can sustain a reasonably expansive conception of the domain of the categorical, on which ***.  
+
+One might worry here that the central role of causal and dispositional concepts in our ordinary conceptual repertoire will drain Categorical Conjunct Independence of its interest.  For example, one might think that the proposition that there is a table in the room fails to be categorical on the grounds that to be a table is (in part) to be such that if objects such as cups and plates were placed on top of one under normal circumstances, they would stay in place rather than sliding to the floor, shooting upwards, etc.  But in evaluating such claims, it is important to bear in mind one of the lessons of the literature on dispositions, which is that disposition ascriptions should not be straightforwardly be analysed in terms of counterfactuals.  We think it's quite plausible to think that dispositional properties are categorical: for example, two coins in my pocket that are sufficiently close in all of their physical properties will have the same dispositional properties, including being disposed to the same extent to land heads if tossed, even if (as a matter of fact) one of them would land Heads if it were tossed right now and the other would land Tails.  ***
+
+*** Why it's OK to think of evidence as categorical within the scope of the Bayesian idealisation.  
+
+Nevertheless, it's worth seeing how the Sequence-theoretic picture of closeness can be extended so as to have something to say about how non-categorical propositions figure in the closeness ordering.  By extending the story in this way we will be able see to what extent Equation-style reasoning can be applied to conditionals which embed other conditionals, and understand what should take its place when it does not apply.  ***
+
+The non-categorical propositions we are centrally interested in are those that concern the composition of the Sequence (other than its first element).  We can think of the closeness ordering of worlds as determining a Metasequence, or sequence of Sequences.  The first element in the Metasequence is the Sequence as it actually is; the second element is the way the Sequence would have been if it had not been as it actually is; the third element is the way that it would have been if it had not been either of those two ways; and so on.  
+
+The brilliance of van Fraassen's paper comes into play at this point.  His thought is that the Metasequence is simply derived from the Sequence by successively pruning away the first element.  That is: the first element of the Metasequence is the Sequence; the second element is the tail of the Sequence; the third element is the tail of the tail of the Sequence, and so on.  
+
+This gives us a Sequence-theoretic sufficient condition for any conditional with a Sequence-theoretic antecedent and consequent.  When $A$ and $B$ are Sequence-theoretic, if the first truncation of the Sequence in which $A$ is true is one in which $B$ is true, then the closest $A$-world is a $B$-world.  
+
+One thing we can immediately note about this proposal is that it lets us extend Conjunct-independence to all conditionals with categorical antecedents whose consequents are Sequence-theoretic (but not necessarily categorical).  Where $A$ and $B$ are categorical and $C$ is Sequence-theoretic, $¬A ∧ ((A∧B)⇒C)$ is logically equivalent to $¬A ∧ T((A∧B)⇒C)$.  So we can run the proof above to conclude that $\prob((A∧B)⇒C|A) = \prob((A∧B)⇒C) = \prob((A∧B)⇒C|A∧B) = \prob(C|A∧B)$.  
+
+Even better, we can slightly relax the condition that $A$ and $B$ are categorical.  When $P$ is a Sequence-theoretic proposition, say that $P$ is “antecedent-safe” just in case for any sequences $S$ and $T$ such that $P$ is true in $S[n]$ and $T[n]$ and $S$ and $T$ agree at all positions earlier than $n$, for any $m<n$, $P$ is true in $S[m]$ iff $P$ is true at $T[m]$.  Intuitively: once we know that $P$ holds in the the $n$th truncation of a sequence, the question which earlier truncations of the sequence $P$ holds in is settled just by what the first $n$ positions of the sequence are like.  
+
+
+
+
+
+
+
+\begin{prop}
+\item
+  vF's way of extending
+\item
+  how this generalises the Equation to conditional consequents, and even
+  some not-too-complex antecedents involving conditionals.
+
+  \begin{itemize}
+    \item
+    Define a ‘safe’ proposition $P$ as one such that if, given a
+    certain sequence, $P$ holds at the $k$th world but not at the
+    $j$th world, where $k>j$, then every other sequence that agrees
+    with that sequence up to $k$ and is such that $P$ holds at the
+    $k$th world is one where it doesn't hold at the $j$th world.\\
+  \item
+    Show that when $P$ is safe, the conditional probability that $Q$
+    is true at the $k$th world given that $P$ is true at the $k$th
+    world equals the conditional probability that $Q$ is true at the
+    $k$th world given that $P$ is true at the $k$th world and not
+    at any earlier world. So long as the probability that $P$ is true
+    at some world is 1, it follows that the conditional probability that
+    $Q$ is true given that $P$ is true equals the unconditional
+    probability that $Q$ is true at the first $P$-world.
+  \item
+    And more generally: when $P$ and $Q$ are both safe, the
+    conditional probability that $R$ is true at world $k$ given that
+    $P$ and $Q$ are equals the conditional probability that $R$ is
+    true at world $k$ given that $P$-and-$Q$ is true at world
+    $k$, $P$-and-$Q$ is not true at any world $<k$, and $P$ is
+    not true (i.e.~not true at world 0). So long as the probability that
+    $P$-and-$Q$ is true at some world is 1, it follows that the
+    conditional probability of $R$ given $P$-and-$Q$ is equal to
+    the conditional probability that $R$ is true at the first
+    $P$-and-$Q$ world given not-$P$, and hence also (given the
+    previous result) to the conditional probability that $R$ is true
+    at the first $P$-and-$Q$ world given $P$.
+  \item
+    Show too that:
+
+    \begin{itemize}
+        \item
+      everything categorical is safe (obviously)
+    \item
+      every conditional with a safe antecedent and consequent is safe.
+      (Suppose that $P→Q$ is true at world $k$ but not at world
+      $j$. Then it must be that for some $n$ with $j≤n<k$, world
+      $n$ is a $P$-and-not-$Q$ world, and world $m$ is a
+      not-$P$ world for every $j≤m<n$. But all of this will still be
+      true no matter how we modify the sequence at position $n$ and
+      later.)
+    \item
+      every conjunction of safe propositions is safe (obviously).
+    \item
+      every proposition that, for some categorical question, says what
+      the answer to that question is at each of the first $n$ worlds
+      is safe. (Suppose that $P$ is like this, true at $k$ but not
+      at $j$. There are two possibilities: either the categorical
+      profile of worlds earlier than $k$ is already inconsistent with
+      $P$, or $P$ is consistent with this but inconsistent with the
+      categorical profiles of worlds $≥k$). In the former case, $P$
+      will still be false at $j$ no matter how we change things
+      $≥k$; in the latter case, the falsity of $P$ at $j$ follows
+      from its truth at $k$.)
+    \end{itemize}
+  \item
+    On the other hand:
+
+    \begin{itemize}
+        \item
+      The negation of a safe proposition need not be safe
+    \item
+      The disjunction of safe propositions need not be safe
+    \end{itemize}
+  \end{itemize}
+\item
+  It validates the surprising new logical inference rules “RIE”: If C,
+  D; If B or C, B; so if B (if C, D).\\
+\end{prop}
+
+\begin{itemize}
+\item
+  If P and Q, R; so if P (if P and Q, R). (And backwards. )
+\end{itemize}
+
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item
+  In the case of counterfactuals, this is defensible but not
+  particularly compelling. Suppose that as a matter of fact, if I had
+  tossed the coin twice, it would have come up Tails both times; but if
+  it had come up Heads the first time, it would have come up Heads the
+  second time. Does it follow that if I had tossed it and it came up
+  Tails both times, it would still have been the case that it would have
+  come up Heads the second time if it had come up Heads the first time?
+  The idea suggests a surprisingly fatalistic conception of the
+  counterfactuals in question.\\
+\item
+  If you don't like it, you can adapt the vF construction to no longer
+  yield it: instead of assigning a categorical profile to each natural
+  number, God makes a tree of categorical profiles by assigning a
+  categorical profile to each $n$-tuple of positive numbers. We make
+  this tree of categorical profiles into a tree of trees of categorical
+  profiles by assigning to each $n$-tuple $s$ the tree we get by
+  throwing all the elements that don't begin with $s$ and pruning
+  $s$ off the beginning of all the elements that do begin with
+  $s$.\\
+\item
+  But actually the vF rule has the great property that it makes ‘if A,
+  then if B, C’ logically equivalent to ‘if A and B, C’ when the
+  embedded conditional is given the natural constrained reading on which
+  ‘If A, then if B, C’ is tantamount to ‘If A, then if A and B, C’. This
+  is a nice and desirable feature! Let's tentatively endorse it. In
+  terms of closeness, it's equivalent to: if $w_1$ is closer than both $w_2$
+  and $w_3$, then at $w_1$ ($w_2$ is closer than $w_3$) iff $w_2$ is closer than $w_3$.
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Say something about indicatives that embed counterfactuals - idea that
+  counterfactuals get to count as honorary categoricals in this setting.
+\item
+  Talk about Andrew's CSO-denying way of getting the Equation in greater
+  generality.
+\item
+  Why it requires introspection, and strict conditionalisation,
+  and\ldots{}
+\item
+  Note: go back and revisit CSO discussion either here or in the
+  previous chapter, taking note of the quasi-validity type moves that
+  CSO-rejecters could appeal to to defeat the seeming evidence for
+  CSO.\\
+\item
+  ‘If he had been in England, he would have been in London, but if he
+  had been in the South of England, he would have been in Oxford’. And
+  the indicative version thereof. The CSO rejecter can say that the
+  indicative version is a bad speech, since it implies ‘He is not in
+  England’, thus violating the presupposition of nonvacuity; but this
+  does not explain the problem with the counterfactual version. The
+  counterfactual speech does however have the deficiency that,
+  plausibly, you couldn't know it. Is this an adequate account of its
+  badness?\\
+\item
+  More argument forms that look good but aren't valid according to CSO
+  rejecters:
+\item
+  ‘If A and B, C; if A and not B, C; so if A, C’. Not even quasi-valid.
+  (It may have some ‘preserving high credence’ status; but there is no
+  reason to think that this status is something we have trouble
+  distinguishing from validity proper.)
+
+  \begin{itemize}
+    \item
+    Consider quantified speeches to block knowledge-based explanations
+    of apparent goodness of inferences/badness of conjunctions. ‘At
+    least two of these 10 people would have been in London if they had
+    been in England\ldots{}’.
+  \end{itemize}
+\item
+  Other “triviality” results (Hajek): infinitely many worlds; Jeffrey
+  conditionalisation\ldots{}
+\item
+  Think more about things we could say about the importance of
+  counterfactuals, and whether these things can help our case for
+  (counterfactual) CSO. Use in deliberation - seems like obviously good
+  deliberation. But there are moves that can be made by anti-CSO people
+  in this context, where counterfactual CSO has some positive
+  credence-preserving status (figure out exactly what this would be?).
+\item
+  Cian: look again at Andrew's paper to see how things break down if you
+  imagine someone with super strong evidence that leaves only 4
+  epistemically possible worlds.
+\end{itemize}
+
+\begin{itemize}
+	\item 
+	This chapter is going to end with a discussion of why the limitations our approach requires aren't tragic.  One important point to consider is to what extent considerations of probabilistic independence might help when we are dealing with the unsafe.  
+	
+	Example: two very far apart coins, one of which has a very high chance of being tossed, the other of which only has a tiny chance of being tossed.  Sentence: If one of the two had been such that it would have landed Heads if tossed, then both of them would have been.  Given independence, chance of consequent is 1/4 and chance of antecedent is 3/4, so Equation style reasoning says chance of 1/3.  But for the vF version of us, it looks like chance will be near 1/4, since conditional on falsity of antecedent, closest world where both are tossed is probably the same as the closest world where the hard-to-toss one is tossed.  
+\end{itemize}
+
+\section{Context-dependence (Kaufmann,
+McGee\ldots{})}\label{context-dependence-kaufmann-mcgee}
+
+\begin{itemize}
+\item
+  somewhere: discuss the derivation of And-to-if from CEM, and praise
+  this as demonstrating the virtues of simplicity.
+\end{itemize}
+
+--- notes from beginning of chapter
+
+\begin{enumerate}
+\item
+Explain how we deal with counterexamples to Adams: McGee, Kaufmann, \ldots{}
+\item
+Why it's OK to only have the restricted version: conditionals in
+antecedents are normally constrained.
+\item
+Why {[}instances of{]} CEM fall out of Adams thesis.\\
+\item
+Opponents to address in this chapter: 5.1 People who do without
+closeness altogether---von Fintel, Gillies. 5.1.1 SM has already
+demolished their arguments about Sobel sequences.\\
+5.2 Real Hajek --- falsity all over the place 5.3 Epistemological
+version of Hajek --- lack of knowledge blocks assertability 5.3.1 for
+counterfactuals, let everything be exactly as it is in the case of the
+future. 5.4 Kratzer's vision where ‘if’ clause directly restricts the
+attitude verb. 5.5 5.6 Andrew's stuff where you keep the full version
+of Adam's thesis
+\end{enumerate}
+
+\begin{itemize}
+\item
+  Matt Bird's thing about connections. If (if you had flipped it it
+  would have landed tails) then (if you had flipped it and bet on tails,
+  you would have won).
+\end{itemize}
+
+\end{document}

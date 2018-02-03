@@ -1,0 +1,904 @@
+\documentclass[If.tex]{subfiles}
+
+\begin{document} 
+
+\chapter{Accessibility}\label{chap:accessibility}
+\section{The context-sensitivity of conditionals} \label{sect:context}
+Even holding fixed which propositions are the antecedent and consequent, there are different propositions that could be expressed by uttering a conditional on different occasions. For one thing, it is well known that the difference between ‘indicative morphology’ and ‘counterfactual morphology’ is semantically significant, as exemplified by Ernest Adams's famous minimal pair:
+\begin{prop}
+	\nitem	
+	\begin{prop}
+		\aitem \label{indoswald}
+			If Oswald didn't kill Kennedy, someone else did
+		\aitem \label{cfoswald}
+			If Oswald hadn't killed Kennedy, someone else would have
+	\end{prop}
+\end{prop}
+This difference seems to be driven by something about the pattern of tense markings that appear on the surface within the main and subordinate clauses; however, the way in which these morphological differences actually contribute to meaning is quite controversial. For the moment, we will take a capacity to sort “indicative” from “counterfactual” conditionals for granted, and we will try only to use examples whose classification is uncontroversial.
+
+For another thing, the proposition expressed by a conditional can vary even when the wording remains exactly the same. In the case of counterfactuals (i.e.~sentences syntactically like \ref{cfoswald}), this variability can be illustrated by an example of Quine's:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem \label{nukes}
+			If Caesar had fought in Korea, he would have used nuclear weapons
+		\aitem \label{catapults}
+			If Caesar had fought in Korea, he would have used catapults
+	\end{prop}
+\end{prop}
+Given an appropriate conversational background, it seems that one could speak the truth by uttering each of these sentences, though in no normal background could one speak the truth by uttering their conjunction. Similarly, each of \ref{jumpedkilled} and \ref{jumpednet} seems like something one could use to assert a truth, although their conjunction seems absurd:
+\begin{prop}
+	\nitem	
+	\begin{prop}
+		\aitem \label{jumpedkilled}
+		If I had jumped out the window right now, I would have been killed
+		\aitem \label{jumpednet}
+		If I had jumped out the window right now, I would have done so only because there was a soft landing laid out for me
+	\end{prop}
+\end{prop}
+In the case of indicatives (i.e.~sentences syntactically like \ref{indoswald}), the case for context-sensitivity is more controversial, but still strong. The main observations here are due to \citet{GibbardTRTC}, although the following case is due to Bennett. The setting is one where there are two channels by which water can flow from an upper reservoir to a lower reservoir; each is closed off by a gate. Speaker A discovers that the east gate is closed and asserts
+\begin{prop}
+	\nitem \label{west}
+	If the water got to the bottom, it got there via the west channel and not the east channel
+\end{prop}
+Speaker B discovers that the west gate is closed and asserts
+\begin{prop}
+	\nitem \label{east}
+	If the water got to the bottom, it got there via the east channel and not the west channel
+\end{prop}
+Intuitively, both speeches seem true; but the conjunction is extremely odd. It is thus very natural to explain the acceptability of \ref{west} and \ref{east} by appeal to context-dependence.
+
+Our view is that all of the differences we have just been talking about are to be explained by differences in what it takes for a world to be “accessible” in the sense relevant to the context. For example, in the context where \ref{nukes} seems true, accessibility requires match with respect to what kinds of military technology is in use at a given historical period, whereas in the context where \ref{catapults} seems true, accessibility requires match with respect to what kinds of military technology were actually available to particular people.%
+\footnote{Note that if, unbeknownst to us, there are no such things as nuclear weapons and catapults are still in wide use even now, the true-seeming utterances of \ref{nukes} are in fact false; similarly, if unbeknownst to us, Martians actually provided Caesar with nuclear weapons which he only didn't use because he had no need to resort to them, the true-seeming utterances of \ref{catapults} are in fact false.}
+ Similarly, in the context where \ref{jumpedkilled} seems true, accessibility requires match with respect to the laws of nature and the (approximate) course of history up until very shortly before the time of utterance, whereas in the context where \ref{jumpednet} seems true, the constraints on matching history are much weaker.%%
+\footnote{Explain and reference CD's paper.}
+ In the contexts where \ref{west} and \ref{east} seem true, meanwhile, accessibility typically involves something like compatibility with the knowledge of the speaker at the time of utterance, and the contextual variability is primarily due to variation in who is speaking and when.
+
+Even holding fixed who is speaking and when, we think there is plenty of room for further contextual variation in the interpretation of a indicative conditionals like \ref{west} and \ref{east}.  First, in some cases the knowledge state of other relevant individuals or groups may be relevant, rather than just the knowledge of the speaker.  Secondly, the epistemic relation that fixes accessibility may not always be knowledge---in some settings it may be something more demanding (e.g. being known for sure), while in others it may be laxer.   Thirdly, when questions are salient (or ‘under discussion’) in a conversation, they may serve to constrain accessibility, so that the worlds accessible from any given world are required to match that world with respect to the answers to those questions, in addition to being epistemically live.  (The phenomenon of constraint by questions under discussion also arises for counterfactuals.)  We will return later to all of these potential axes of contextual variation, and put them to work in explaining various data points.  
+
+Notice that according to these suggestions about what plays the role of accessibility in the natural interpretations of out example sentences, there is in each case at least one “accessible” world at which the antecedent of the conditional is true, and moreover the fact that there is such a world is something that the speaker is in a position to know. As we are thinking about things, this is characteristic of conditional utterances (both indicative and counterfactual): the intended interpretation almost always sets accessibility in such a way that it can be taken for granted that there are some accessible worlds in which the antecedent is true. Label this phenomenon ‘the presumption of non-vacuity’.  This presumption can explain why, for example, ‘If Oswald didn't kill Kennedy, Oswald did kill Kennedy’ is terrible to utter in pretty much any context.  We will investigate this presumption in detail in \autoref{sect:nonvacuity}, but throughout the discussion we shall be helping ourselves to the idea that this is one of the guiding constraints on conditional discourse.
+\begin{itemize} 
+	\item
+	or maybe go back to the lingo of ‘presupposition’ here
+	\item
+	be more explicit that ‘accessibility’ is a \emph{property} of worlds, not a \emph{set} of worlds 
+\end{itemize}
+
+\section{The difference between indicatives and counterfactuals} \label{sect:indcf}
+Given our framework, it is clear that the grammatical difference between indicative and counterfactual conditionals goes along with some systematic difference in the resolution of the context-sensitivity of ‘accessibility’. We propose that the key difference lies in a general constraint on indicatives which does not apply to counterfactuals, namely, that for an indicative conditional, \emph{accessibility must entail epistemic possibility}. Roughly, to say that a world is epistemically possible is to say that it is a live candidate for being how things actually are, from the perspective of some contextually relevant individual or group. This explains why we are forced to use counterfactual morphology to get across the plausible thoughts we naturally would try to get across by uttering \ref{nukes} or \ref{catapults}. Given the presupposition of non-vacuity, these thoughts involve certain accessibility properties that is possessed by some worlds where Caesar fought in Korea.  It is very hard to get oneself into a mindset where such worlds are treated as “live”. (And it is harder still to get oneself into a mindset where there are “live” worlds in which Caesar was present in Korea and where there is no special sort of deception involved in the transmission of information about his activities.) Similarly, conditionals beginning with ‘If I didn't exist right now\ldots{}’ are generally much more intelligible than those beginning with ‘If I don't exist right now\ldots{}’: making sense of the latter requires entering into a most unusual sense of openness to nihilistic metaphysics.%
+\footnote{Cite and discuss von Fintel, ‘The presuppositions of subjunctive conditionals’; be neutral as regards which is the ‘default’. Flag that you could get it for one and then derive it for the other via ‘maximise presupposition’.}
+
+This characterisation of how accessibility works for indicative conditionals is, for us, intimately related to a certain natural account of epistemic modals: ‘It must be that Φ’; ‘It might be that Φ’; ‘It is possible that Φ’, etc. In orthodox fashion, we take ‘It must be that Φ’ to be true iff Φ is true at all accessible worlds, and ‘It might be that Φ’/‘It is possible that Φ’ to be true iff Φ is true in some accessible world. What it takes for a world to be accessible is a context sensitive matter: but the “epistemic” character of these modals consists in the fact that accessibility always has to entail epistemic liveness (from the standpoint of the contextually relevant individual or group---in simple cases, typically the speaker or a group containing the speaker). When one uses both epistemic modals and indicative conditionals, the default is for both to be interpreted using the same notion of accessibility. Thus, when this parameter of interpretation is held fixed, the proposition expressed by ‘It must be that Φ or~Ψ’ entails the one expressed by the indicative conditional ‘If not~Φ, then~Ψ’. Also, the propositions expressed by ‘It might be that~Φ’ and ‘If~Φ, then~Ψ’ jointly entail the proposition expressed by ‘It might be that~Ψ’.
+
+Given the presupposition of non-vacuity, an utterer of \ref{indoswald} (‘If Oswald didn't kill Kennedy, someone else did’) is taking for granted that there are accessible worlds in which Oswald didn't kill Kennedy, which on the liveness-theoretic gloss requires that its is a live epistemic possibility that he did not do so. One might think this a problematic feature of the view: after all, most of us know perfectly well that Oswald did kill Kennedy and yet are happy to utter \ref{indoswald}. There are a few different routes one might follow in responding to this objection. On a radical view, the proposition expressed by utterances of \ref{indoswald} by us knowledgeable folk is in fact vacuously true, but when we utter it we take for granted something we know to be false, either out of a kind of pretended epistemic modesty, or else a false belief that we don't really know who shot Kennedy. Similarly, the radical view will say that while the sentence ‘I might be dreaming’ is natural, utterances of it will express a false proposition that is treated as acceptable either because we are pretending that it is true, or because we falsely believe that it is true (since at the time of utterance we are taken in by the thought that we don't know whether we are dreaming). On a less error-theoretic view, the presupposition of nonvacuity introduced by \ref{indoswald} is indeed satisfied: in the relevant sense of accessibility, there is an accessible world in which Oswald didn't kill Kennedy. This could be reconciled with the thesis that accessibility for indicative conditionals requires liveness in a few different ways. One option is to appeal to a contextualism about the verb ‘know’: in the context invoked by \ref{indoswald}, ‘We don't know whether Oswald killed Kennedy’ expresses a truth, although it expresses a falsehood in many other contexts. Another option is to allow our notion of liveness to have a kind of context-sensitivity that does not always march in lock-step with ‘know’: for example, liveness could in some cases be a matter of consistency with some more attenuated body of knowledge, or liveness might be a matter of consistency with a body of propositions of which one has an especially secure kind of knowledge.
+
+Epistemic modals need not always be anchored to the facts about what is live at the time of speech. In a sentence like ‘It was possible that it had rained, since the ground seemed a bit damp’, the operative epistemic perspective is in the past: what we are saying, roughly, is that what the relevant people knew at the relevant past time was consistent with the proposition that it had rained earlier than that time. There is no suggestion that the speaker is ignorant or in any way open at the time of speech to the possibility that it had rained: what matters is just the epistemic standpoint of the salient person or group (or more abstract ‘perspective’) as of the target time.%
+\footnote{In some cases one needs to work with such notions as ‘the evidence that was available at the time’ even when there is no relevant person around to gather it: ** Add example about the early universe **}
+ ‘It was possible that it was raining’ and ‘It was possible that it was going to rain’ are similar. ‘Might have’ and ‘could have’ claims also have a reading that works like this: ‘It might have been raining’ can mean ‘It was possible that it was raining’, although it can also mean ‘It is possible that it has been raining’.%
+\footnote{In some other natural languages where the analogues of ‘might’ are normal tensed verbs, this ambiguity is lexically resolved. In English ‘have to’ works like this: we distinguish ‘It has to have been raining’ from ‘It had to be raining’.{]}}
+
+
+Given the intimate relation we posit between epistemic modals and indicative conditionals, we would thus expect that in some cases, the accessibility parameter of an indicative conditional is tied to an earlier epistemic perspective. This does indeed seem to be going on in examples like the following:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem \label{hadhad}
+		If Oswald hadn't killed Kennedy, someone else had 
+		\aitem \label{hadwould} 
+		If Oswald hadn't killed Kennedy, someone else would 
+		\aitem \label{didwould} 
+		If Oswald didn't kill Kennedy, someone else would %was going to succeed in doing so
+		\aitem \label{waswas} 
+		If Oswald wasn't killing Kennedy, someone else was
+		%If it wasn't Oswald killing Kennedy, it was someone else
+	\end{prop}
+\end{prop}
+Just like ‘It was raining’ and ‘Einstein was going to win a Nobel Prize’, these are sentences that could not be felicitously asserted out of the blue: some particular past time has to be salient, and the proposition asserted involves that time somehow or other. (The required salience could be achieved either by earlier discourse or by some nonlinguistic clues.) In the case of \ref{hadhad}--\ref{waswas}, the most natural reading is one on which one of the roles of this salient past time is that of providing the relevant epistemic perspective. None of these sentences commits the speaker to accepting ‘It \emph{is} possible that Oswald didn't kill Kennedy’, or to treating this as a live possibility: but they do seem to commit us to a claim about what \emph{was} epistemically possible at the time in question. Note that one natural use for sentences like \ref{hadhad}--\ref{waswas} is in indirect speech reports of present-tense speeches made at the relevant time, namely
+\begin{prop}
+	\sitem[\chisholm{hadhad}{'}] \label{hadhad'} 
+	If Oswald hasn't killed Kennedy, someone else has 
+	\sitem[\chisholm{hadwould}{'}] \label{hadwould'} 
+	If Oswald hasn't killed Kennedy, someone else will 
+	\sitem[\chisholm{didwould}{'}] \label{didwould'} 
+	If Oswald doesn't kill Kennedy, someone else will %is going to succeed in doing so 
+	\sitem[\chisholm{waswas}{'}] \label{waswas'} 
+	If Oswald isn't killing Kennedy, someone else is
+	%If it isn't Oswald killing Kennedy, it is someone else 
+\end{prop}
+On our account, the very proposition that would be asserted by \ref{hadhad'}--\ref{waswas'} can in fact later be asserted or reported by uttering \ref{hadhad}--\ref{waswas}.
+
+Although there are some syntactic similarities between the likes of \ref{hadhad}--\ref{waswas} and \ref{cfoswald} (‘If Oswald hadn't killed Kennedy, someone else would have’), our view is that there is a significant semantic gulf between them. On its natural interpretation, \ref{cfoswald} does not commit us to its being a live possibility that Oswald didn't kill Kennedy, either from our own perspective or from any other perspective---intuitively, its meaning feels altogether more “worldly” by comparison with the “perspectival” feel of \ref{hadhad}--\ref{waswas}. This is what we have been getting at in our use of the labels ‘indicative’ and ‘counterfactual’, roughly in line with the philosophical tradition. Note however that examples like \ref{hadhad}--\ref{waswas} are rather different from the paradigmatic examples of indicative conditional sentences, and would provide counterexamples to many generalisations that philosophers have been wont to make about indicative conditionals (e.g.~generalisations about how the probability or “assertability” of an indicative conditional relates to the corresponding conditional probability), or about the superficial linguistic form distinctive of indicatives and/or counterfactuals (for example, \ref{hadwould} shows that a ‘would’ in the main clause does not suffice for counterfactuality).
+
+Indeed, as we see it, there is no failsafe way to distinguish counterfactuals from indicatives on the basis of superficial syntax, since many conditional sentences admit of both kinds of interpretation. For example even though the dominant reading of \ref{cfoswald} is counterfactual, it does have a “past-perspective” indicative meaning, which comes to the fore when we imagine using \ref{cfoswald} in reporting a past utterance of the following somewhat unusual but perfectly intelligible sentence:
+\begin{prop}
+	\sitem[\chisholm{cfoswald}{'}]
+	If Oswald hasn't killed Kennedy, someone else will have 
+\end{prop}
+And once this epistemic interpretation has been noticed, one can imagine contexts in which it is the intended interpretation even outside indirect speech reports.
+
+There are, however, some conditionals for which a counterfactual meaning is grammatically required. The most prominent examples are ones in which the main verb in the subordinate clause takes a subjunctive form:
+\begin{prop}
+	\nitem 
+		If Gore were president, he would deal with this problem
+	\nitem 
+		If I were to resign tomorrow, I would be hired by Google the day after tomorrow.
+\end{prop}
+Putting certain present-tense verbs in the main clause also seems to close off the possibility of indicative readings:
+\begin{prop}
+	\nitem 
+		If I resigned tomorrow, I reckon I would be hired by Google the day after tomorrow.
+	\nitem 
+		If I got a tattoo, it is unlikely that anyone would notice.
+\end{prop}
+We won't try to give a theory of what's going on in these sentences yet, but it is plausible that the unavailability of indicative readings can be traced to the same source as the unacceptability of sentences like ‘It was possible that I am happy’.
+
+There are also cases where a counterfactual reading seems to be required on semantic grounds:
+\begin{prop}
+	\nitem \label{married}
+		If I had married someone other than the person I did marry, I would not be happy.
+	\nitem \label{giraffes}
+		If giraffes were any taller than they actually are, they wouldn't be able to pump blood up to their brains
+\end{prop}
+In these cases, it is plausible that what forces the counterfactual reading is the fact that the antecedent isn't live from any reasonable perspective.%
+\footnote{When \ref{married} and \ref{giraffes} are embedded they need not always be counterfactuals: for example, ‘He said that if I had married someone other than the person I did marry, I would not be happy’ could be a felicitous report of a past utterance of the ‘If he has married someone other than Jessica, he will not be happy’.}
+
+
+An idea we like is that counterfactual uses of conditionals are marked by the occurrence of what Iatridou (***) calls ‘fake past tense’: an extra layer of past tense morphology is used in a way that does not carry the usual significance of temporal pastness. This apparently non-temporal use of the past is not confined to conditionals: it also occurs with certain modals and attitude verbs, as in the following examples.
+\begin{prop}
+	\nitem 
+	\begin{prop}
+		\aitem
+		I wish they were here right now
+		\aitem 
+		Oh, that they had been here right now!
+		\aitem \label{mighthave}
+		They might have been here right now.
+		\aitem \label{couldhave}
+		They couldn't have been here right now.
+	\end{prop}
+\end{prop}
+Note that in general, ‘might have been’ also has uses where the past tense is genuinely tied to the temporal past---as noted earlier, ‘It might have been raining’ can mean ‘It is possible that it has been raining’ and ‘It was possible (then) that it was raining (then)’. But the use of ‘right now’ in \ref{mighthave} seems to preclude these readings: plausibly for reasons similar to those that make for the badness of ‘It is possible that they have been here right now’ and ‘It was possible that they are here right now’.
+
+\begin{itemize} 
+	\item
+	Find some cross-linguistic examples, and discuss Iatridou's cross-linguistic evidence.
+\end{itemize}
+
+In many paradigmatically counterfactual conditionals, the subordinate clause involves pluperfect morphology, which can be thought of as involving two “layers” of past tense. In an ordinary use of the pluperfect both layers play a temporal role: ‘I had eaten breakfast’ takes us to a past “reference time” and then places an eating event earlier than that time. However, as Iatridou notices, there is no similar sense of double pastness in the natural counterfactual use of ‘If I had eaten breakfast this morning, I would have skipped lunch’. Her view of these cases---which we like---is that at least one layer of past tense is fake past, while at most one is the usual temporal past. (In ‘If it had been raining right now, the ground would have been wet’, both layers seem to be fake.)
+
+Why should the past tense be ambiguous in this way? An intriguing but elusive idea of Iatridou's is that the past tense has a more skeletal core meaning of “distance”, which can be cashed out either temporally or modally.  In our framework, the relevant thought in the modal case would presumably be one to the effect that non-live possibilities are “distant”, so that invoking a notion of accessibility that extends to the non-live requires reaching out to the distant. Obviously this picture raises many questions---for example, why do actual \emph{future} events not count as “distant” and thus apt to be described by verbs in the past tense? But we won't try to address such questions here: as with many other facts about linguistic structure, recognising that the phenomenon of fake past tense exists does not require having an explanation of why language is so configured.
+
+We have posited a interpretative link between indicative conditionals and epistemic modals: barring context-shift, they force the same interpretation of accessibility. Given that fake past tense can occur with modals, as in \ref{mighthave} and \ref{couldhave}, it is quite plausible to posit that such modals bear an analogous relation to counterfactual conditionals. If so, the non-epistemic reading of ‘It couldn't have been that P and Q’ will (holding context fixed) entail ‘If it had been that P, it would have been that Q’. Also, ‘It could have been that P’ and ‘If it had been that P, it would have been be that Q’ will jointly entail ‘It could have been that Q’; and because of the presupposition of non-vacuity, ‘If it had been that P, it would have been that Q’ will be presuppositionally bad unless ‘It could have been that P’ is true. These claims seem no less plausible than the corresponding claims about indicatives.
+
+There is a competing picture of the role of the past-tense morphology in counterfactual conditionals which rejects the idea of ‘fake past’, and instead regards the relevant uses of the past tense as introducing reference to genuine past times in much the same way that we see in past-perspective indicative conditionals like \ref{hadhad}--\ref{waswas}. As developed, e.g., by Condoravdi (****) and Khoo (****), the idea is that just we can talk about a possibility being epistemically live or not at a given time, we can talk about a possibility being “metaphysically live” or not at a given time, where the metaphysically live possibilities at a time are (roughly) those which share their history up to that time. The picture is that when we utter a counterfactual, there is a particular time earlier than the time of utterance such that the accessible worlds are all and only those that are live as of that time, and at least one of the past-tense morphemes in the conditional refers to that past time.
+
+There are several problems with this view. First, it will have trouble explaining why standard counterfactuals can be acceptable even when no particular past time has been raised to salience as a target to be referred to by the relevant morphemes---by contrast, ‘It was raining’ clearly does require such salience to be in place, and so do past-perspective indicatives like \ref{hadhad}--\ref{waswas}. Second, consider counterfactuals about the future like ‘If I resigned next week I would be hired by Google the week after’. Even granting that the set of accessible worlds consists in all those whose history matches that of the actual world up to some given time, there is little reason to think that the time in question is in the past: it is much more plausible that the time of divergence is identical to or after the time of utterance, given that in evaluating such counterfactuals we freely draw on known truths about the history of the actual world right up to the time of utterance. Third, it is just not plausible the notion of accessibility relevant to the evaluation of counterfactuals always requires matching any part of the history of the actual world: consider ‘If gravity had obeyed an inverse cube law, stars would have been unstable’, ‘If there had always been infinitely many stars, then there would always have been infinitely many planets’, etc. Fourth, it is very hard to see what reference to a past time could be going on in ‘I wish he were here right now’; but once we admit that the past tense is fake here, what reason is there to think it is genuinely temporal in ‘If he were here right now, then he would be happy’, especially considering that the word ‘were’ can do double duty in ‘If, as I wish, he were here right now, he would be happy’.%%
+\footnote{\*\*\*Condoravdi and Khoo argue for their view on the grounds that it explains why a present-present conditional like ‘If it's raining the ground is wet’ can only have epistemic readings.  Why we are not impressed by this.
+
+	- Note that in \ref{hadwould} and the past-perspective indicative reading of \ref{cfoswald}, the time of the epistemic perspective can be, and indeed is most naturally taken to be, a time after the (actual-world) killing of Kennedy. This makes it implausible that the counterfactual reading of \ref{cfoswald} is just the same thing with “metaphysical” rather than epistemic accessibility. You might think that the view was getting you some kind of economy by letting you treat ‘had been’ as functioning in the same way in conditionals as elsewhere, but it's not at all.}
+
+\begin{itemize}
+	\item
+	Present tense perspective-shifted uses
+	\item
+	Note somewhere or other: you can quantify into the accessibility parameter 
+\end{itemize}
+
+\section{Quasi-validity and the or-to-if inference}
+\label{sect:quasivalidity}
+Considering ‘arguments’ as consisting of a set of sentences called ‘premises’ and another sentence called a ‘conclusion’, let's say that an argument is valid iff the propositions expressed by the premises jointly entail the proposition expressed by the conclusion, on any uniform resolution of context-sensitivity. And let's say that an argument is ‘quasi-valid’ iff the argument that results from it when ‘It must be that\ldots{}’ is affixed to each of the premises is valid. Many arguments that are quasi-valid but not valid feel intuitively like excellent deductive arguments. For example:
+\begin{prop}
+	\nitem \label{eithermust}
+		Either this is a horse or it's a donkey
+
+		It's not a horse.
+
+		So it must be a donkey.
+\end{prop}
+Even someone with an excellent logical training might naturally and unreflectively answer ‘yes’ when asked whether this is valid. Nevertheless on reflection it is clearly not valid in our sense, or on any of the standard ways of defining validity.
+
+\begin{itemize} 
+	\item
+	taking it for granted it expresses a proposition. 
+	\item
+	It's still a great argument though, and any full account of ‘must’ needs to explain (i) why this is so, and (ii) why this kind of awesomeness is so readily mistaken for validity (contrast? the result of replacing ‘must’ with ‘we ought to believe that’) 
+\end{itemize}
+
+One prominent argument for the ‘materialist’ view of indicative conditionals, according to which ‘If P, Q’ has the same truth-conditions as ‘Either not P or Q’, appeals to the seeming excellence of ‘or-to-if’ arguments: i.e.~arguments of the form ‘P or Q; therefore if not P, Q’. If we took this appearance as a sign of validity proper, it would be a short step to materialism.%
+\footnote{***Fill this in from notes. ‘The only further resources needed to derive the logical equivalence of ‘If P, Q’ and ‘Not-P or Q’ are the validity of double-negation elimination, the law of excluded middle, modus ponens and proof by cases.’ To get from ‘If P, Q’ to ‘not-P or Q’, use LEM to get ‘not-P or P’, and then proof by cases + MP to get ‘not-P or Q’.}
+Similarly, arguments of the form ‘P; therefore if Q, P and Q’ seem good, but the view that they are valid collapses very swiftly into materialism. However, given that quasi-valid arguments as well as valid ones can be expected to strike us as excellent, our view provides a ready rejoinder to these arguments. For recall that, given the connection we posit between epistemic modals and indicative conditionals, ‘It must be that (P or Q), therefore if not P, Q’ and ‘It must be that P, therefore if Q, P’ are both valid on our view. Hence arguments of the forms ‘P or Q, therefore if not P, Q’ and ‘P, therefore if Q, P and Q’ are quasi-valid, and just as excellent as the intuitively excellent argument \ref{eithermust} above. We don't see any pre-theoretic pressure to think that the relevant arguments is even better than the likes of \ref{eithermust}.
+
+Note that this feature of our view depends on our decision to let the conditional be true when there is no accessible world in which the antecedent is true. If we had instead gone for a view on which conditionals are false in this case, we would need to say something more complicated, and perhaps less satisfying, about the or-to-if inference.%
+\footnote{This variant of our view is also unappealing in other ways: most importantly, it entails that sentences of the form ‘If P, P’ are false in many contexts.}
+
+
+One way to make a positive case against the materialist view on which the relevant arguments are in fact valid is to see what happens when premises and conclusions are embedded under operators like ‘For all I know’. When the argument from P to Q is really valid (and easily recognised as such), ‘For all I know P, so for all I know Q’ should sound good. But speeches like ‘For all I know he is at the match, so for all I know if he had a car crash this morning he had a car crash and is at the match’ and ‘For all I know, it's true that she's either in Paris or on Mars (because for all I know she's in Paris); so for all I know, if she's not in Paris she's on Mars’ seem bad. This looks like good prima facie evidence that the felt goodness of the relevant inferences should be explained by some feature other than straightforward validity.
+
+(A related argument for materialism appeals not to intuitions about the validity of arguments, but to intuitions about the logical truth of single sentences of the form ‘If P or Q, then if not-P, Q’. The notion of quasi-validity does not provide a response to this form of argument, since there is no corresponding notion of ‘quasi-logical-truth’: if we are willing to speak of arguments with zero premises, then quasi-validity will coincide with validity for such arguments. We think there is a good response to this argument too, but we will not have the resources to explain it until we get to consider conditionals which embed other conditionals in \autoref{chap:embedding}. But for the present, note that it would be difficult to endorse this as an argument for materialism unless one also endorsed the apparent tautologousness of ‘If this is either a horse or a donkey and it's not a horse, then it must be a donkey’ as an argument for the view that ‘It must be that P’ expresses a true proposition whenever P does.)
+
+It is worth comparing our response to the ‘or-to-if’ argument for materialism with a somewhat similar response offered by Robert Stalnaker. On Stalnaker's view, the distinctive role of epistemic possibility in the semantics for indicative conditionals consists not in the exclusion of epistemically impossible worlds from the domain of accessibility (as on our view), but in the fact that indicative conditionals impose a distinctive kind of closeness ordering, in which any epistemically possible world must count as closer than every epistemically impossible world. On his view, asserting an indicative conditional also carries the presupposition that its antecedent is epistemically possible. These commitments lead Stalnaker to somewhat different diagnoses of the status of the argument-forms we have been discussing. For him, the or-to-if inference is not quasi-valid in our sense, since ‘Must (P or Q); therefore if not P, Q’ is not valid. If it is epistemically necessary that P and the closest not-P-world is a not-Q world, then ‘Must (P or Q)’ will be true even though ‘If not-P, Q’ is false. But this argument-form does have another status for Stalnaker: if the premise is true \textbf{and epistemically necessary} and the presupposition of the conclusion is satisfied, the conclusion is true.%
+\footnote{** This is not clear --- the argument form that has this status is the one with ‘Must’ attached to the premise. It also has the status of “Strawson validity” (cite von Fintel): if the premises are true and their presuppositions are all satisfied, then the conclusion is true and its presuppositions are satisfied.}
+ Stalnaker thinks that the fact that his view secures this good status is enough to undermine the case for materialism based on the seeming validity of the or-to-if argument. But notice that the status in question is also possessed by some arguments which don't intuitively seem that great, for example
+\begin{prop}
+	\nitem 
+		No-one will be smoking in the year 2050; therefore Fred will have stopped smoking by 2050
+	\nitem 
+		John regrets everything he has ever done; therefore John regrets killing his mother
+	\nitem 
+		Every creature in the room is purring; therefore, the elephant in the room is purring
+\end{prop}
+So \emph{prima facie}, our view does a better job than Stalnaker's at explaining what is good about the or-to-if inference.%
+\footnote{Another possible resource for Stalnaker is to appeal to the idea that utterances of ‘P or Q’ or ‘Must (P or Q)’ carry the implicature that both P and Q hold in live possibilities. (Such an implicature can plausibly be predicted on Gricean grounds.) Given this, any case where both the content and the implicature of ‘Must (P or Q)’ are true will be one where ‘If P, Q’ is true. However this point does not carry over to ‘Q; therefore if P, P and Q’ and the like. \textbf{This is a nice example - move to main text?}}
+
+\begin{itemize}
+	\item
+	\textbf{Note: check on Stalnaker's paper, also Moritz Shultz \& Robbie.}
+	\item
+	Maybe: give another argument why we don' t like Stalnaker's ‘demoting’ approach, namely that it makes ‘If P, actually P’ false in cases where not-P is epistemically necessary. Come back to this in chapter 3. 
+	\item
+	Make sure not to forget to talk about Stalnaker's distinctive claims about ‘actually’. 
+\end{itemize}
+
+One might worry that in going as far as we are going to accommodate the validity-judgments that motivate materialism, we will also be saddling ourselves with some of the problems of materialism---specifically, the so-called “paradoxes of material implication”, arguments that are valid according to materialis  but don't seem intuitively good at all. One of these “paradoxes” is the inference form ‘Q; therefore if P, Q’. On our view, this is quasi-valid.%
+\footnote{Similarly, Stalnaker's view assigns this argument the same presupposition-theoretic status as the or-to-if inference.}
+ We admit that it would be odd and suspicious if someone actually produced such an argument in the course of reasoning. But we don't think this is a good reason to deny that such arguments are quasi-valid: for ‘This is a horse; therefore this must be a horse’ is uncontroversially quasi-valid but also seems quite strange. If someone were to utter something like this, we would feel pragmatic pressure to interpret the ‘must’ in some way that would give the conclusion some conversational point, and this will require some interpretation that doesn't tie the ‘must’ in a flat-footed way to what has been established at that point in the conversation.%
+\footnote{*cite Mandelkern on the need for a salient argument*} 
+In general, when we are dealing with super-simple arguments, intuitions of excellence will be tempered by the fact that such arguments have so little conversational point that they send us looking for non-obvious interpretations under which they are more tendentious or informative. Notice once we turn to slightly more complex arguments in the same family as ‘Q; therefore if P, Q’, the intuitions of excellence start to fall into place: for example, ‘P; therefore if Q, P and Q’ sounds great--- cf. ‘John is in the room; so if Jill is in the room, two people are in the room’---and is quasi-valid on our account.
+
+The second “paradox of material implication” is the argument form ‘not-P; therefore if P, Q’. This is also valid on the materialist view and quasi-valid on our view, and it sounds like a truly awful template for argumentation. But note that given the presupposition of non-vacuity, the argument ‘It must be that not-P, therefore if P, Q’ has the bad-making feature that if the premise is true, the presupposition of the conclusion is violated. In this respect it is similar to arguments like ‘She hasn't stolen from anyone; therefore she doesn't regret stealing from her employer’, or ‘Everyone is having a good time; therefore everyone who isn't having a good time is a terrorist’. The latter is especially pertinent. If the domain was constant throughout the argument, then the truth of the premise would mean that the presupposition of the conclusion (that someone isn't having a good time) was violated. If someone actually produced such an argument, it would be natural to take the domain of the conclusion to be different from that of the premise, precisely so as to avoid convicting them of presupposition-failure. That is how presupposition typically operates as a way of allowing an audience to recognise lack of uniformity across time in the interpretation of context-sensitive elements. But insofar as there is such a shift, the argument is terrible.
+
+The idea that sometimes excellent arguments are quasi-valid rather than valid can also be used to undercut a certain case for the ‘strict conditional’ theory, according to which ‘If P, Q’ has the same truth conditions as ‘It must be that (either not-P or Q)’. Someone might argue for “strictism” on the grounds that the excellent-seeming argument ‘If P, Q; therefore it can't be that P and not-Q’ should be regarded as valid, in which case the argument ‘If P, Q; therefore it must be that (not-P or Q)’ is surely also valid. On our view, these arguments are merely quasi-valid: since ‘If P, Q’ logically entails ‘Not-P or Q’, ‘It must be that (if P, Q)’ logically entails ‘It must be that (not-P or Q)’.
+
+Some other controversial argument-forms that are valid according to materialists and strictists, but not valid on our account include contraposition (‘if P, Q; therefore if not-Q, not-P’), transitivity (‘If P, Q; if Q, R; therefore if P, R’), and antecedent strengthening (‘If P, R; therefore if P and Q, R’).
+
+We have said why we are not convinced by the central argument for the material conditional theory of indicative conditionals.  However, the foregoing discussion also suggests that the task of arguing against the material conditional theory is going to be somewhat delicate.  Given that opponents of the material conditional theory deny that the indicative conditionals are entailed by the corresponding material conditionals, one might prima facie expect that they would be willing to provide counterexamples to this entailment, where providing a counterexample would involve making a speech of the form ‘P ⊃ Q, but not (if P, Q)’.  But our account suggests that speeches like this will generally be unacceptable.  Since the inference from ‘Must P⊃Q’ to ‘if P, Q’ is valid, so is the inference from ‘Not (if P, Q)’ to ‘Might not (P ⊃ Q)’, i.e. ‘It might be that P and not Q’.  So the counterexample-offering sentence validly entails something of the form ‘P but it might be the case that not-P’.  And sentences of this form are generally quite odd.  The task of explaining why they are odd involves similar explanations to the task of explaining what's good about the inference from P to ‘must P’.  A first-pass explanation appeals to the knowledge norm of assertion: in asserting P one represents oneself as knowing that P, while ‘might P’ entails that one does not know that P, so the overall impact of the speech act is incoherent.%
+\footnote{A more sophisticated explanation will have to take account of the context-sensitivity of ‘must’ and ‘might’: in some way we will not here attempt to fully work out, resolving the context sensitivity of modals in a way that makes it hard for ‘must P’ to be true also raises the bar for a flat-out assertion of P.}
+
+We don't want to overstate the problem posed by the relevant kind of oddity.  Speeches of the form ‘P and if not P then Q’ are sometimes fine, and one could perhaps in the same mood accept speeches of the form ‘P and not (if not P then Q)’---for example, ‘Oswald shot Kennedy, but it's not the case that if he didn't, no-one did’.  (This is certainly not as bad as ‘Oswald shot Kennedy but he may not have’.).  But we still wouldn't want to lean too heavily on arguments against materialism based on such premises.  Materialists might not unreasonably insist that we are especially prone to error in deploying the stilted locution ‘it is not the case that’---note for instance that ‘It's not the case that every unicorn that he owns is coming to the party, since he doesn't own any unicorns’ sounds initially fairly appealing.%
+\footnote{Arguments against materialism that turn on conditionals embedded under quantifiers provide one way around the problem of assertability.  For example, one might object that materialism entails that in a setting where exactly one of several candidates won the election, ‘Some candidate lost if she won’ is true, whereas in fact no candidate lost if she won.  However, as we will be discussing in chapter \autoref{chap:embedding}, the materialist has some defensive resources involving domain restriction.  More generally, as we will be seeing, sentences in which conditionals are embedded under quantifiers are very challenging for everyone to explain, so the dialectic concerning them will have to take the form of a careful comparative investigation.}  
+
+In our own thinking about the material conditional account, we have been particularly moved by a well-known argument having to do with degrees of confidence.  Consider:
+\begin{prop}
+	\nitem \label{moderatelyconf}
+	I'm moderately confident that if they did go out they went to the movies, but I am even more confident that they didn't go out.  
+\end{prop}
+The psychological state reported by this sentence is one that could not be maintained by someone who was certain of the material conditional theory, and formed credences about propositions expressed by indicative conditionals in accordance with the dictates of that theory.  This pattern of credence formation involves never being less confident in an indicative conditional than in the negation of its antecedent, since according to the material conditional theory, the conditional is entailed by the negation of its antecedent.  But it seems obviously fine to be the kind of person of whom \ref{moderatelyconf} is true.  Similarly, it seems paradigmatically fine to be the sort of person that is 50\% confident that if a certain fair coin was tossed it came up tails, but less than 100\% confident that it was tossed, and thus less than 50\% confident that it was tossed and came up tails.  But again, since according to the material conditional theory the conditional is entailed by its consequent, forming credences in accordance with that theory would involve never being more confident in a conditional than in its consequent.  
+
+** We can also consider changes of confidence levels under the impact of new evidence.  Suppose you find 
+\begin{prop}
+	\nitem
+	It's starting to look like Smith won big if he won.  
+\end{prop}
+*** 
+
+The point here is not just about sentences in which indicative conditionals occur embedded under expressions syntactically like ‘confident that’.  The pattern of material-unfriendly confidence judgments shows up in all sorts of other syntactically different configurations.  For example, consider discourses like this:
+\begin{prop}
+	\nitem
+	If they went out they went to the movies.  
+	
+	--- You're probably right / I'm pretty confident of that / There's a good chance that they did / That's fairly likely to be true / I'm moderately inclined to agree with what you just said…  
+\end{prop}
+It is easy to spell out the scenario in such a way that these replies are all in order, but where the second speaker is extremely confident that they didn't go out, and so is not forming credences in accordance with the dictates of the material conditional theory.  
+
+Similar points can be made about desire-like attitudes.  Consider hope:
+\begin{prop}
+	\nitem \label{hopeblue}
+	I'm hoping that I've won a blue car if I've won a car
+\end{prop}
+On the material conditional account, the proposition expressed by ‘I've won a blue car if I've won a car’ is equivalent to the one expressed by ‘Either I've won a blue car or I haven't won a car’.  But on the natural way of fleshing out the scenario, \ref{hopea} would seem to be false:
+\begin{prop}
+	\nitem \label{hopea}
+	I'm hoping that I have either won a blue car or haven't won a car	
+\end{prop}
+We can sharpen the point by assuming it's part of the speaker's background knowledge that the cars on offer are red and blue.  Then, given the plausible assumption that hope is closed under substitution of propositions that are equivalent relative to such background knowledge, \ref{hopeb} stands or falls with \ref{hopea}:
+\begin{prop}
+	\nitem \label{hopeb}
+	I'm hoping that I didn't win a red car
+\end{prop}
+Forming pro-attitudes in accordance with the material conditional theory would thus involve patterns of hopes (and presumably other pro-attitudes) that are quite out of step with the patterns we actually seem to see, even amongst apparently rational people.  
+
+Of course, it is open to proponents of the material conditional theory to admit that people do in fact form credences and pro-attitudes in the ways that we have described, but to put this down to their blindness to the truth of the material conditional theory.  Perhaps, once one has become enlightened, one should simply revise one's credences (and hopes, etc), so that there will no longer be cases where one is less confident in a conditional than in its consequent or the negation of its antecedent.%
+\footnote{It is an open question whether the update involved in such enlightenment is appropriately modeled using standard conditionalisation.}  
+This need not involve saying that ordinary folk are \emph{irrational}, since failure to know the truth of a true theory, even in philosophy, need not be a failure of rationality.  Nevertheless, there is generally a strong presumption against the truth of semantic theories that would have to induce large-scale revision of ordinary patterns of usage if taken to heart.  Consider, by analogy, the theory that ‘know’ expresses the relation of truly believing: if taken to heart, this would recommend a substantial overhaul of a central pattern of judgments that have guided users of ‘know’ and its cognates since antiquity.  This looks like a powerful objection to the view.  Proponents will say things like ‘My view is more simple, and we already know that ordinary people make mistakes all the time’, but this does not seem adequate to the force of the objection.
+
+The attitude-based objection to materialism would of course have little force if it turned out that no theory could underwrite the relevant patterns of attitudes. Indeed, there is a body of literature that attempts to identify the relevant pattern, and then argue that no way of associating propositions with conditionals can vindicate that pattern.  We will discuss this at length in chapter 3.  For now, we just want to remark, first, that some of the literature in question assumes the falsity of the kind of fine-grained context-sensitivity that we have been advocating in this chapter, and second, that the particular confidence-judgments about particular cases that we were relying on need not be significantly undermined by the difficulty of subsuming them under some completely general principle that applies to all indicative conditionals, whatever their logical structure.  
+
+
+	% - give it both object-level and metalinguistically
+	% - be careful to make the contrast between how confident we *are* and how confident we should be.
+	% - anaphoric ‘that’ - even if we can sometimes pick up on other propositions, surely we should be *able* to pick up on the one semantically expressed.
+	% - if there is this other proposition floating around why not say that it's the one expressed
+
+The anti-materialist arguments we have been looking at suggest that very often, an indicative conditional expresses a proposition that is not known to have the same truth value as to the disjunction of the negation of its antecedent with its consequent, and that fairly often, the proposition expressed by the indicative conditional is actually false even when the antecedent is false or the consequent true.  This does not, however, rule out the possibility that there are some occasions on which an indicative conditional is used to express a proposition that can be known to coincide in truth value with the corresponding material conditional.  The really boring way for this to happen is for the material conditional to be known to be false, in which case the indicative conditional can also be known to be false since it entails the material conditional.  Another fairly boring way for it to happen is for the material conditional to be known to be true; then if accessibility for the indicative conditional is restricted to worlds compatible with what is known, the indicative conditional will in fact be true, and so long as we know that we know the relevant proposition, we will be in a position to know the proposition expressed by the indicative conditional.  But the structure of the analysis also allows that in some contexts, the accessibility parameter for an indicative conditional may be set in such a way that the conditional is known to have the same truth value as its material counterpart even though its truth value is unknown.  For a conditional ‘If P, Q’, this will happen whenever the operative accessibility relation is such that none of the epistemically possible not-P worlds are such that a P-and-not-Q world is accessible from them.  This condition guarantees that for every not-$P$ world $w$ that is epistemically possible (relative to actuality), ‘If P, Q’ has the same truth value as P⊃Q, while the fact that every world is the closest world to itself guarantees that ‘If P, Q’ always coincides with P⊃Q at $P$-worlds (epistemically possible or otherwise).  
+
+The theory that accessibility is in some contexts constrained by a salient question under discussion suggests a way in which this might happen (even when the truth value of the material conditional is unknown).  Suppose for example that after Smith left on a parachute jumping trip, we found out that there were some non-working parachutes lying around the airport.  The question whether the parachute Smith took with him was working is a salient and pressing one from our point of view.  We think Smith is likely, but not certain, to notice a broken parachute and so is unlikely to jump with a broken parachute.  As we investigate further we find out that most of the parachutes were broken.  Suppose one of us pessimistically utters ‘If Smith jumped, he died’.  There are two natural ways of reacting to this speech.  One might on the one hand say ‘That's quite improbable---remember that Smith is a pretty experienced skydiver and is likely to have thoroughly checked his parachute before deciding whether to jump’.  But on the other hand, faced with the evidence of the abundance of broken parachutes, we might say ‘More likely than not you're right, but don't forget the possibility that he got one of the good parachutes’.  Presumably these two reactions correspond to two resolutions of the context-sensitivity of ‘If Smith jumped, he died’.  A natural diagnosis is in the second case, the accessibility relation requires match with respect to the question whether Smith's parachute was working.  Given that we know that no-one can survive a jump without a working parachute, the effect of imposing this constraint on accessibility is to make ‘If Smith jumped, he died’ epistemically equivalent both to ‘Smith's parachute wasn't working’ and to the material conditional ‘Smith jumped ⊃ Smith died’.  
+
+One might worry that the proposal that accessibility is naturally constrained by questions under discussion would make it much easier than it in fact seems to be for indicative conditionals to behave in a material-like way.  After all, when someone utters ‘If P, Q’ the question whether P 
+
+
+
+
+ 
+As we pointed out in the introduction, the basic shape of our analysis allows for the possibility that in some contexts, ‘if $P$, $Q$’ simply has the same truth-conditions as the corresponding material conditional.  If $P$ is true at no worlds, or $Q$ is true at no worlds or at all worlds, then such a collapse is automatic no matter how we resolve the accessibility parameter (given a suitably coarse understanding of ‘truth conditions’).  But even in the case where $P$ and $Q$ are both contingent, there are many possible accessibility relations that would generate material truth conditions.%
+\footnote{We confine our attention here to reflexive accessibility relations, since we are inclined to think that the relevant accessibility relations always are reflexive.  If one allows for non-reflexive accessibility relations there are many other possible ways of securing material truth conditions, for example an accessibility relation that every $P$-world bears to itself and every non-$P$ world bears to no worlds at all.}  
+One such relation is the relation that every world bears to itself and nothing else.  Another such relation is the relation that every $P$-world bears to every other $P$-world, and every not-$P$ world bears to every other not-$P$ world.  (When $P$ is false, the conditional interpreted according to this accessibility relation will be vacuously true.  And given that each world is closest to itself, we already know that every conditional with a true antecedent has the same truth value as its consequent.)  Essentially the same reasoning shows that more generally, any accessibility relation which not-$P$-worlds never bear to $P$ worlds will make ‘If $P$, $Q$’ equivalent to ‘Either not-$P$ or $Q$’.%
+\footnote{Even more generally, any accessibility relation which not-$P$ worlds never bear to $P$-and-not-$Q$ worlds will generate material truth conditions.  }  
+
+So, are material conditional readings common?  
+\begin{prop}
+	\item
+	Very implausible for counterfactuals - many counterfactuals with false antecedents seem straightforwardly false.  
+	\item
+	Direct judgments of truth value less easy to access for indicatives, so not so implausible for indicatives.  
+	\item
+	Some other arguments against the view that indicatives are (often) material conditionals that we don't think are very good: bare judgment of invalidity for the paradoxes of m.p.  
+	\item
+	Mention argument about quantifiers like ‘most’, ‘no’, and ‘some’ here?  For these we will actually later on be offering a technique that the material conditional lover could use as a defence, so not so good.  
+	\item
+	? An argument from betting (if you bet on a conditional you don't get to collect if the antecedent turns out to be false)?  This is obviously not that strong an argument, the fact that no money changes hands in this case could just be a local convention about the practice of making bets.  
+	\item
+	A confidence-theoretic argument that ordinary indicatives are not material.  
+\end{prop}
+
+We can explain why unembedded conditionals rarely have material truth conditions by appealing to the presupposition of nonvacuity, together with familiar Gricean reasoning.  Suppose someone has asserted ‘If $P$, $Q$’, and we are wondering whether to interpret them using an accessibility relation that not-$P$-worlds never bear to $P$ worlds.  Given the presupposition of nonvacuity, one will expect someone to assert ‘If $P$, $Q$’ on such an interpretation only if they take for granted that $P$, since if $P$ could be be taken for granted, the existence of accessible $P$-worlds couldn't be taken for granted either.  But for familiar Gricean reasons, the hypothesis that the asserter of ‘If $P$, $Q$’ is someone who takes $P$ for granted is pretty far-fetched.  Someone in that position could instead say ‘$P$ and $Q$’, or just $Q$; and these speeches would be a lot more informative without sacrificing simplicity.  Thus, there will be a strong presumption against interpreting an assertion of a conditional using the kind of accessibility parameter which precludes not-$P$ worlds from seeing $P$-worlds.%
+\footnote{We note that this kind of reasoning does not preclude an accessibility relation in which not-$P$ worlds do see $P$-worlds but never see $P$-and-not-$Q$ worlds; and as mentioned in the previous footnote, such relations will also generate material truth conditions.  But in typical cases, where $P$ and $Q$ are modally independent of one another, such accessibility relations will be quite contrived and artificial, so that they are in any case unlikely to be in play.}  %
+\footnote{*** In the case of a counterfactual, the Gricean reason for thinking that someone who asserts ‘If $P$, $Q$’ does not know that $P$ is true is further buttressed by whatever presuppositions are triggered by fake past tense.}
+
+(Note that there are some special cases where the usual ignorance implicature generated by Grician reasoning is defeated: for example, one can utter ‘If $P$, $Q$’ in the course of spelling out some a chain of reasoning in which $P$ has already been established.  For all we have said, conditionals asserted in these settings might in some cases have material truth conditions.)
+
+
+
+* That's why we don't think that typical indicative conditionals express material conditionals, or even propositions epistemically equivalent to material conditionals.  But note that our contextualist view leaves it open to us to say that in some cases the indicative does become epistemically equivalent to a material conditional, even when its antecedent and consequent are both epistemically contingent.  
+
+* Example: the double-black versus red-blue coin.  
+\begin{prop}
+	\nitem
+	[More likely than not] if the coin didn't land blue it landed red.
+\end{prop}
+??? John argument from ‘desparately hoping’ (not so good)
+
+
+\section{The presupposition of non-vacuity}
+\label{sect:nonvacuity}
+\begin{itemize} 
+	\item
+	why it's so much easier to say ‘If P then Q’ than ‘It might be that P’ (for obviously false P). Diagnosis: presupposition leads to quiet accommodation.
+\end{itemize}
+
+Up to now we have been helping ourselves to the idea that conditionals carry a presupposition of non-vacuity; it is time we said something in defence of this claim. The most obvious thing to be said in favour of the thesis is that it explains what is wrong with certain kinds of sentences that seem to be almost always unacceptable. For example, conjunctions of the form ‘If P, Q and if P, not Q’ are almost always unacceptable, unless P is something truly bizarre like “All contradictions are true”. This is true whether the conditionals are indicative or counterfactual, and seems like the kind of phenomenon that deserves a unified explanation. Given our decision to count ‘If P, Q’ as true when there are no accessible P-worlds---a decision we motivated in the previous section---we can't explain this infelicity as semantic falsehood in all contexts: ‘If P, Q and if P, not Q’ will be true in any context where under which no P-worlds count as accessible. So we need something pragmatic to say about these sentences, and the presupposition of non-vacuity fits the bill quite nicely.
+
+The presupposition of nonvacuity also helps us explain why certain inferences which one might expect to be good given just the semantic part of our story in fact seem problematic. We already considered one such example in the previous section, namely the inference from ‘It can't be that P’ (or just ‘not P’) to the indicative ‘If P, Q’. Similarly in the counterfactual case, ‘It couldn't have been that P’ will entail ‘If P it would be that Q’ for any Q, but such inferences are intuitively highly problematic: we explain this by saying that if accessibility relation for the conditional is interpreted as the same one that matters for the modal, the premise entails that the presupposition of the conditional is violated; so the discourse puts pressure on us to invoke two different accessibility relations, in which case the inference will be simply invalid.
+
+However, there is a competing explanation which might be given for the phenomena just described. The competing explanation invokes a weaker presupposition, namely that the conditional being asserted is not \emph{known} to be vacuously true. The weaker presupposition is, for example, enough to explain why ‘If P, Q and if P, not Q’ should sound bad: after all, in uttering this conjunction one represents oneself as knowing it; but since it could be true if both conjuncts are vacuously true, such knowledge will easily yield knowledge of vacuity.%
+\footnote{One could try to make trouble for this explanation by appealing to the fact that ordinary people may not make the relevant inference and hence may not speaking speaking have any view at all about whether vacuity holds; but we don't think this gets to the heart of the matter, since in semantics it is often to helpful to use somewhat technical vocabulary in one's representation of what language users tacitly know.}
+ Similarly, if one knows that it couldn't be that $P$, one will be in a position to know that ‘if $P$ it would be that $Q$’ is vacuous (holding fixed the accessibility relation), and hence unacceptable even given the weaker presupposition.
+
+[****CUT THE FOLLOWING IF WE ARE REALLY HAVING A WHOLE SECTION ON MATERIAL READINGS: 
+We noted in the Introduction that our schematic analysis of ‘If $P$, $Q$’ can yield the truth conditions of a material conditional in the limiting case where accessibility is understood in such a way that each world is accessible only at itself, or more broadly when the accessible worlds all have match actuality with respect to the truth value of the antecedent. This kind of interpretation of an unembedded conditional will always violate the presupposition of non-vacuity, but need not violate the weaker presupposition of lack of known vacuity. So if one thought that many conditionals are truth-conditionally tantamount to material conditionals that would be evidence against the stronger presupposition, while the view that such truth conditions are rare would support it.]
+
+While adopting this alternative presupposition wouldn't be damning for our overall purposes, we do think there are reasons to favour the stronger presupposition over its weaker rival. For example, \ref{half} is clearly a terrible thing to assert unless one believes that the number of full-time people in the department is even:
+\begin{prop}
+	\nitem \label{half}
+		If there had been exactly half as many full-time people in the department as there actually are, then we would have had to hire at least three adjuncts.
+\end{prop}
+This is readily explained by the presupposition of nonvacuity, since the antecedent is metaphysically impossible if the relevant number is odd. But so long as you don't know whether the number is odd or even, you don't know whether the conditional is vacuous, so the weaker epistemic presupposition does not account for the infelicity of \ref{half}. Along similar lines: suppose that I know one of Jack and Jill had three jacks and a queen and the other had a worthless hand with no queens. Both fold before the final draw; I look at the top of the deck and see that each would have been dealt a queen. If the only relevant barrier were the epistemic presupposition, it's hard to see why the following wouldn't be a reasonable thought to think:
+\begin{prop}
+	\nitem \label{queens}
+		If Jill had kept playing with those four cards and had ended up with two queens, she would have won.
+\end{prop}
+But in fact \ref{queens} is bizarre. The presupposition of non-vacuity explains this: an interpretation on which you knew that there was an accessible world where the antecedent was true would require not holding fixed such facts as that a poker hand only contains five cards, and once we let in worlds where the rules of poker allow six-card hands, we don't know that \ref{queens} is true. (If she in fact had the worthless hand, then the closest six-card poker world where she has two queens as well is probably a losing world.)
+
+\begin{itemize} 
+	\item
+	\textbf{two more examples: (Setting: I'm not sure whether today or yesterday is the first day of the semester. I know Ted was in town until yesterday.) I say ‘If Ted had left on the first day of the semester, he would have been in the airport this morning’. ‘If he had won for the first time yesterday, he would barely have noticed the increase in his wealth’.} 
+\end{itemize}
+
+The foregoing examples all involved counterfactual conditionals. With indicative conditionals, it is much more delicate to tease the effects of the two presuppositions apart. If we know which worlds are and are not epistemically possible, then whenever it is consistent with our knowledge that there is an epistemically possible world where the antecedent of a given conditional is true, we will know that there is such a world, so we will know what we need to know to satisfy the stronger presupposition. Thus to distinguish the proposals one must consider either cases where accessibility requires the application of some further, epistemically non-transparent constraint, or else cases where what's epistemically possible is not transparent. We will be considering the former phenemenon in chapter 2; the most straightforward examples of the latter phenomenon involve conditionals like \ref{hadhad}--\ref{waswas} from \autoref{sect:indcf}, where the relevant epistemic perspective is in the past. Consider for example
+\begin{prop}
+	\sitem[\ref{hadhad}] If Oswald hadn't killed Kennedy, someone else had 
+\end{prop}
+Consider a scenario where we aren't sure which of two scenarios obtain. In scenario A, the relevant past people had evidence that someone or other had killed Kennedy, and were unsure whether or not it was Oswald. In scenario B, they knew Oswald had killed Kennedy, and this was their entire basis for thinking that anyone had. \ref{hadhad} is not intuitively felicitous if this is all we now know. But if the only relevant presuppositional requirement were one of lack of \emph{known} vacuity, we would presumably be able to interpret \ref{hadhad} in such a way that the accessible worlds were just those consistent with what was known at the past time, so that \ref{hadhad} is non-vacuously true in scenario A and vacuously true in scenario B, and hence known to be true either way. By contrast, the stronger presupposition predicts infelicity in this case, since we do not know the presupposition to obtain---given our ignorance about what was \emph{known} at the past time, the presupposition would send us looking for a wider interpretation of accessibility on which we now know that some worlds where Oswald didn't kill Kennedy are accessible.%
+\footnote{*** A view where we are somehow allowed to substitute lack of known vacuity at the past time for lack of vacuity known now would be even worse, allowing lots of material-conditional-like interpretations.}
+,%
+\footnote{??? Saying ‘we are playing a game where you are only allowed to say something if it was known at the time’ is no good, obviously.}
+
+
+So far we have been talking about the presuppositions of standalone utterances of conditionals. When conditionals are embedded inside more complex sentences, there is a standard lore about “presupposition projection” which can be used to generate predictions for what those more complex sentences will presuppose. For example, the standard lore says that when φ presupposes that $P$, ‘$x$ thinks that φ’ will typically presuppose that $x$ thinks that $P$, and not presuppose that $P$: for example, in uttering ‘He thinks that the ghost haunting his house is benevolent’ we do not normally take it for granted that there is a ghost, but we do seem to be taking it for granted that he thinks that there is a ghost haunting his house. For conjunctive sentences, the lore says that when (relative a certain context) φ asserts $P$ and presupposes $P'$ and ψ asserts $Q$ and presupposes $Q'$, then relative to that context, ‘φ and ψ’ presupposes that $P'$ and that if $P$ and $P'$, $Q'$.%
+\footnote{The lore is rather unspecific as regards how that conditional should be interpreted---perhaps it is just a material conditional.}
+ The presupposition of nonvacuity can be slotted comfortably into this framework. For example, when we say ‘He thinks that if Clark Kent lived far away from Superman he would be happier’ we are not committed to the antecedent in fact being metaphysically possible, but we do seem to be taking it for granted that the subject thinks it is.%
+\footnote{*** The lore also says that presuppositions carry over to questions, which also fits.}
+ Likewise, when we say ‘It might be raining, and if it is the ground is slippery’ we are clearly not representing ourselves as \emph{taking it for granted} that it might be raining. The standard lore for conjunctions just described explains this, since it predicts that the second conjunct's presupposition gets conditionalised into the trivial ‘If it might be raining, it might be raining’.
+
+The label ‘presupposition’ is used to cover a rather disparate array of phemomena. The common thread is that in uttering a certain sentence, one presents oneself as taking certain things for granted, as opposed to presenting them as answers to the main questions at hand. But there are significant differences in how tight the association is between uttering a self-standing sentence and presenting oneself as taking the relevant propositions for granted. At one extreme lie parentheticals, where the connection is very tight indeed: one can scarcely imagine a context where one utters ‘The president (who is a Democrat) comes from Chicago’ unembedded without presenting oneself as taking for granted that the president is a Democrat. (Similarly for when it's the first conjunct of a conjunction.) By contrast, while uttering ‘He doesn't know that it's raining’ normally suggests that one takes it for granted that it is raining, there are exceptional cases where this suggestion is absent---for example in ‘He doesn't \emph{know} it's raining! Remember that he's relying on those notoriously unreliable instruments’.
+
+With presuppositional sentences that lie towards the weaker end of this spectrum, there is a broad and only partially explored array of pragmatic factors that help to determine whether a suggestion that the speaker takes a certain thing for granted will be heard in a given case. One such factor that is especially interesting to us is that when sentences would standardly have contradictory or obviously false presuppositions, in some cases this leads the presupposition to be suspended. For example
+\begin{prop}
+	\nitem 
+		He doesn't know she is guilty, and he doesn't know she is innocent
+\end{prop}
+would be standardly predicted to presuppose something bizarre such as ‘She is guilty, and if she's guilty and he doesn't know it, she is innocent’; but in fact it carries no strong suggestion that anything in particular is being taken for granted. Similarly
+\begin{prop}
+	\nitem \label{regent}
+		I won't salute the king and I won't salute the regent
+\end{prop}
+would be standardly predicted to presuppose that there is a king; but if it's taken for granted that if there's a king there isn't a regent and vice versa, an utterer of \ref{regent} will probably not be taken to be committed to the presupposition predicted by standard lore.
+
+We think we can see cases where the presupposition of nonvacuity behaves in similar ways. Let's look at another poker example. Suppose I know that Sally's four cards are either the ten, jack, queen, and king of spades, or two nines and two eights. I have two kings and three aces. Sally folds; I look at the top card and see that it is the nine of spades. I say
+\begin{prop}
+	\nitem \label{cards}
+		If she had drawn that card and had a straight she would have won, but if she had drawn that card and had a full house she would have lost.
+\end{prop}
+This seems acceptable given the facts. But to make it acceptable it seems that we need to be holding fixed the actual makeup of Sally's first four cards and my five---after all, if we allow accessible worlds where the four cards in her hand are different, then the first conjunct is quite dubious since not every straight beats a full house. However, if all accessible worlds match actuality in these respects, then inevitably one of the two counterfactuals will be vacuously true.
+
+***Someone might take examples like that to be evidence that the presupposition of conditionals is the weaker, epistemic thing discussed earlier.  But…
+
+\begin{itemize}
+	\item
+	Other examples that are prima facie problematic for our presupposition but where we think that a proper delicacy about the strength of the thing is all you need:
+
+ (He knows where the keys are and is going to get them.) ‘Wherever he goes he'll open a drawer, because he knows that if it's in the kitchen it's in the kitchen drawer and if it's in the living room it's in the living room drawer’.
+	\item
+	Problematic anti-materialist arguments: truth-value judgments; validity judgments (paradoxes of material implication).
+	\item
+	Confidence-theoretic arguments against the commonness of material conditional readings.  (Kratzer, ‘Chasing Hook’ argues that apparent counterexamples to contraposition are mere presuppositional effects, but this diagnosis does not apply when we're looking at confidence judgments.)
+	\item
+	Tell about the McDermott cases --- suggest that here at least the presupposition is weakened. (Speculate about why?)
+	\item
+	mention monkey's uncle conditionals. {[}Puzzle - why don't we get them with counterfactuals? How do they relate to crazy conditional promises like ‘If \ldots{} I'll eat my hat’ / ‘If I'm wrong about this just shoot me’.
+	\item
+	Status of the presupposition - is it derivable by general (Gricean?) pragmatic considerations? We are not optimistic about this, though it wouldn't be a disaster. (It's easier to see how it would work if it were not-known-vacuity.)
+	\item
+	Hard to cancel.
+	\item
+	Maybe come back later to other common presuppositions/implicatures: inhomogeneity, falsity of antecedent for counterfactuals. 
+\end{itemize}
+
+\section{Material conditional readings and the presupposition of non-vacuity}
+\label{sect:material}
+***
+
+The foregoing discussion concerned cases where a conditional is asserted, as opposed to being a constituent of a more complex assertion.  In general, there is no guarantee that Gricean reasoning as applied to asserted sentences will carry over to embedded occurrences.  So let's turn to considering some examples of embedded conditionals.  For now we will look at conjunctions and disjunctions, setting aside cases where conditionals are embedded under quantifiers, modals, or other conditionals.%
+\footnote{Since sentence-level negation operators like ‘It is not the case that’ are only marginally part of ordinary English, our reactions to conditionals embedded under such operators are too theory-laden to be fairly thought of as natural language data.}  
+Beginning with the case of conjunction, there are many cases where material-like truth conditions for conditional conjuncts are no more plausible than they would be for unembedded conditionals, and where the explanation in terms of presuppositions and implicatures seems to extend pretty well.  In lots of cases, conjunctions seem to inherit the presuppositions of both of their conjuncts.  For example,
+\begin{prop}
+	\nitem \label{conjpresupposition}
+	Mary didn't feed her cat and Susan didn't feed her chickens
+\end{prop}
+pretty clearly presupposes that Mary has a cat and Susan has chickens.%
+\footnote{The orthodox lore discussed in the previous section predicts something a little weaker: namely, that Mary has a cat and if Mary didn't feed her cat Susan has chickens.  Some have used sentences like \ref{conjpresupposition} to argue against the orthodox lore; defenders of the lore (***) will say that the conjunctive presupposition can be recovered from the predicted one given background knowledge.  We we will not need to take sides in this debate since our discussion could easily be adapted either way.}
+Consider:
+\begin{prop}
+	\nitem \label{boringand}
+	If Jones bet on Ted in Race 1 he won, and if Smith bet on Ned in Race 2, he lost.
+\end{prop}
+If you don't like a material conditional view of unembedded indicative conditionals, there is no additional temptation in this case to think that the conditionals in \ref{boringand} are material---in particular, there is no temptation to think that \ref{boringand} is automatically true if neither bet was made.  We can explain this by postulating that \ref{boringand} inherits the presuppositions of its conjuncts in the same way as \ref{conjpresupposition}: we presuppose, that is, that there are some worlds that are accessible in the sense relevant to the first conjunct where Jones bet on Ted in race 1, and some worlds that are accessible in the sense relevant to the second conjunct where Smith bet on Ned in race 2.  But for Gricean reasons, uttering \ref{boringand} will implicate that one does not know either that Jones made his bet or that Smith made his bet, since otherwise one could simply delete the relevant ‘if’ clause, or replace it with a conjunction.  Thus, if the accessibility relation for the first conditional is one that worlds where Jones doesn't bet on Ted never bear to worlds where he does bet on Ted, or the  accessibility relation for the second conditional is one that worlds where Smith doesn't bet on ned never bear to worlds where he does bet on Ned, one will be risking violating the presuppositions of \ref{boringand} in uttering it.  
+
+However, there are some conjunctions of conditionals where material-like truth conditions seem attractive for reasons that don't carry over to unembedded conditionals.  Suppose that after a die has been rolled but before the result has been revealed, someone asserts \ref{mcdermott}:
+\begin{prop}
+	\nitem \label{mcdermott}
+	If it was an even number it was a 6, and if it was an odd number it was a 1.
+\end{prop}
+(Maybe the speaker thinks the die was weighted, or is hoping to get a reputation for  paranormal abilities….)  In this context it is tempting to think that \ref{mcdermott} is straightforwardly equivalent to the claim that the die landed 1 or 6.  In particular, if it turns out that the die landed on 6, we don't think along the following lines: the first conjunct is true, but the status of the conjunction is still unclear, because it is unclear whether the die lands 1 at the closest accessible world where it lands on an odd number.  The equivalence in question is smoothly explained by a view on which the conditionals are interpreted as material conditionals: on such a view, the second conjunct is automatically true in worlds where the die landed on an even number, and the first conjunct is automatically true in worlds it landed on an odd number.  
+%suggests that on the operative interpretation, the second conjunct is automatically true if the die doesn't land on an odd number.  Similarly, the fact that \ref{mcdermott} seems straightforwardly true if it turns out that the die landed on 1 suggests that the first conjunct is automatically true if the die doesn't land on an even number.  
+
+Within our framework, there are many ways of tweaking the accessibility parameter so as to make \ref{mcdermott} equivalent to ‘It was a 1 or a 6’, some of which seem more natural than others.  One that seems relatively natural takes the accessibility relation (for both conditionals) to require, in addition to epistemic accessibility, match with regard to whether the die landed on an even or odd number.  This in effect turns the conditionals into material conditionals: for example, in the scenario where the die lands on 1, there are no accessible worlds where it lands on an even number, so the first conjunct is vacuously true (while the second is non-vacuously true).  An objection to this proposal is that it requires making an exception to the generalisation that conjunctions inherit the presuppositions of their conjuncts (or at least their first conjunct).  For it we don't make an exception, we will have to say that \ref{mcdermott} presupposes that there is an accessible world where the die lands on an even number, which on the proposed reading entails that it actually lands on an even number.  And obviously the utterer of \ref{mcdermott} is not taking it for granted that the die landed on an even number.  
+
+A possible response is to move to another tweak on the accessibility relation that does not secure the truth of either conjunct by the mechanism of vacuous truth.  For example, we could take the accessibility relation to be the intersection of epistemic accessibility with an two-cell equivalence relation in which worlds where the die landed 1 or 6 form one cell, and worlds where it landed 2--5 form the other cell.  This also makes \ref{mcdermott} true when the die landed 1 or 6 and false otherwise.  For example, if it landed 1, the first conjunct is true (by and-to-if), and the second conjunct is nonvacuously true, since there are accessible worlds where it lands on an even number, but no accessible worlds where it lands on an even number other than 6.  
+
+* what's the general strategy here - how does it extrapolate to the case of non-exhaustive and/or overlapping antecedents, or overlapping consequents?  
+
+* is there something to say about why it struck as more artificial?  
+
+A different option is to keep the accessibility relation that relies on vacuous truth, and claim that \ref{mcdermott} is yet another example where a conjunction fail to inherit the presuppositions of either of their conjuncts.  As we saw in the previous section, this seems to happen in some cases, such as:
+\begin{prop}
+	\nitem \label{innocent}
+	She doesn't know that he is innocent and she doesn't know that he is guilty
+	\nitem
+	(Maybe we'll think of more compelling examples, with universal quantifiers, definites, etc.)
+	? She didn't stop being a kind person and she didn't stop being a mean person
+
+\end{prop}
+It seems quite reasonable to diagnose \ref{mcdermott} as another such exception.  After all, interpreted using the vacuity-friendly accessibility relation, it is just like \ref{innocent} in that the presuppositions of the two conjuncts are jointly inconsistent.  Given that the inferences about what speakers take for granted associated with presuppositions are in any case often fairly weak and defeasible, it is not surprising to suggest that they could be defeated in cases where following the usual rules would lead the conclusion that someone is taking contradictory things for granted.%
+\footnote{As noted earlier, ‘presupposition’ labels a rather heterogeneous class of phenomena, and there are big differences within this collection as regards how defeasible the relevant inferences are.  For example, parentheticals lead to a very strong inference---no co-operative speaker who doubts that John is a philosopher will assert ‘John, who is a philosopher, went home’, or assert any conjunction with this as a conjunct.}  
+THIS IS WHERE WE STOPPED IN AUGUST 2017
+
+
+
+The phenomenon saliently brought out by \ref{mcdermott} can also be seen in conjunctions of conditionals whose antecedents are not exhaustive of the epistemically possible cases, such as \ref{nonexhaustive}:
+\begin{prop}
+	\nitem \label{nonexhaustive}
+	If was 1 or 2 it was 1, and if it was 5 or 6 it was 6.
+\end{prop}
+Like \ref{mcdermott}, this looks straightforwardly true in a scenario where the die turns out to have landed on 1 or 6: in those scenarios, we are not inclined to worry that while one of the conjuncts has been established the other one remains dubious.  However, by contrast with \ref{mcdermott}, it is debatable whether the truth conditions we naturally assign to \ref{nonexhaustive} are those that would be predicted by a material conditional analysis.  If it turns out that the die landed 3 or 4, it is unclear how we should be retrospectively evaluating the utterance of \ref{nonexhaustive}.  And if we are trying to figure out how much confidence to assign to \ref{nonexhaustive} before looking at the die, it is unclear how the probability of the die landing 3 or 4 should enter into our calculations.%
+\footnote{We could get a similar effect by changing the backstory for \ref{mcdermott} so that we don't know whether the die was rolled.}
+In our framework, we can get different judgments by using different accessibility relations.  The key thing that is needed to guarantee truth in the case where the die lands 1 or 6 is that worlds where the die lands 5 are inaccessible from those where it lands 1, and worlds where it lands 2 are inaccessible from those where it lands 6.  But there are different accessibility relations that have this feature, and not all of them have the effect of making the conditionals work like material conditionals.%
+\footnote{If we take both conditionals to be governed by an accessibility relation which partitions the accessible worlds into those where the die lands 1 or 2, those where it lands 3 or 4, and those where it lands 5 or 6, then we will count it as true in the scenario where it lands 3 or 4.  Or we might use a partition where the worlds where it lands 1-4 are in one cell and those where it lands 5 or 6 are in the other; then the truth value in worlds where it lands 3 or 4 depends on whether it lands 1 in the closest world where it lands 1 or 2.  
+	We could also consider using different accessibility relations for the two conjuncts, e.g.\ using the $\set{1-4,5-6}$ partition for the first conditional and the $\set{1-2,3-6}$ partition for the second: this makes it harder for the conjunction to be true in the cases where the die lands 3 or 4, since it has to both land 1 in the closest (epistemically possible) world where it lands 1 or 2 and land 6 in the closest world where it landed 5 or 6.  It is quite hard to tell which of these interpretations is in play in the imagined utterance of \ref{nonexhaustive}.  We could try to distinguish the possibilities by asking how confident we should be in the truth of \ref{nonexhaustive}, both in the envisaged scenario with a fair die and in variants where the die is weighted in various ways, e.g., towards 6 and away from 1.  However we find it hard to muster clear confidence-theoretic verdicts about these questions.  (It may well be vague which accessibility relations are in play.) }
+
+%
+\footnote{*** If we took it that the conjunction suffers from a presupposition-failure in a case where \emph{both} of its conjuncts would suffer from presupposition failure taken by themselves, we would also predict that \ref{nonexhaustive}, read in this way, presupposes that the die didn't land 3 or 4.  This doesn't seem right for the kind of utterance of \ref{nonexhaustive} we were imagining.  
+	
+	*Note that ‘I don't know that it landed on 1 and I don't know that it landed on 6’ does not seem to presuppose ‘It landed on 1 or 6’.
+	}
+
+Let us turn next to disjunctions of indicative conditionals.  Here too there are some cases where a disjunct with a false antecedent seems to be simply ignored in ways that wouldn't be predicted by any standard account.  Consider:
+\begin{prop}
+	\nitem \label{bigorsmallprize}
+	He either got a huge prize if he answered the final question correctly, or a small prize if he didn't.  
+\end{prop}
+Mysteriously, we seem inclined to process this sentence as if it were a disjunction of conjunctions rather than a disjunction of conditionals:
+\begin{prop}
+	\nitem \label{prizedisjunction}
+	He either got a huge prize and answered the final question correctly, or a small prize and didn't answer the final question correctly.  
+\end{prop}
+In particular, if we later find out that he did answer the final question correctly but didn't get a huge prize, we seem to treat \ref{bigorsmallprize} as simply false.  We don't think to ourselves: the first disjunct of \ref{bigorsmallprize} is false, but that still doesn't settle whether the whole disjunction is false, since the second disjunct might yet be true.  By contrast with the conjunction case, a material conditional account does particularly poorly here: understood as a disjunction of material conditionals, \ref{bigorsmallprize} is tautologous, since there is no way for both of the conditionals to have true antecedents.
+
+We might contemplate trying to account for \ref{bigorsmallprize} by appealing to a suitably crafty resolution of the accessibility parameter, such that if one disjunct has a true antecedent, the truth value of the other disjunct is guaranteed to match the truth value of that disjunct.  For example, we could take the accessibility relation to be the conjunction of epistemic accessibility with a two-cell equivalence relation, in which worlds where \ref{prizedisjunction} is true form one cell, and worlds where it is false form the other.  This will guarantee that \ref{bigorsmallprize} has the same truth value as \ref{prizedisjunction} in all cases, because ***.  
+
+But there is a very different 
+
+
+* Rather than appealing to such relations, we'd like to draw an analogy to other disjunctions of presupposition-carrying sentences:
+\begin{prop}
+	\nitem
+	He didn't salute the king or he didn't salute the regent.
+	\nitem
+	He either won't regret doing it or won't regret not doing it.  
+	\nitem
+	He either didn't stop drinking or didn't stop smoking.  
+	\nitem
+	Few people who received the will power supplement didn't stop drinking or didn't stop smoking.
+	\nitem
+	He either hasn't read Chomsky or hasn't read Kant.
+\end{prop}
+
+
+* Relate what we have said to McDermott's own three-valued approach.
+
+
+
+
+
+
+
+
+\section{Accessibility for counterfactuals}\label{sect:cf}
+As many authors have observed, our standard for evaluating a counterfactual whose antecedent concerns a particular period of time involves helping ourselves to all kinds of facts about earlier times. For example, if we know John has had breakfast every day for the last year, we will unhesitatingly endorse
+\begin{prop}
+	\nitem \label{breakfast}
+		If John had forgotten to have breakfast on Tuesday morning, that would have been the first time this year.
+\end{prop}
+The phenomenon is pervasive: even when the consequent of a counterfactual isn't about the past, in deciding what to make of it we will typically be \textbf{tacitly holding the past fixed}. For example, in thinking about
+\begin{prop}
+	\nitem 
+		If I had run a four minute mile this morning, I would have been extremely surprised.
+\end{prop}
+we seem to be holding fixed the speaker's previous track record.
+
+Our favoured account of this phenomenon appeals to fine-grained context-sensitivity in the accessibility parameter. When considering a counterfactual whose antecedent is about a certain period, it is natural to resolve its context-sensitivity in such a way that the accessible worlds are all required to match with respect to earlier times.%
+\footnote{The match may not be perfect (cite), and it may need to be restricted to allow for a smooth transition into the kind of event described by the antecedent. Indeed for certain antecedents --- consider ‘If a giant comet had struck Washington DC yesterday afternoon\ldots{}.’ --- we may need quite a long stretch of preceding time where there is nothing like exact match in order to achieve the smooth transition.}
+ Notice that the closeness relation plays no role in this account of why counterfactuals like \ref{breakfast} are true: \emph{all} the accessible worlds where John forgets to have breakfast on Tuesday are worlds where it his his first time doing so this year. So for example, while our account suggests that \ref{wednesdaybreakfast} is true in the context \emph{it} naturally evokes for the same reason as \ref{breakfast}, it provides no reason to expect \ref{wednesdaybreakfast} to be true relative to context naturally evoked by \ref{breakfast}:
+\begin{prop}
+	\sitem[\chisholm{breakfast}{'}] \label{wednesdaybreakfast} 
+	If John had forgotten to have breakfast on Wednesday morning, that would have been the first time this year.
+\end{prop}
+After all, the context evoked by \ref{breakfast} is one where the accessible worlds are merely required to match with respect to history up to Tuesday; since some of them involve forgetting to have breakfast on Tuesday and on Wednesday, the accessibility facts provide no guarantee for the truth of \ref{wednesdaybreakfast} in this context. And indeed, the account of closeness that we will develop in chapter 2 will provide no grounds for confidence that the closest worlds where John forgets breakfast on Wednesday are not worlds where he forgets breakfast on Tuesday as well. Meanwhile, while \ref{mondaybreakfast} is non-vacuously true in the context it naturally evokes, it is vacuously true in the context evoked by \ref{breakfast}.
+\begin{prop}
+	\sitem[\chisholm{breakfast}{''}] \label{mondaybreakfast}
+	If John had forgotten to have breakfast on Monday morning, that would have been the first time this year.
+\end{prop}
+By contrast, Lewis's influential treatment of counterfactuals tells a rather different story about why holding the past fixed is a reliable way of evaluating counterfactuals. For Lewis, what does the work is closeness, not accessibility---indeed, his account would work even on the assumption that all metaphysically possible worlds are accessible in all contexts.%
+\footnote{Check if Lewis says this. Mention others who do.}
+ Moreover, Lewis's account of the phenomenon does not rely in any essential way on context-sensitivity. For example, he thinks that there is a single context on which we can knowledgeably utter \ref{breakfast}, \ref{wednesdaybreakfast}, and \ref{mondaybreakfast}: given that we know that John in fact had breakfast every day this year, we know that worlds where John skips breakfast for the first time on Wednesday are closer than worlds where he skips breakfast for the first time on Tuesday, which are in turn closer than worlds where he skipped breakfast on Monday. More generally, the closeness relation that Lewis thinks is standard is one on which worlds whose history diverges from that of the actual world at later times are ipso facto closer than worlds where history diverges earlier (Lewis 1979).
+
+This feature of Lewis's view leads to some well-known oddities that our view avoids. Pollock (***) noticed that Lewis's view seems to underwrite counterfactuals such as the following:
+\begin{prop}
+	\nitem \label{coat}
+		If my coat had been stolen last year it would have been stolen on December 31st.
+\end{prop}
+Given that my coat was not in fact stolen, on Lewis's view worlds where it is stolen are closer to the extent that they diverge later from the actual world.%
+\footnote{This is a slight oversimplification: if there are certain days on which it would have taken a large miracle for my coat to be stolen they will count as further away from actuality on Lewis's account. But this doesn't make the problem go away. Let's just make the plausible assumption that on any day last year, a small miracle (perhaps taking place in the brain of some errant youth) on that day would have been enough to take the world onto a trajectory where my coat gets stolen on that day.}
+ But intuitively, unless I have some special reason to think that my coat was unusually vulnerable to theft on December 31st, I have no right to assert \ref{coat}.
+
+It would really be quite bizarre if we had to start computing counterfactuals in the way seemingly recommended by Lewis. Just to take one more example: suppose that, sadly, someone fell from a ship and drowned while people stood and watched without anyone diving in to help. On Lewis's approach, there seems to be a quite strong reason to accept
+\begin{prop}
+	\nitem \label{drowning}
+		If someone had dived in to try to help her, she would still have drowned.
+\end{prop}
+After all, if the later the divergence the closer, then the closest worlds will be ones where someone dives in too late, even if there are plenty of worlds where a more timely rescue attempt would have saved her.
+
+The examples cry out for a treatment on which the only period of history that is completely held fixed is one that predates the period in question---last year in the case of \ref{coat}, the period during which the drowning victim was in the water in the case of \ref{drowning}. A contextualist approach like ours can readily accommodate this. Given the antecedent of \ref{coat}, it would be completely unmotivated to select some time after the beginning of last year as the basis for resolving accessibility: the natural constraint on accessibility will allow more or less indiscriminate importation of facts about the actual world only for times prior to last year.
+
+One possible response to the problems for Lewis's account would be to maintain that for some reason \ref{coat} is computed as equivalent to
+\begin{prop}
+	\sitem[\chisholm{coat}{'}] 
+	On any day last year, if my coat had been stolen on that day it would have been stolen on December 31st. 
+\end{prop}
+It's not obvious what would motivate this seemingly \emph{ad hoc} mechanism beyond a desire to avoid the counterexamples. But in any case, the proposal is clearly inadequate. Suppose that halfway through the year I moved from a dangerous neighbourhood to a much safer one; then I could naturally assert
+\begin{prop}
+	\nitem \label{probcoat}
+		Probably if my coat had been stolen last year, it would have been stolen during the first half of the year.
+\end{prop}
+By contrast, \ref{probcoat'} is obviously unassertable:
+\begin{prop}
+	\sitem[\chisholm{probcoat}{'}] \label{probcoat'} 
+	Probably on any day last year, if my coat had been stolen on that year it would have been stolen during the first half of the year.
+\end{prop}
+
+The problems raised by the coat and drowning examples are not peculiar to the details of Lewis's approach, or even to the possible worlds framework. Given certain minimal logical assumptions, problems of this sort will arise for any view that attempts to secure the reliability of ‘holding the past fixed’ for antecedents about different times without appealing to context-shift. Suppose that there was a thunderstorm all weekend in the area that destroyed many trees, but my tree luckily survived. Now consider
+\begin{prop}
+	\nitem \label{sundaysad}
+		If this tree had been in pieces on Sunday morning, Sunday would have been an especially sad day for me.
+\end{prop}
+This is a typical example of the kind of sentence that is evaluated by holding the past fixed; so it's plausible that in the context naturally evoked by \ref{sundaysad}, \ref{sundaysaturday} is true:
+\begin{prop}
+	\nitem \label{sundaysaturday}
+		If the tree had been in pieces on Sunday, it would have been intact on Saturday afternoon.
+\end{prop}
+But surely \ref{sundayweekend} and \ref{weekendsunday} are true as well (in the relevant context):
+\begin{prop}
+	\nitem \label{sundayweekend}
+		If the tree had been in pieces on Sunday, it would have been destroyed during the weekend.
+	\nitem \label{weekendsunday}
+		If the tree had been destroyed during the weekend, it would have been in pieces on Sunday.
+\end{prop}
+After all, Sunday is part of the weekend, so denying \ref{sundayweekend} looks completely unpromising; meanwhile given that trees don't reform once they have split into pieces, \ref{weekendsunday} seems safe too. But given \ref{sundayweekend}, \ref{weekendsunday}, and \ref{sundaysaturday}, we are in a position to apply the inference-schema sometimes called ‘CSO’, according to which arguments of the following form are valid:
+\begin{prop}
+	\sitem[CSO]
+	If $A$ then $B$; If $B$ then $A$; If $A$ then $C$ ⊦ If $B$ then $C$
+\end{prop}
+Plugging in ‘The tree was in pieces on Sunday’, ‘The tree was destroyed during the weekend’, and ‘The tree was intact on Saturday afternoon’ for $A$, $B$, and $C$, we can derive
+\begin{prop}
+	\nitem \label{weekendsaturday}
+		If the tree had been destroyed during the weekend, it would have been intact on Saturday afternoon.
+\end{prop}
+But \ref{weekendsaturday} seems very problematic in the same way as the coat and drowning examples considered earlier.
+
+CSO is valid according the best-known logics for counterfactual conditionals, namely those of Stalnaker and Lewis. And to our my minds its popularity is well-deserved. While it may not be immediately compelling when first encountered, there are several argumentative routes to it from principles whose appeal is more immediate. One route consists of
+\begin{prop}  
+	\sitem[RT (‘Cumulative Transitivity’)] 
+	If $A$ then $B$; if $A$ and $B$ then $C$ ⊦ If $A$ then $C$ 
+	\sitem[RCV (‘Very Limited Antecedent Strengthening’)] 
+	If $A$ then $B$ and $C$ ⊦ If $A$ and $B$ then $C$
+\end{prop}
+For suppose the premises of CSO hold: if $A$, $B$; if $B$, $A$; and if $A$, $C$. Given the first and third, by RCV it follows that if $A$ and $B$ then $C$; and from this and the second premise (If $B$, $A$) RT yields that if $B$, $C$.%
+\footnote{Also note that CSO entails CT and VLAS, and that they are equivalent modulo CEM.}
+
+
+Reliance on RT seems to pervade a great deal of our ordinary reasoning using conditionals, both indicative and counterfactual. Consider how good the following piece of reasoning looks: ‘If they attacked they would use their cavalry; if they attacked using their cavalry, they would win; so if they attacked, they would win’. And consider how terrible the following speech sounds: ‘If he had gone to the party, he would have gone with Janet, and if he had gone to the party with Janet, he would have had a good time, but I doubt that if he had gone to the party he would have had a good time’. Clearly there is some general principle underlying the goodness of the good reasoning, and the badness of the bad speech, and it is hard to see what it could be if RT is invalid. Regarding RCV, similar remarks apply to the following excellent argument (which involves a contraposed application of RCV): ‘If they attacked they would use their mercenaries; but it's not the case that if they attacked using their mercenaries they would win; so it's not the case that if they attacked they would win’, and also to the following appalling speech: ‘If he had gone to the party he would have gone with Janet, and had a great time; however if he had gone to the party with Janet, he would have had a terrible time.’ (Note too that all of this looks equally compelling if we shift everything to an indicative form: ‘If they attacked they used their cavalry’, etc.)
+
+Another route to CSO worth mentioning is to derive it from RCV together with the following extremely compelling principles:
+\begin{prop}
+	\litem[Cases]
+	If $A$ and $B$ then $C$, If not-$A$ and $B$ then $C$ ⊦ If $B$ then $C$
+\end{prop}
+Unlike the previous derivation, this one relies on some background principles of the logic of conditionals, albeit ones that are almost universally accepted, namely Identity (‘If $A$ then $A$’), Finite Agglomeration (If $A$ then $B$, If $A$ then $C$ ⊦ If $A$ then $B$ and $C$) and closure of consequents under logical consequence. \textbf{Say more about these here if not earlier.} Suppose again that the premises of CSO hold: if $A$, $B$; if $B$, $A$; and if $A$, $C$. By RCV, if $A$ and $B$ then $C$. Since the material conditional $A⊃C$ is a logical consequence of $C$, we can infer from this by closure that if $A$ and $B$, then $A⊃C$. But by Identity, if not $A$ and $B$ then not $A$ and $B$, so by another appeal to closure, if not $A$ and $B$, then $A⊃C$. So by Cases, if $B$, then $A⊃C$, and by Finite Agglomeration, if $B$ then ($A$ and $A⊃C$). A final application of closure yields that if $B$ then $C$.%
+\footnote{Cite/thank Andrew Bacon.}
+
+
+Like RT, Cases also seems to underlie a good deal of ordinary conditional reasoning, both counterfactual and indicative. Consider how good the following piece of reasoning looks: ‘If they attacked using their cavalry they would win; if they attacked without using their cavalry they would also win; so if they attacked, they would win’. And consider how bad the following speech sounds: ‘If he had gone to the party with Janet, he would have had a good time; if he had gone to the party without Janet, he would have had a good time; but I doubt that he would have had a good time if he had gone to the party.’ Clearly there is some general principle underlying the goodness of reasoning and the badness of the speech, and it is hard to see what it could be if Cases is invalid.
+
+(Both of the above paths required appeal to pairs drawn from the trio of RT, RCV, and Cases. But as we will later show, each member of the trio is by itself sufficient for CSO, given the principle of Conditional Excluded Middle, which we will be defending at length in Chapter 2.)
+
+Those who would deny the validity of the above principles could try to fall back on the idea that they are at least quasi-valid, or have some other positive status of an epistemic sort, for example being such that if one were rationally certain of the premises, one would be entitled to be certain of the conclusion. But the challenges to such an approach are formidable. For one thing, the badness of the relevant speeches does not disappear under ‘Maybe’ or ‘Perhaps’ or ‘For all I know’. For example, the following speech is still terrible: ‘For all I know, he would have gone with Jane and had a good time if he had gone to the party, but wouldn't have had a good time if he had gone to the party with Jane’. We could also consider quantified speeches like ‘Two of those three people would have brought guests and had a great time, if they had gone to the party, but only one of them would have had a great time if they had brought a guest to the party’. \textbf{This isn't doing much for us right now---cut or expand?}
+
+Given the general considerations for thinking that context-sensitivity is pervasive and the costs of giving up CSO, it seems to us much more appealing to explain the relevant data by appeal to context sensitivity rather than jettisoning CSO. On the picture we favour, \ref{weekendsaturday} is indeed straightforwardly true in the context naturally evoked by \ref{sundaysad}, but would be a very risky assertion in the context it naturally evokes. Those who endorse CSO but think that there is no relevant context-sensitivity in play will, like Lewis, be forced to accept the problematic \ref{weekendsaturday}.
+
+The diagnosis of context-sensitivity enjoys substantial independent support, since there are many cases where counterfactuals with the same antecedent suggest different ways of holding the past fixed. For example, each of \ref{refreshed} and \ref{exhausted} seems to be true in the natural context they suggest:
+\begin{prop}
+	\nitem \label{refreshed}
+		If I had been in the Caribbean this morning I would have been feeling refreshed
+	\nitem \label{exhausted}
+		If I had been in the Caribbean this morning I would have been exhausted from travelling
+\end{prop}
+In these cases it is the consequent rather than the antecedent that provides the linguistic cues as regards which portions of the past to hold fixed.%%
+\footnote{Counterfactuals with stative antecedents especially prone to this.  **Also: counterfactuals with epistemic consequents-counterfactuals designed to display evidential connections-often behave in this way.  Consider: ‘If he had shaken my hand firmly, I would have known he was doing OK’, and contrast this with ‘If he had shaken my hand firmly, he would have been doing OK’.***}  
+(Of course there may be non-linguistic cues as well.) On a view where \ref{refreshed} and \ref{exhausted} are both true in the same context, one would have to either live with bizarre counterfactuals like
+\begin{prop}
+	\nitem \label{refreshedexhausted}
+		If I had been in the Caribbean this morning I would have been feeling refreshed and exhausted from travelling
+\end{prop}
+or else postulate widespread violations of an even more obviously compelling inference rule, namely \ref{conjunction}:
+\begin{prop}  
+	\litem[Conjunction] \label{conjunction}
+	If $A$, $B$; If $A$, $C$ ⊦ If $A$, $B$ and $C$ 
+\end{prop}
+The appeal to context-sensitivity is thus pretty much inevitable when it comes to sentences like \ref{refreshed} and \ref{exhausted}. We see no reason to deny that the phenomenon manifested by the previously examples is any different: in both cases, contextual triggers determine how much of the past is held fixed in all accessible worlds.
+
+Lewis, for his part, is willing to play the context-sensitivity card in a much more limited way. His picture is that there is a “standard” resolution of context-sensitivity under which worlds that diverge later are closer, and a separate category of “backtracking” resolutions of context-sensitivity where a different standard of closeness is in play. Lewis gives various examples where he thinks a backtracking resolution of context-sensitivity is natural, such as ‘If Jim were to ask Jack for help today, there would have to have been no quarrel yesterday’ (Lewis 1979, p.~33). He might say that one or both of our sentences \ref{refreshed} and \ref{exhausted} fall into this category as well.\footnote{While the examples Lewis focuses on are sentences where the consequent directly concerns times earlier than those mentioned in the antecedent, he is careful to leave open the possibility that the non-standard resolutions of context-sensitivity required to handle those are also natural for a range of other counterfactual utterances that don't have this structure.} Lewis never develops a theory about what plays the role of the closeness relation in backtracking contexts. But we think there is very little prospect for a theory that posits a \emph{single} closeness relation for backtracking contexts. Typically even evaluating a counterfactual in a “backtracking” way we still draw freely on quite a lot of facts about the past---for example, in evaluating \ref{refreshed} we probably draw on the fact that in the not-so-distant past the speaker was not feeling refreshed. There is no prospect of a general rule saying how much of the past to hold fixed for evaluating backtrackers. Given that fine-grained context-sensitivity is thus hard to avoid when dealing with the counterfactuals Lewis categorises as backtrackers, it would not at all surprising if, as we contend, it also extends to those he categorises as non-backtrackers.
+
+------
+
+As well as requiring some bullet-biting about cases like Pollock's coat, Lewis's approach also requires him to give up a prima facie compelling principle about the logic of counterfactuals. If time extends infinitely into the future, and worlds are closer the later they diverge from actuality, then for every non-actual world, there is a closer one. The closeness relation thus fails to obey the ‘Limit Assumption’, which says that every set of worlds contains some worlds that are as close to actuality as any world in the set. Lewis is well aware of this structural feature, and crafts his truth conditions accordingly: a counterfactual is true iff either there is no (accessible) world where the antecedent is true, or at least one world where antecedent is true is such that every world where the antecedent is true that is at least as close as it is one where the consequent is true. However, the upshot of this semantics is that counterfactuals do not generally obey the following principle:
+\begin{prop}  
+	\litem[Agglomeration] \label{agglomeration}
+	If some propositions each would have been true if a certain condition had obtained, then if that condition had obtained, all of them would have been true.
+\end{prop}
+On Lewis's account AGGLOMERATION is not true in general, although it is true for finite collections of propositions. To see why it can fail in the infinite case, consider the collection of propositions which contains, for each time $t$, the proposition that history proceeds just as it actually does until $t$. Each conditional of the form
+\begin{prop}
+	\nitem \label{cfquant}
+		If history had diverged from actuality at some point, then history would have proceeded just as it actually does until $t$.
+\end{prop}
+will be true, since for any $t$ worlds which diverge after $t$ are closer than worlds which diverge earlier. But clearly \ref{quantcf} is false:
+\begin{prop}
+	\nitem \label{quantcf}
+		If history had diverged from actuality at some point, then each $t$ is such that history would have proceed just as it actually does until \emph{t.}
+\end{prop}
+As many authors have noted---starting with Pollock ***---the intuitive force of AGGLOMERATION carries over very smoothly from the finite to the infinite case. It is thus a uncomfortable feature of Lewis's view that it requires driving a wedge between the two kinds of cases.
+
+\begin{itemize} 
+	\item
+	Add some more discussion of why AGGLOMERATION is so great. 
+\end{itemize}
+
+This feature is very hard to avoid on any account that attempts to accommodate the phenomena without making essential appeal to context-sensitivity. For on such an account, all sentences of the form
+\begin{prop}
+	\nitem \label{lateearly}
+		If things had gone differently on day $n$ or later, things would have been the same up to day $n$
+\end{prop}
+will be true in a single context. Moreover, given the abundance of causal influence in the futurewards direction, there is strong pressure to accept all conditionals of the form
+\begin{prop}
+	\nitem \label{somelate}
+		If things had gone differently on some day, things would have gone differently on some day later than day $n$.
+\end{prop}
+After all, a scenario where the only differences occur before day $n$ and then history then re-converges to that of the actual world seems quite far-fetched. But obviously \ref{latesome} is also true irrespective of context:
+\begin{prop}
+	\nitem \label{latesome}
+		If things had gone differently on day $n$ or later, things would have gone differently on some day.
+\end{prop}
+So by CSO, we can conclude that all the conditionals of the following form are true in the same context:
+\begin{prop}
+	\nitem \label{someearly}
+		If things had either gone differently on some day, things would have been the same up to day $n$.
+\end{prop}
+This is obviously inconsistent with AGGLOMERATION. The case for \ref{somelate} is perhaps not quite watertight: one might think that for all we know, if there had been any divergence at all it would have been a very slight and temporary divergence confined to some initial finite period. But we can forestall this response by substituting the property of being a day such that things go differently from how they actually go on it and all subsequent days for the property of being a day on which things go differently from how the actually go throughout the argument: then \ref{somelate} and \ref{latesome} both become trivial, while the case for \ref{lateearly} is in no way weakened.
+
+Our view preserves AGGLOMERATION: if each of a certain class of propositions is true at the closest accessible world where $P$ is true, then at that world, all of those propositions are true. We think that the above argument against AGGLOMERATION fails because there is no single context in which all sentences of the form \ref{lateearly} are true. Each, nevertheless, is true in some contexts, and indeed has some tendency to evoke the kind of context in which it is true.%
+\footnote{***Note that the relevant tendency seems considerably stronger for counterfactuals with eventive antecedents. [Is this a good place to show an awareness of the H? paper about ‘event’ conditionals?]}
+
+Given the centrality of CSO to the arguments we have been considering, it is worth addressing a particular kind of putative counterexample to CSO that has been presented in some recent work by Kit Fine. Fine is concerned in the first instance not with CSO but with the principle that logically equivalent sentences can be substituted salva veritate in conditionals. On Fine's view, for example, \ref{simple} is true whereas \ref{disjunctive} is false, despite the fact that its antecedent is logically equivalent to that of \ref{simple}:
+\begin{prop}
+	\nitem \label{simple}
+		If the tree had been dead on Sunday, it would have been alive on Saturday afternoon.
+	\nitem \label{disjunctive}
+		If the tree had been either dead on Sunday and not alive on Saturday afternoon, or dead on Sunday and alive on Saturday afternoon, it would have been alive on Saturday afternoon.
+\end{prop}
+These sentences also generate counterexample to CSO, since Fine accepts that the logically equivalent antecedents of \ref{simple} and \ref{disjunctive} are also “counterfactually equivalent” in the sense that \ref{sd} and \ref{ds} are both true:
+\begin{prop}
+	\nitem \label{sd}
+		If the tree had been dead on Sunday, it would have been either dead on Sunday and not alive on Saturday afternoon or dead on Sunday and alive on Saturday afternoon
+	\nitem \label{ds}
+		If the tree had been either dead on Sunday and not alive on Saturday afternoon or dead on Sunday and alive on Saturday afternoon, it would have been dead on Sunday.
+\end{prop}
+Fine develops a new kind of model-theoretic semantics for counterfactuals which is capable of validating these judgments. While we don't propose to work through the details of this semantics here, we do wish to draw attention to two of its key features. The first feature is that ‘If $A$ or $B$, $C$’ turn out to be logically equivalent to the conjunction of ‘If $A$, $C$’ and ‘If $B$, $C$’. Thus according to Fine, \ref{disjunctive} entails the obviously false \ref{bad}, whereas \ref{simple} does not:
+\begin{prop}
+	\nitem \label{bad}
+		If the tree had been dead on Sunday and not alive on Saturday afternoon, it would have been alive on Saturday afternoon.
+\end{prop}
+Now, as we mentioned in the introduction (*PAGEREF*), we are in agreement with Fine to this extent: sentences of the form ‘If $A$ or $B$, $C$’ really do admit quite natural readings on which they are equivalent to ‘If $A$, $C$ and if $B$, $C$’. (We be returning to this phenomenon in chapter 5: our treatment of it will involve giving up the idea that the relevant conditionals can be characterised as predicating a relation of two propositions, and will appeal to context-sensitivity in a way that leaves CSO intact.)
+
+The second feature of Fine's view that we want to note is the fact that the semantics allows us to classify each sentence (relative to a context) as either disjunctive or non-disjunctive. Disjunctions are always disjunctive; atomic sentences may or may not be disjunctive. (Fine is amenable to a dose of context-dependence here.) Given that he has this ideology at his disposal, it would thus be natural for Fine to accommodate the seeming goodness of the inferences whose validity we wanted to explain by appeal to CSO (or by appeal to CT and/or VLAS) by maintaining that these inference-rules are valid when restricted to conditionals with non-disjunctive antecedents and consequents. In any case, Fine does not present any cases that make trouble for this fallback position. Insofar as Fine's new machinery provides a diagnosis of what goes wrong with the CSO-based arguments we have been considering, the diagnosis will thus have to turn that some of the relevant sentences are disjunctive (in the relevant contexts). For example, it would be natural for Fine to say that the antecedent of \ref{weekendsaturday} is disjunctive:
+\begin{prop}
+	\nitem \label{weekendsaturday}
+		If the tree had died during the weekend, it would have been alive on Saturday afternoon
+\end{prop}
+Disjunctive sentences behave in the semantics like explicit disjunctions. Thus if, for example, Fine said that the antecedent of \ref{weekendsaturday} was tantamount to the disjunction ‘Either the tree died on Saturday or the tree died on Sunday’, \ref{weekendsaturday} would turn out to be equivalent to \ref{satsatsunsat}:
+\begin{prop}
+	\nitem \label{satsatsunsat}
+		If the tree had died on Saturday, it would have been alive on Saturday afternoon, and if the tree had died on Sunday, it would have been alive on Saturday afternoon.
+\end{prop}
+which sounds straightforwardly false.
+
+On big problem we see with this account of \ref{weekendsaturday} is that, in the context it naturally evokes, \ref{weekendsaturday} doesn't seem to be straightforwardly true or straightforwardly false. In that context, it would be natural to say
+\begin{prop}
+	\nitem \label{mightormightnot}
+		If the tree had been in pieces at some point during the weekend, it might or might not have been intact all day Saturday
+\end{prop}
+Moreover, there are other contexts where a sentence such as \ref{weekendsaturday} seems more or less straightforwardly true, even though Fine seems to predict that it's false. For example if there was no storm on Saturday but there was one on Sunday it would be quite natural to assert \ref{weekendsunday}:
+\begin{prop}
+	\nitem \label{weekendsunday}
+		If the tree had died during the weekend, it would have died on Sunday.
+\end{prop}
+The problem is not essentially due to the postulated semantic equivalence of ‘The tree died during the weekend’ to ‘The tree died on Saturday or Sunday’, since the same problematic issues arise even when we substitute that explicit disjunction into \ref{weekendsaturday} and \ref{weekendsunday}.
+
+Fine does have one other resource that he invokes in somewhat related contexts. He notices that sentences like
+\begin{prop}
+	\nitem \label{eitherwest}
+		If I had moved to the West coast or the East coast, I would have moved to the West coast.
+\end{prop}
+can be uttered felicitously even though his semantics predicts that it entails the absurd-sounding
+\begin{prop}
+	\nitem \label{eastwest}
+		If I had moved to the East coast, I would have moved to the West coast.
+\end{prop}
+What he says is this: while \ref{eastwest} is indeed an absurd thing to utter because of the presupposition of non vacuity, relative to the context in which \ref{eitherwest} is uttered felicitously, \ref{eastwest} is in fact not absurd but instead vacuously true. Fine could say something similar about the problem sentence \ref{satsunsat},
+\begin{prop}
+	\nitem \label{satsunsat}
+		If it had died on Saturday or on Sunday, it would have died on Sunday.
+\end{prop}
+But this does not look like a promising suggestion in settings where we are inclined to make remarks like
+\begin{prop}
+	\nitem \label{satsunmight}
+		If it had died on Saturday or on Sunday, it might or might not have died on Saturday
+\end{prop}
+Since the truth of \ref{satsunsat} turns on whether \ref{bad} is vacuously true, the kind of ignorance we are avowing in uttering \ref{satsunmight} would have, for Fine, to turn on on ignorance as regards whether \ref{bad} is vacuously true. We have trouble seeing how a plausible theory of vacuous truth could fit the bill.
+
+It is time to turn briefly to an objection that we anticipate being directed against our view. Consider the sequence of conditionals
+\begin{prop}
+	\nitem 
+		\begin{prop}
+			\aitem
+			If I had skipped breakfast on Monday, that would have been the first time I did so all year 
+			\aitem[b] \ldots{} 
+			\aitem[g] 
+			If I had skipped breakfast on Sunday, that would have been the first time I did so all year.
+		\end{prop}
+\end{prop}
+On our account, each is true in the context it naturally suggests, but there is no context where we can be confident that all of them are nonvacuously true. But note that there appears to be a reading of the quantified sentence \ref{quantified} on which it is true:
+\begin{prop}
+	\nitem \label{quantified}
+		Each day last week is such that if I had skipped breakfast on that day, it would have been the first time I did so all year.
+\end{prop}
+It is hard to deny that this quantified claim is true. Relevantly similar claims occur in many other settings.
+\begin{prop}
+	\nitem 
+		If any member of my family had voted Republican she would have been he only one to do so
+	\nitem 
+		I bought lottery tickets on several occasions last year. On each of those occasions, if I had won I would have more than quadrupled my wealth.
+\end{prop}
+It is easy for someone like Lewis to explain how such sentences could get be true in a single context: a single closeness relation along the lines he suggests can vindicate each witness to the quantified claim. But such sentences pose a challenge to our account, on which the relevant explanatory work is done by accessibility rather than closeness. For example, if for each day last week the set of accessible worlds contains a world where I skip breakfast on that day, it is hard to see what would stop there from being an accessible world where I skip breakfast on two days last week. And unless we impose special Lewis-style constraints on the closeness relation (something which we want to resist) there is no obvious ground for confidence that the closest world where I skip on a certain day isn't one where I have already skipped on some earlier day.
+
+Our response to this objection draws on some quite pervasive facts about the interaction of quantification with context-dependence. The paradigm on which we think most context-sensitive words should be modelled is ‘local’. Sometimes, the semantic contribution of ‘local’ is a particular property, say the property of being in Brooklyn, or perhaps the property of being within a certain distance of Barack Obama. But on other occasions, ‘local’ behaves semantically as if it contained a variable bound by some higher quantifier. For example
+\begin{prop}
+	\nitem 
+		Each of my brothers went to a local tattoo parlour
+\end{prop}
+can mean that each of my brothers went to a tattoo parlour \emph{in the neighbourhood he lives in}. Such “bindability” seems to be a feature of pretty much all context-sensitive expressions (with a few possible exceptions, such as ‘I’). For example ‘Each of my brothers is angry that we don't spend enough time together’ can mean ‘Each of my brothers is angry that \emph{he and I} don't spend enough time together’. ‘Everyone in my family is tall’ can mean ‘Everyone in my family is tall \emph{for his or her age}’. ‘Everyone is scared because there might be a spider in the closet’ can mean, roughly, ‘Everyone is scared because it is \emph{an epistemic possibility for them} that there is a spider in the closet’. And so forth. We intend ‘accessible’ to fit this pattern. So \ref{quantified} could, for example, mean something like
+\begin{prop}
+	\nitem 
+		Each day last week is such that either there is no world that matches the history of the actualised world up to that day where I skip breakfast on that day, or the closest such world is one where that day is the first day on which I skip breakfast all year.
+\end{prop}
+This provides, in effect, a different accessibility relation for each day.
+
+\begin{itemize}
+	\item
+	TODO: add a discussion of Morgenbesser's coin: ‘If I had bet on heads I would have won’. Return to (46) once we have said this.
+	\begin{itemize} 
+		\item
+		One moral: the standard accessibility relations for counterfactuals is not a straightforwardly historical one.
+		\item
+		Tricky cases: when $A$ enhances the probability of $B$ but $B$ still fails to happen it's sometimes tempting think that if $A$ hadn't happened $B$ still wouldn't have happened.
+		\item
+		We could say a little bit on the question what this means for counterfactuals analyses of causation. Don't be too down on the idea that one could characterise what's held fixed in non-causal (probabilistic?) terms.
+		\item
+		When characterising what Morgenbesser cases show about holding fixed it's tempting to say certain things about causation which would force you into the “big sudden miracle” view. This is bad, so be careful.
+		\item
+		Also consider cases where we have false beliefs about causal relevance and irrelevance. Is the accessibility relation characterised in causal terms, or is it a matter of non-causal properties that speakers believe to have certain causal profiles.
+		\begin{itemize} 
+			\item
+			Remember about small gravitational impact of betting.
+		\end{itemize}
+		\item
+		Another kind of case that might illustrates the complexity of accessibility for counterfactuals: the comet example from CD's miracles paper. 
+	\end{itemize}
+	\item
+	Make sure that we properly address the idea that holding history fixed could just mean holding macro history fixed.
+	\item
+	Circumstantial modals which stand to counterfactuals as epistemics stand to indicatives: ‘It couldn't have happened that\ldots{}’
+	\item
+	It would be nice to say something about why holding history fixed is the canonical way of doing things. Connection to deliberation? (Look at Luke Glynn recent paper?)
+	\item
+	Play up the unity of our account.
+	\item
+	Notice that we didn't say that it always just is epistemic possibility (for some relevant person/group/etc\ldots{}) We think it can be stronger.
+	\item
+	Examples of modals where it is stronger: constrained uses.
+	\item
+	Examples of constrained conditionals --- maybe just announce some without giving the probability-theoretic argument\ldots{}
+	\item
+	To do in next chapter: Talk about Matt Bird's example.
+	\item
+	Add a little bit on general anti-contextualist arguments about eavesdroppers, disagreement and all that. Point out that the things that people like Bennett (and Gibbard?) say about Sly Pete cases are just a special case of this general theme.
+\end{itemize}
+
+\end{document}

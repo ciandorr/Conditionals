@@ -1,0 +1,91 @@
+%!TEX TS-program = pdflatex
+\documentclass[leqno, 11pt, a5paper, openany]{book}
+\usepackage[a5paper]{mybiblatexstyle}
+\usepackage{appendix}
+\usepackage{aliascnt}
+%\usepackage{tensor}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{subfiles}
+\usepackage{longtable}
+\usepackage{pfbreaks}
+\usepackage{tikz}
+\usepackage[linguistics]{forest}
+
+\newcolumntype{N}{>{$}r<{$}}
+\newcolumntype{E}{>{$}c<{$}}
+\newcolumntype{M}{>{$}l<{$}}
+
+\setlength{\proprightmargin}{0em}
+
+\bibliography{Shoulders}
+
+\setlength{\bibitemsep}{0em}
+
+% \let\OLDproof\proof
+% \let\OLDendproof\endproof
+% \renewenvironment{proof}[1][Proof]{\small\OLDproof[#1]}{\OLDendproof}
+
+\newcommand{\page}[1]{p.~#1}
+\newcommand{\pages}[1]{pp.~#1}
+
+\newcommand{\negate}[1]{\overline{#1}}
+\DeclareMathOperator{\prob}{Pr}
+\DeclareMathOperator{\prior}{Cr}
+
+\DeclareItemType{long}{left}{dummy}{\textsc{\MakeLowercase{\itemtext}}}{\textsc{\MakeLowercase{\reftext}}}
+\DeclareNumProp[equation][\alph{myalph}.][\paren{\theequation\alph{myalph}}]{myalph}
+
+\newcommand{\aitem}{\xitem{myalph}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+
+\newpagestyle{front}{
+\sethead[\usepage][][]
+{}{\textsl{\chaptertitle}}{\usepage}
+}	
+\newpagestyle{main}{
+\sethead[\usepage][\textsl{\sectiontitle}][]
+{}{\thechapter. \textsl{\chaptertitle}}{\usepage}
+}
+\newpagestyle{biblio}{
+\sethead[\usepage][\textsl{Bibliography}][]
+{}{\textsl{Bibliography}}{\usepage}
+}
+
+
+\renewcommand{\theequation}{\arabic{equation}}
+
+
+\begin{document}
+\frontmatter
+\pagestyle{front}
+\title{If…: A Theory of Conditionals}
+\author{\textsc{Cian Dorr and John Hawthorne}}
+\date{Draft of \today}
+
+\maketitle
+
+\tableofcontents
+
+\mainmatter
+\pagestyle{main}
+
+\subfile{logic}
+
+\subfile{Chapter0}
+
+\subfile{Chapter1}
+
+\subfile{Chapter2}
+
+\subfile{Chapter3}
+
+\subfile{Chapter4}
+
+\printbibliography
+
+\end{document}
