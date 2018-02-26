@@ -22,11 +22,11 @@ To get a grip on what this is saying, it is helpful to observe that we already k
 	$.
 	So if $\prob(A|B) = \prob(A)$,
 	$
-		\prob(A) &= \prob(A)\prob(B) + \prob(A|\negate{B})\prob(\negate{B})
+		\prob(A) = \prob(A)\prob(B) + \prob(A|\negate{B})\prob(\negate{B})
 	$, and hence 
-		$\prob(A)(1 - \prob(B)) &= \prob(A|\negate{B})\prob(\negate{B})$.
+		$\prob(A)(1 - \prob(B)) = \prob(A|\negate{B})\prob(\negate{B})$.
 	But since $1-\prob(B) = \prob(\negate{B}) > 0$, we can divide across to deduce that
-	$\prob(A) &= \prob(A|\negate{B})$.}
+	$\prob(A) = \prob(A|\negate{B})$.}
 	% Here is a formal derivation corresponding to the above remarks
 	% \begin{align*}
 	% \prob(A→B) & = \prob(A→B|A)\prob(A) + \prob(A→B|¬A)\prob(¬A) \intertext{(probability theory)}

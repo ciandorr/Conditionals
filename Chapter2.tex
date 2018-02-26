@@ -17,19 +17,19 @@
 	Does Kratzer have any arguments that the hidden operator in indicatives is ‘must’-like? One could make an argument from the premise that we never see a \emph{lexicalised} modal that is epistemic but has the kind of ordering source feel that would be required by a CEM lover.
 \end{itemize}
 
-\section{\texorpdfstring{Why ‘Closest’?}{Why Closest?}}\label{why-closest}
+\section{Three views}\label{why-closest}
 
 Recall that our bare-bones theory of conditionals is as follows:
 \begin{prop}
 \litem[CLOSEST] \label{closest}
-	A conditional with antecedent p and consequent q is true iff either there is no accessible p-world, or the closest accessible p-world is a q-world.
+	A conditional with antecedent $p$ and consequent $q$ is true iff either there is no accessible $p$-world, or the closest accessible $p$-world is a $q$-world.
 \end{prop}
 In saying this we are taking it for granted that where there are accessible p-worlds, there is a unique closest one. The aim of the present chapter is to say more about the relevant notion of closeness, and to develop and justify the required uniqueness assumption.
 
 Some theories of conditionals use the ideology of worlds and closeness but make no assumption that there is always a unique closest accessible p-world provided there is any accessible p-world. The most influential such theorist is David Lewis \citeyearpar{LewisCounterfactuals}. Lewis's theory allows for two kinds of failures of uniqueness. First, there can be ties: there may be several maximally close accessible p-worlds (i.e.\ equally close p-worlds such that no p-worlds are closer than them). Second, there may be no maximally close accessible p-worlds: it could be that for every accessible p-world, there is a yet closer accessible p-world. Lewis's truth-conditions agree with ours in the case where there is a unique closest accessible p-world, but introduce a new element of universal quantification to deal with the other cases. When there are several maximally close accessible p-worlds, the conditional is true just in case all of them are q-worlds. When there are accessible p-worlds but no maximally close accessible p-worlds, the conditional is true just in case there is some accessible p-world such that every accessible p-world at least as close as it is a q-world. In fact the latter case also covers the case where there is one or more maximally close p-worlds; so Lewis's theory can be stated as follows:
 \begin{prop}
 \litem[LEWIS] \label{lewis}
-	A conditional with antecedent p and consequent q is true iff either there is no accessible p-world, or there is an accessible p-world such that every accessible p-world that is at least as close as that world is a q-world.%
+	A conditional with antecedent $p$ and consequent $q$ is true iff either there is no accessible $p$-world, or there is an accessible $p$-world such that every accessible $p$-world that is at least as close as that world is a $q$-world.%
 	\footnote{Lewis avoids the need to say ‘accessible’ all the time by setting things up in such a way any accessible world is closer than all inaccessible worlds (if there are any inaccessible worlds). But this is not essential to the aspect of Lewis's theory that we are presently concerned with.} 
 \end{prop}
 Lewis himself only applied this schema to the analysis of counterfactual conditionals, but it is certainly worth exploring whether a theory with this shape could also work for indicatives.
@@ -37,7 +37,7 @@ Lewis himself only applied this schema to the analysis of counterfactual conditi
 Another important family of rival theories of conditionals makes use of the ideology of worlds and accessibility, but does not appeal to closeness at all in the specification of truth-conditions. On these ‘strict conditional’ accounts, the truth-conditions of conditionals are straightforward:
 \begin{prop}
 \litem[STRICT] \label{strict}
-	A conditional with antecedent p and consequent q is true iff every accessible p-world is a q-world.
+	A conditional with antecedent $p$ and consequent $q$ is true iff every accessible $p$-world is a $q$-world.
 \end{prop}
 (One might be tempted to think that at the schematic level we are
 presently working at, \ref{strict} is perfectly compatible with our account:
@@ -45,18 +45,18 @@ if we redefine ‘accessible world’ to mean what we previously meant by
 ‘closest accessible world’, won't \ref{strict} then be just a terminological
 variant on \ref{closest}? No: in the expression ‘the closest accessible
 p-world’, ‘closest’ is not playing the role of a monadic predicate of
-worlds. Being a closest accessible p-world is not just being (a)
-closest, (b) accessible, and (c) a p-world, just as the property of
+worlds. Being a closest accessible $p$-world is not just being (a)
+closest, (b) accessible, and (c) a $p$-world, just as the property of
 being a shortest spy is not the conjunction of the property of being
 shortest and the property of being a spy. Being a shortest spy is being
 a spy who is at least as short as any spy; being a closest accessible
-p-world is being a p-world that is at least as close as any accessible
-p-world.)
+$p$-world is being a $p$-world that is at least as close as any accessible
+$p$-world.)
 
 Lewis's argument against \ref{strict} (for counterfactual conditionals) is
 well-known and prima facie compelling. Lewis notes that \ref{strict} validates
-the rule of antecedent strengthening: whenever ‘If P, Q’ is true, ‘If P
-and R, Q’ for any R. But this rule does not look to be valid. For example, the inference
+\emph{Antecedent Strengthening}: whenever ‘If $P$, $Q$’ is true, ‘If $P$
+and $R$, $Q$’ is true (for any $R$). But this rule does not look to be valid. For example, the inference
 from
 \begin{prop}
 	\nitem \label{dog}
@@ -89,19 +89,21 @@ One feature that distinguishes \ref{closest} from both \ref{strict} and \ref{lew
 that status of the principle of Conditional Excluded Middle:
 \begin{prop}
 	\litem[CEM] \label{CEM}
-	Either if P, Q or if P, not-Q.
+	Either if $P$, $Q$ or if $P$, not-$Q$.
 \end{prop}
-Given \ref{closest}, instances of this schema will be true independent of context, assuming that every world is either a Q-world or a not-Q world. (This assumption will be revisited in chapter 3, but we will here take it for granted.) By contrast, \ref{strict} obviously allows for interpretations of instances of CEM on which they fail to be true, because the set of accessible worlds includes both P-and-Q worlds and P-and-not-Q worlds. Likewise, \ref{lewis} allows for two kinds of failures of instances of CEM. In one kind of case, there are several P-worlds tied for maximal closeness, which differ with regard to the truth-value of Q; in the other kind of case, there are no maximally close P-worlds, and for every P-and-Q world there is a closer P-and-not-Q world, and for every P-and-not-Q world there is a closer P-and-Q world.
+Given \ref{closest}, instances of this schema will be true independent of context.%
+\footnote{At least if we continue take it for granted that every world is either a $Q$-world or a not-$Q$ world.  Chapter 4 will consider whether we sometimes need to invoke “incomplete” worlds that do not conformt to this generalisation.} 
+By contrast, \ref{strict} obviously allows for interpretations of instances of CEM on which they fail to be true, because the set of accessible worlds includes both $P$-and-$Q$ worlds and $P$-and-not-$Q$ worlds. Likewise, \ref{lewis} allows for two kinds of failures of instances of CEM. In one kind of case, there are several $P$-worlds tied for maximal closeness, which differ with regard to the truth-value of $Q$; in the other kind of case, there are no maximally close $P$-worlds, and for every $P$-and-$Q$ world there is a closer $P$-and-not-$Q$ world, and for every $P$-and-not-$Q$ world there is a closer $P$-and-$Q$ world.
 
 Proponents of \ref{strict} and \ref{lewis} are well aware of this feature of their views; indeed their views have been partly motivated by the desire for CEM to come out invalid. However, we think there are strong reasons to like CEM. We will consider several such reasons in the present section; in section 2 we will address some arguments against CEM.
 
 \section{Chance and confidence-theoretic arguments for CEM}
-The most central considerations for us turn on facts about the chances of conditionals, and the levels of confidence we should have in conditionals. We are going to look at some instances of CEM involving fair coins, which seem like good test cases: if there were there were a problem for CEM, one would expect it to show up for conditionals concerning the outcomes of fair coin tosses.
+The most central considerations for us turn on facts about the chances of conditionals, and the levels of confidence we should have in conditionals. We are going to look at some instances of CEM involving fair coins, which seem like good test cases: if there were a problem for CEM, one would expect it to show up for conditionals concerning the outcomes of fair coin tosses.
 
 Let's begin with chance (understood as objective rather than epistemic). Consider one of the coins currently in your pocket. What's the chance that it would land Heads if it were tossed in the next minute? Around 50\%, surely (unless you are in the habit of carrying around trick coins). Similarly, the chance that it would fail to land Heads if it were tossed is around 50\%. But chance is a kind of probability, and it a basic theorem of the probability calculus that the sum of the probabilities of two propositions equals the sum of the probabilities of their disjunction and their conjunction. And in this case, the conjunction of the two conditionals---namely that if the coin were tossed it would land Heads, and if the coin were tossed it would fail to land Heads---is absurd, and deserves zero credence. So the chance of the disjunction of the conditionals---which is an instance of CEM---is roughly one. In fact, it would seem to be \emph{exactly} one, since any surprising factors that might elevate the chance of one disjunct above 50\% would presumably reduce the chance of the other disjunct below 50\% by the same amount. But given that the disjunction has chance one, it would be preposterous to deny that it is true.%
 \footnote{We wouldn't quite want to assume that \emph{all} chance-one propositions are true: certain examples involving infinitely fine-grained outcomes make trouble for that simple generalisation. Similar points apply to arguments for the truth of a proposition from the premise that its epistemic chance is 1, or for the premise that we ought to assign it a credence of 1. But it seems hopeless to try to leverage these considerations into a defence of the denial of CEM.}
 
-*** Think somewhere about cases like ‘What is the chance that what this piece of paper says is true?’ when it's a counterfactual.  It actually seems fine - and that's a good argument against NTV style theorists, Kratzerians, etc.  
+%*** Think somewhere about cases like ‘What is the chance that what this piece of paper says is true?’ when it's a counterfactual.  It actually seems fine - and that's a good argument against NTV style theorists, Kratzerians, etc.  
 
 We can generate a similar pattern of judgments by considering the chances at a certain past time of counterfactuals concerning times in the future of that time. For example, if you didn't toss a certain coin yesterday, it seems that the chance two days ago that it would land Heads if it were tossed yesterday was in the region of 50\%, as was the chance two days ago that it would fail to land Heads if it were tossed yesterday, so again, the chance of the disjunction of these counterfactuals would seem to have been 1.
 
@@ -436,7 +438,7 @@ Of course, high credence isn't in general sufficient to explain assertability---
 \cite{HawthorneKL}.%
 \footnote{Our talk of objective chance here need not be understood as building in a commitment to indeterminism: for accounts of chance-talk that make non-trivial chance-ascriptions compatible with determinism, see ***. Nor do the epistemological issues turn essentially on the assumption of indeterminism: even if we knew that determinism was true, ‘I will lose the lottery’ would still be unassertable (in ordinary circumstances), and it would still be hard to find an explanation of this unassertability that didn't overgeneralise to all manner of ordinary assertions about the future.} 
 We can remain neutral about this here: the main suggestion we want to make is that one should approach the knowledge and assertability of counterfactuals in the same way as the knowledge and assertability of claims about the future. Whatever explains the unassertability of ‘I will lose the lottery’ will also explain the unassertability of ‘If I had bought a ticket in that lottery I would have lost’; whatever explains why the unassertability of the first claim doesn't carry over to all sorts of other claims about the future which have small chances of being false will explain why the unassertability of the second claim doesn't carry over to all sorts of other counterfactuals whose consequents have a small chance of being false conditional on their antecedents. Of course whatever defensive manoeuvres we make, we should concede that in the future case, if you are unlucky and the plate does in fact tunnel through the floor, then the earlier self-ascription of knowledge was false after all; similarly, if you are unlucky and the closest accessible world where the plate falls is one where it tunnels, your self-ascription of knowledge that the plate would break if it fell is false.%
-\footnote{In the case of future-tense claims, the prima facie attractive idea that knowledge is closed under many-premise deductive consequences leads to further puzzles: by performing a conjunction introduction based on many intuitively knowable high-chance premises, one can deduce a conclusion that one knows to have very low chance. This is both puzzling in its own right, and makes further puzzles for the project of formulating an account of the rational connection between the proposition that P and the proposition that P has a certain objective chance. Given the best-known such principle (Lewis's ‘Principal Principle’), we will have a choice between saying either that the conjunction in question is known despite the fact that one rationally ought to have assigned it a very low credence, or appealing to the standard get-out clause of ‘inadmissible information’. All of this structure carries over to the case of counterfactuals: given multi-premise closure and (finite) agglomeration for counterfactuals, we will be in a position to know certain counterfactuals for which SKYRMS* recommends very low confidence. Possible reactions include giving up multi-premise closure; tolerating the idea that one can know things to which one ought to have assigned low confidence; or modifying SKYRMS* further with an ‘inadmissible counterfactual information’ clause.}
+\footnote{In the case of future-tense claims, the prima facie attractive idea that knowledge is closed under many-premise deductions leads to further puzzles: by performing a conjunction introduction based on many intuitively knowable high-chance premises, one can come to know a conclusion that one knows to have very low chance. This is both odd in its own right, and makes further puzzles for the project of formulating an account of the rational connection between the proposition that $P$ and the proposition that $P$ has a certain objective chance.  On one approach, one's knowledge of $P$'s low chance means that one ought to have a low degree of confidence in $P$ (despite the fact that one in fact knows that $P$ and thus presumably has a high degree of confidence in $P$); on a different approach, one ought to have a high degree of confidence in $P$ (despite the fact that one knows its chance is low).  In the terminology of Lewis's ‘Principal Principle’, the latter option will involve claiming that one's evidence at the time in question is inadmissible at that time.  All of this structure carries over to the case of counterfactuals: given multi-premise closure and (finite) agglomeration for counterfactuals, we will sometimes be in a position to know that if it were that $P$ it would be that $Q$ despite also knowing that there's a very low chance that if it were that $P$ it would be that $Q$.  Possible reactions include giving up multi-premise closure; tolerating the idea that one can know things to which one ought to have assigned low confidence; and tolerating the idea that we should sometimes be confident in something whose current chance we know to be know.}
 
 (The challenge of connecting up facts about the appropriate degrees of confidence in conditionals with facts about assertability and knowledge arises for indicatives as well as for counterfactuals. However, for indicatives, there is more scope for explaining assertability by appeal to the accessibility parameter. Suppose that I know that the plate won't be dropped without breaking, and suppose that what it takes for a world to be accessible is that be compatible with my knowledge. Then the aforementioned knowledge about the future will guarantee the truth of ‘If the plate is going to be dropped, it is going to break’; and if I know that I know that the plate won't be dropped without breaking, I will be in a position to know the proposition expressed in context by the indicative conditional without drawing at all on thoughts about closeness. On our view this kind of explanation is often apt, but is not the only path to knowledge of indicative conditionals: one can also bring in whatever resources one used to make room for knowledge of counterfactuals like \ref{break} and \ref{notunnel}. By contrast, it is much harder to see how a proponent of \ref{strict} can make room for knowledge of indicative conditionals in a case where iterated knowledge is unavailable.)
 
@@ -445,11 +447,14 @@ We have rejected similarity-based analyses of closeness. And as will be becoming
 
 So, in a sense we are less ambitious in our goals than many other theorists of conditionals have been. Nevertheless, the claims we are making are by no means trivial - indeed as we have seen they are inconsistent with the views of many other writers, so we feel no need to defend the substantiveness or interest of the views we are putting forward.
 
-“Treating closeness as primitive” is merely refraining from offering any definitions or equivalences that break out of the circle just noted. It is not any kind of claim about closeness. We are thus not making any claim to the effect that closeness is fundamental or perfectly natural or unanalysable or anything else of the sort. Nevertheless, the structural claims we are making about closeness invite a certain inchoate metaphysical worry. Take for example the claim that a certain untossed coin is either such that some world where it lands Heads is closer than any world where it lands Tails, or such that some world where it lands Tails is closer than any world where it lands Heads. What, people want to know, could conceivably \emph{make it be the case} that one of these closeness profiles obtains?
+“Treating closeness as primitive” is merely refraining from offering any definitions or equivalences that break out of the circle just noted. It is not any kind of claim about closeness. We are thus not making any claim to the effect that closeness is fundamental or perfectly natural or unanalysable or anything else of the sort. Nevertheless, the structural claims we are making about closeness invite a certain hard-to-pin-down metaphysical worry. Take, for example, the claim that a certain untossed coin is either such that some world where it lands Heads is closer than any world where it lands Tails, or such that some world where it lands Tails is closer than any world where it lands Heads. What, people want to know, could conceivably \emph{make it be the case} that one rather than the other of these two possibilities obtains?  In what could the difference between the untossed toins that would have landed Heads if tossed and the ones that would have landed Tails if tossed conceivably \emph{consist}?
+
+% The worry is an old one...
+%	\emph{mention the tradition of thinking that middle knowledge is weird}
+
+
 
 \begin{itemize}
-	\item
-	\emph{mention the tradition of thinking that middle knowledge is weird}
 	\item
 	Is the appeal to vagueness enough to defuse all the worries?
 	\begin{itemize}
