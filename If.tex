@@ -20,6 +20,8 @@
 
 \bibliography{Shoulders}
 
+\newcommand{\argument}[1]{#1.}
+\newcommand{\argbreak}{. }
 
 \setlength{\bibitemsep}{0em}
 
@@ -60,14 +62,18 @@
 
 \renewcommand{\theequation}{\arabic{equation}}
 
-\newcommand{\gap}{\begin{center}[\ldots]\end{center}}
+\newcommand{\gap}{[\ldots]}%\begin{center}[\ldots]\end{center}}
 
 \begin{document}
 \frontmatter
 \pagestyle{front}
 \title{If…: A Theory of Conditionals}
 \author{\textsc{Cian Dorr and John Hawthorne}}
-\date{Draft of \today}
+\date{Draft of \today\\
+$\quad$\\
+Note for Mind and Language seminar participants: some apologies are in order, for (i) the fact that this is in pretty rough shape; (ii) the fact that it is not so directly about ‘semantic frameworks’, and (iii) the fact that there is so much of it.  We expect to focus on Chapter 1; parts of Chapter 2 are included for context.}
+
+$\quad$\pagebreak
 
 \maketitle
 
@@ -76,7 +82,9 @@
 \mainmatter
 \pagestyle{main}
 
+\begin{comment}
 \subfile{logic}
+\end{comment}
 
 \subfile{Chapter0}
 
@@ -90,6 +98,6 @@
 \subfile{Chapter4}
 \end{comment}
 
-\printbibliography
+\printbibliography[heading=bibintoc]
 
 \end{document}
