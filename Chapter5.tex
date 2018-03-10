@@ -1,0 +1,271 @@
+\documentclass[If.tex]{subfiles}
+
+\begin{document}
+\chapter{Conditionals, quantifiers, and modals} \label{chap:embedding}
+
+\section{The restrictor view and its problems}
+
+\section{Conditionals under ordinary quantifiers}
+To see what an alternative account of the phenomena that motivate the restrictor view might look like, let's begin with some phenomena which we already briefly discussed in chapter 2, for which an account using the technology of the restrictor view is conceivable but has not met with wide acceptance.  Consider an example from Abbott (****): you are going through your company's email records from last month to see whether it is abiding by its policy of replying to queries that come from reputable addresses.  If your search for unanswered emails from reputable addresses comes up empty, the following speech seems felicitous:
+\begin{prop}
+	\nitem \label{everyif}
+	Every query was answered if it came from a reputable address.
+\end{prop}
+As Abbott notes, it is easy at least in this setting to hear \ref{everyif} as equivalent to
+\begin{prop}
+	\nitem \label{everywhich}
+	Every query which came from a reputable address was answered.
+\end{prop}
+This apparent equivalence is surprising.  Given our view of conditionals, it looks like \ref{everyif} should be strictly stronger than \ref{everywhich}: for the former to be true, not only must all the emails which come from reputable addresses in the actual world be answered in the actual world, but also all the other emails must be answered in the closest accessible worlds in which they come from reputable addresses.  
+
+The pattern here seems quite common, at least for past-tense indicative conditionals embedded under universal quantifiers.  Consider another example:
+\begin{prop}
+	\nitem
+	Every day, he went for a walk after lunch if he had time.
+	\nitem
+	Every participant chose A if given a choice between A and B.  
+\end{prop}
+These seem naturally interpreted as equivalent to corresponding restricted generalisations:
+\begin{prop}
+	\nitem
+	Every day on which he had time, he went for a walk after lunch.  
+	\nitem
+	Every participant who was given a choice between A and B chose A.  
+\end{prop}
+
+Prima facie, it looks like the only way to get equivalences such as that between \ref{everyif} and \ref{everywhich} without radically departing from their apparent syntactic structure is to analyse the conditionals as tantamount to a material conditional.  This option is not out of the question for us: we would merely need to postulate that on the relevant occasions, accessibility is understood in such a way that the only accessible world is the actual world, or at least that the only accessible worlds are worlds which match actuality with respect to the question which emails came from reputable addresses.  (Note that a demanding notion of accessibility of this sort would also achieve the effect of a material conditional reading on a strict conditional analysis.)  But such an explanation is not adequate to the generality of the phenomenon, since the following pair of sentences are also naturally heard as equivalent.%
+\footnote{Moreover, \ref{noif} seems equivalent to \ref{everyif}, as discussed in section ***.}
+\begin{prop}
+	\nitem \label{noif}
+	No query went unanswered if it came from a reputable address.
+	\nitem \label{nowhich}
+	No query which came from a reputable address went unanswered.
+\end{prop}
+A material conditional analysis does nothing to explain the sense of equivalence here.  Moreover, a material analysis has the crazy implication that \ref{noif} is true just in case every email was both from a reputable address and answered---this is one of the central objections to the material conditional approach to indicatives.  
+
+An alternative strategy for explaining the apparent equivalence of \ref{everyif} and \ref{everywhich} which also extends to \ref{noif} and \ref{nowhich} is to appeal the fact that the argument from \ref{everywhich} to \ref{everyif} is \emph{quasi-valid} in the sense explained in section ???: the result of strengthening the premise by adding ‘must’ entails the conclusion. The argument thus have the same status as the arguments from ‘P or Q’ to ‘If not P, Q’ and the argument from ‘P or Q and not-P’ to ‘Must Q’. As we saw in section ???, arguments with this status tend to induce positive feelings akin to those produced by actually valid arguments.  Given that the argument in the other direction is actually valid (given modus ponens), we then have something to say about why the sentences in question might strike us as equivalent.  
+
+However there are reasons not to be satisfied with this diagnosis.  First of all, the inferences in question seem good even when we inject an element of uncertainty which should put one in a setting where quasi-valid inferences don't even seem valid.  For example, consider the quasi-valid inference from ‘He's in South or North Korea’ to ‘If he's not in South Korea he's in North Korea’: under circumstances in which you know he would never go to North Korea but have pretty good evidence that he is in South Korea, ‘There is pretty good evidence that he is in South or North Korea’ seems true
+while ‘There is pretty good evidence that if he is not in South Korea he is in North Korea’ seems false.  Applying this diagnostic to the case at hand, suppose that you have almost got to the end of your search through the query archive checking which ones were answered and which came from reputable addresses, and have so far discovered no counterexamples to \ref{everywhich}.  The last query on the list is one that you know not to have been answered, and you have initial but not decisive indications that the address is disreputable.  At this point, both of the following speeches seem fairly good:
+\begin{prop}
+	\nitem \label{startingwhich}
+	It is starting to look like every query which came from a reputable address was answered.
+	\nitem \label{startingif}
+	It is starting to look like every query was answered if it came from a reputable address.
+\end{prop}
+But the goodness of \ref{startingif} is unexpected, given that 
+\begin{prop}
+	\nitem \label{particular}
+	The last query on the list was answered if it came from a reputable address
+\end{prop}
+is clearly unacceptable given your knowledge that the query was unanswered.  So, there is a puzzle here that doesn't particularly turn on the idiosyncracies of our own theory of conditionals: given that you are so confident of the falsehood of \ref{particular}, how can you be even mildly confident of the truth of \ref{everyif}?  
+
+A second reason to be dissatisfied with the quasi-validity diagnosis is its failure to extend to other quantifiers.  For example, \ref{somewhich} and \ref{someif} are easily heard as equivalent, as are \ref{mostwhich} and \ref{mostif}:
+\begin{prop}
+	\nitem \label{someif}
+	Some days, he went for a walk after lunch if he wasn't tired.
+	\nitem \label{somewhich}
+	Some days on which he wasn't tired, he went for a walk after lunch.
+	\nitem \label{mostif}
+	Most queries were answered if they came from a reputable address
+	\nitem \label{mostwhich}
+	Most queries which came from a reputable address were answered
+\end{prop}
+In the case of the first pair, modus ponens secures the validity of the argument from \ref{somewhich} to \ref{someif}, but the argument in the other direction is not even quasi-valid on our account, assuming the kind of epistemic conception of accessibility which we promoted in chapter 1.  Suppose that in fact the only day he went for a walk was March 22nd, a day on which he was tired.  We don't know whether he was tired that day, but we do know, and indeed know that we know, that he either went for a walk or was tired.  (Maybe we know this because we know that he was on a mountain vacation that day on which everyone who wasn't tired went for a walk.  Or maybe we simply know that he went for a walk that day.)  Then although \ref{somewhich} is false, we know that \ref{someif} is true, since we know that he goes for a walk on that day at all accessible worlds where he is not tired, and a fortiori at the closest accessible world where he is not tired.  In the case of the ‘most’ sentences the situation is even worse, since there is no quasi-valid argument (and a fortiori no valid argument) in either direction.  Again applying our account in a flatfooted way, it looks like various ways of knowing the proposition expressed by \ref{mostif} should be available even in a world where \ref{mostwhich} is false: for example, one could know, concerning each query in a certain set comprising the majority of the queries received during the relevant month, that they were answered, and also know that one knew this, and thus know that each query in that set is answered in every accessible world.  In the other direction, one could know the proposition expressed by \ref{mostwhich} even in a situation where most of the queries are known to be unanswered, and thus are unanswered in all accessible worlds.%
+\footnote{Note that a strict conditional approach does no better than our approach with regard to securing quasi-validity of the inferences just discussed.  For example, knowing of most of the queries that they are answered in all the accessible worlds where they come from a reputable source is compatible with its being true that all the queries that in fact come from a reputable source were unanswered.}  
+
+% \begin{prop}
+% 	\nitem
+% 	Some days, if I'm bored, I go for a walk.  / Some days, I have a nap if I have time between meetings
+% 	\nitem
+% 	Some farmers, if they own a donkey, beat it regularly  / Some farmers store wheat in a silo if they have one
+% 	\nitem
+% 	Some people, if they live in a village or are too poor to afford a TV, have never even heard of Beyoncé
+% \end{prop}
+
+How can we do better?  One option that has been taken seriously is to extend the ideas about the logical forms of sentences involving ‘if’ clauses and adverbial quantifiers to ordinary quantifiers as well.  On this kind of approach, the reading of \ref{everyif} that makes it equivalent to \ref{everywhich} would be derived by assigning \ref{everyif} a logical form along the lines of the following:
+\begin{center}
+	\begin{forest}
+		[[[[Every, tier=word] [query, tier=word]] [[if, tier=word] [it came from a reputable address, tier=word]]] [was answered, tier=word]]
+	\end{forest}
+\end{center}
+or maybe
+\begin{center}
+	\begin{forest}
+		[
+			[[If, tier=word] [it came from a reputable address, tier=word]] 
+			[[[every, tier=word] [query, tier=word]] [was answered, tier=word]]
+		]
+	\end{forest}
+\end{center}
+or even conceivably
+\begin{center}
+	\begin{forest}
+		[
+			[
+				[Every, tier=word] 
+				[
+					[query, tier=word] 
+					[[if, tier=word] [it came from a reputable address, tier=word]]
+				]
+			] 
+			[was answered, tier=word]
+		]
+	\end{forest}
+\end{center}
+One might implement this by taking the semantic value of the ‘if’ clause to be the property of coming from a reputable address, 
+***COME BACK TO THIS ONCE WE'VE WRITTEN THE SECTION ON ADVERBIAL QUANTIFIERS***
+
+Interestingly, in her paper discussing the behaviour of conditionals under determiner quantifiers, Kratzer (****) ends up rejecting the kinds of syntactically revisionary maneuvers just described.   Instead, she favours an approach on which ‘if’ clause takes scope under the quantifier, and the relevant equivalences are secured by appeal to the phenomenon of quantifier domain restriction.  It is not controversial that the relevant reading of \ref{everyif} involves domain restriction: we are certainly not talking about every query in the entire universe.  Kratzer's proposal is that the restriction in play is not only to queries to the relevant company during the relevant period, but to those that came from reputable addresses, so that \ref{everyif} is equivalent to something like this:
+\begin{prop}
+\nitem 
+	Every query that was received by company $X$ during the last month and came from a reputable address was answered if it came from a reputable address.
+\end{prop}
+Given any account of the conditional that validates modus ponens and and-to-if, the ‘if’ clause in this sentence will be truth-conditionally redundant, so that it will be true just in case *** is:
+\begin{prop}
+\nitem 
+	Every query that was received by company $X$ during the last month and came from a reputable address was answered.  
+\end{prop}
+Similarly for the sentences with other quantifiers like ‘most’, ‘no’, and ‘some’.  The central point of including the ‘if’ clause, then, is to help to suggest a certain way of resolving the context-sensitivity of the quantifiers.  If this suggestion is taken up, the ‘if’ clause will have made itself redundant.  But the envisaged mechanism is pragmatic, and does not require treating the ‘if’ clause as having a different syntactic position from the one it seems to have.  
+
+(Kratzer also makes the further suggestion that the relevant accessibility relation for the conditionals in sentences like \ref{everyif} is the trivial one in which every world is accessible only to itself, so that the conditionals become equivalent to material conditionals. But her way of recovering the equivalences does not depend on this suggestion: all that matters is that the conditional is one that respects modus ponens and and-to-if.)
+
+There are several features of this proposal which might strike one as dubious or artificial.  First, one might think it generally questionable to posit contextual effects that make an expression semantically redundant when on the surface it is manifestly a significant part of a sentence.  But there are other pretty clear cases where expressions contribute to pragmatically resolving the context sensitivity of other expressions in the same sentence in such a way as to render themselves truth-conditionally inert.  Consider:
+\begin{prop}
+	\nitem
+	Usually, a three-legged tiger has been in an accident.
+\end{prop}
+Treating ‘usually’ as a context-sensitive quantifier over situations suggests the analysing this as follows:
+\begin{prop}
+	\nitem
+	In most minimal situations involving a three-legged tiger, a three-legged tiger has been in an accident.
+\end{prop}
+Here, the second occurrence of ‘three-legged’ can be dropped without affecting the truth-conditions; but the first occurrence is simply a reflection of how we have found it natural to resolve the vast contextual flexibility associated with ‘usually’.  Note that it is not inevitable for ‘a three legged tiger’ to constrain the situation quantifier in this way: for example, in
+\begin{prop}
+	\nitem
+	Usually, a three-legged tiger is on display at the freak show
+\end{prop}
+‘usually’ might mean something like ‘in most minimal situations involving the freak show’.%
+\footnote{Note that the phenomenon is not confined to adverbial quantifiers, since ‘usually’ could be replaced by ‘in most cases’.  We could also consider sentences like
+	\begin{prop}
+		\nitem
+		In most families, an overbearing father is resented by the children.
+	\end{prop}
+	where ‘most families’ naturally means ‘most families in which there is an overbearing father’.}
+
+A second source of suspicion arises from the generalisation that an indicative conditional suggests that one is ignorant with respect to the truth value of the antecedent.  This generalisation seems fairly robust for unembedded conditionals, although there are well-known exceptions in the form of ‘echoing’ conditionals whose antecedents have recently been asserted in the course of spelling out some chain of reasoning.  And one might expect that it would carry over to quantified sentences at least to the extent that one does not know that the domain consists entirely of items relative to which the antecedent is true.  By analogy, just as asserting ‘Fred has a good chance of passing’ suggests that one doesn't know that Fred will pass, asserting ‘Each student has a good chance of passing’ suggests that one does not know that every student in the domain will pass.  
+
+However, the most flat-footed, and to our mind perfectly adequate, explanation of the ignorance implicature for conditionals does not in fact carry over to quantified cases in a way that is problematic for us.  The explanation in question is a Gricean one: hearing someone say ‘If P, Q’, we assume that they do not know ‘P’ to be true, because if they did, they could have opted for the more informative ‘P and Q’, or simply for ‘Q’.  Explanations in this family often do extend to quantified cases: for example, saying ‘Each student has a good chance of passing’ suggests that one was not in a position to assert the simpler and stronger ‘Each student will pass’.  But in the case of quantified conditionals there is no parallel extension to the quantified case.  The knowledgeable utterer of \ref{everyif} does in fact know the propositions that would be expressed in the same context by the quantified versions of the competitors ‘P and Q’ and ‘Q’ which accounted for the ignorance implicature of ‘If P, Q’ in the unquantified case:
+\begin{prop}
+	\nitem
+	Every query was answered and came from a reputable source
+	\nitem
+	Every query was answered
+\end{prop}
+But the propositions expressed by these sentences in that context are \emph{not} stronger than the one expressed by \ref{everyif}---in fact they are truth functionally equivalent.  And moreover, there is a decisive reason not to utter these sentences as a way of getting across the relevant knowledge, namely that it is extremely unlikely that anyone hearing them would be able to figure out that the domain on ‘every query’ was to be interpreted as restricted to queries that came from a reputable source.  
+
+***introduce expression ‘boring truth conditions’ earlier on
+
+The phenomenon of boring truth conditions also arises when conjunctions of conditionals appear underneath a quantifier.  For example, \ref{everyifand} seems equivalent to \ref{everywhichand}:
+\begin{prop}
+	\nitem \label{everyifand}
+	Every query was answered if it came from a reputable address and discarded if it came from a particularly disreputable address
+	\nitem \label{everywhichand}
+	Every query which came from a reputable address was answered and every query which came from a particularly disreputable address was discarded
+\end{prop}
+Can an appeal to contextual domain restriction help here?   It would be absurd to suggest that the domain of ‘every query’ is restricted to queries from reputable addresses, or to queries from particularly disreputable addresses, since both kinds of queries are pertinent to the desired truth conditions.  A more promising thought is that the domain of ‘every query’ in \ref{everyifand} is restricted to queries that either came from a reputable address or came from a particularly disreputable address.  This explains why, for example, the question what the emails that came from neither category do at the closest worlds where they are reputable is irrelevant to the truth conditions.  However, this move is not on its own enough to account for the equivalence, since even with the restricted domain, \ref{everyifand} will require not just that \ref{everywhichand} is true, but that all the emails that actually come from reputable addresses are discarded in the closest accessible world where they come from particularly disreputable addresses, and that all the ones that actually came from particularly disreputable addresses are answered in the closest world where they came from reputable addresses.  So, to generate a reading for \ref{everyifand} that makes it equivalent to \ref{everywhichand}, we would also need to say something special about the nature of the accessibility parameter governing the conditionals in \ref{everyifand}.  We could, following Kratzer, posit that the relevant accessibility relation is the super-demanding one that makes the conditionals collapse into material conditionals.  But to get the desired equivalence it is sufficient, and more in keeping with our usual approach to accessibility for indicative conditionals, to say that accessibility is governed by a matching constraint, such that accessibility requires accuracy with regard to the question which emails come from reputable addresses and which come from particularly disreputable addresses.  This constrained reading is analogous to one we appealed to in chapter 1 in connection with McDermott's example, in which 
+\begin{prop}
+	\nitem
+	The die landed on 2 if it landed on an even number and landed on 1 or 3 if it landed on an odd number
+\end{prop}
+is interpreted as equivalent to ‘The die landed on 1, 2, or 3’. Given that unembedded conditionals carry a presupposition of nonvacuity, such readings require suspension of the presuppositions that would be predicted by the standard lore about how presuppositions for conjunctions related to presuppositions for conjuncts; but while this lore is a good rough and ready heuristic, as we discussed in chapter *** the actual linguistic reality is more varied and complicated.  
+
+*** 
+Note that this approach does not depend on the conjoined conditionals having jointly inconsistent antecedents.
+\begin{prop}
+	\item	
+	Every query was answered if it came from a reputable address and added to the database if it mentioned one of the current products
+\end{prop}
+
+
+The matching constraint just described is sufficient to secure the equivalence of \ref{everyifand} and \ref{everywhichand} even if the domain of ‘every query’ is not restricted to queries that satisfy the disjunction of the antecedents.  But this is a special feature of ‘every’; as noted above, simply ascribing material-like truth conditions to the relevant conditionals yields intuitively disastrous results with other quantifiers.  For example, if we leave the quantifier unrestricted and impose the matching constraint just discussed, \ref{mostifand} will, absurdly, be counted as true in a world where most emails came from addresses that were neither reputable nor particularly disreputable, no matter what may have befallen the rest:
+\begin{prop}
+	\nitem \label{mostifand}
+	Most queries were answered if they came from reputable addresses and discarded if they came from particularly disreputable addresses
+\end{prop}
+By contrast, if we combine the matching constraint with a restriction of the domain of ‘most queries’ by the disjunction of the antecedents, we we will predict that \ref{mostifand} is truth-conditionally equivalent to \ref{mostwhichand}:
+\begin{prop}
+	\nitem \label{mostwhichand}
+	Most queries which either came from reputable addresses or particularly disreputable addresses either were answered and came from reputable addresses, or discarded and came from particularly disreputable addresses.
+\end{prop}
+This is a certainly a much more plausible gloss on \ref{mostifand}, although we admit that judgments in this area are quite delicate.  To explore its merits let us consider an example that may be easier to have clear judgments about:
+\begin{prop}
+	\nitem \label{mostdice}
+	Most of the dice landed on 1 or 3 if they landed on an odd number and landed on 2 if they landed on an even number
+\end{prop}
+The proposal we have been considering predicts that this has a salient reading where it is true just in case most of the dice that either landed on an odd number or landed on an even number---i.e.\ most of the dice that were rolled---landed on 1, 2, or 3.  Note that this could be true if most of the dice landed on 1 or 3, and a few landed on 4 or 6, and none landed on 2.  You might think that this points to a problem with our truth conditions, since you might think that \ref{mostdice} entails that most of the dice that landed on an even number landed on 2.  But the force of this objection is far from clear. In the unquantified case, McDermott probes our intuitions of truth conditions by asking which bets we would expect to be paid out on, noting for example that in a scenario where a single die was rolled and landed 1, we would expect to be paid out if we had bet on \ref{mcdermott}.  Similarly, if we had placed a bet on \ref{mostdice}, we would feel a bit aggrieved if we were not paid out in the scenario just described. So on the evidence presented so far, the suggested approach is defensible.  Is there a principled way to achieve a stronger reading for \ref{mostifand}, on which it entails ‘Most queries which came from a reputable address were answered’ and ‘Most queries which came from a particularly disreputable address were discarded’?  It is not obvious how this could be achieved, unless we allow ourselves to reconstruct the sentence as a conjunction of two ‘most’ claims:
+\begin{prop}
+	\nitem
+	Most queries were answered if they came from a reputable address and most queries were discarded if they came from a particularly disreputable address
+\end{prop}
+If we allowed such a reconstruction, and associated suitably different domains with the two quantifiers, we could get 
+Telling a principled story that would allow 
+
+
+Granted, 
+
+
+
+Note that both elements in the explanation are playing a crucial role in securing the equivalence of \ref{everyifand} with \ref{everywhichand}: if we merely 
+
+\begin{prop}
+	\nitem
+	Every query was answered if it was from a reputable address and forwarded to management if it was from a long-term client
+\end{prop}
+
+
+
+
+* How to deal with conjunctions
+	Conjunctions of ifs - 
+	Conjunctions of an if with a non-if
+	
+* Why no boring readings for counterfactuals?
+
+* Why a difference between future and past?  (Not an objection to us in particular.)
+	- Not really about ‘will’ since non-boring reading is easy for ‘Each of them is screwed if he doesn't study’.
+	- Are boring truth conditions available for the future?  Yes in some cases: have a future version of the emails example.  
+
+* Differences between quantifiers (most vs. at least 3)
+	- Kratzer's theory
+	- Nobody might win / nobody even might win
+	- Most people flunked even if they tried hard / 
+
+* Thing to add somewhere maybe: sentences like ‘Most of these dice will land on 1-5 if they are rolled’.  (On the non-boring reading, which is the natural one.)  We think you could know on statistical grounds, and assert.  Problematic for STRICT.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Conditionals under adverbial quantifiers}
+
+\section{Conditionals over quantifiers}
+
+\section{Modals}
+
+
+\end{document}

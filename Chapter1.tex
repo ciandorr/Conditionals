@@ -773,7 +773,7 @@ CSO is valid according the best-known logics for counterfactual conditionals, na
 	If $A$ and $B$ then $C$
 	\argbreak So, if $A$ then $C$}
 	\litem[RCV] 
-	\argument{If $A$ then $B$ and $C$\argrbreak So, if $A$ and $B$ then $C$}
+	\argument{If $A$ then $B$ and $C$\argbreak So, if $A$ and $B$ then $C$}
 \end{prop}
 (These patterns are sometimes called ‘Cumulative Transitivity’ and ‘Very Limited Antecedent Strengthening, respectively’.)  For suppose the premises of CSO hold: if $A$, $B$; if $B$, $A$; and if $A$, $C$. Given the first and third, by RCV it follows that if $A$ and $B$ then $C$; and from this and the second premise (If $B$, $A$) RT yields that if $B$, $C$.%
 \footnote{Also note that CSO entails RT and RCV, and that the two are equivalent modulo CEM which we will defend in \autoref{chap:cem}.}
@@ -901,7 +901,7 @@ Now, as we mentioned in the introduction, we are in agreement with Fine to this 
 
 The second feature of Fine's view that we want to note is the fact that the semantics allows us to classify each sentence (relative to a context) as either disjunctive or non-disjunctive. Disjunctions are always disjunctive; atomic sentences may or may not be disjunctive. (Fine is amenable to a dose of context-dependence here.) Given that he has this ideology at his disposal, it would thus be natural for Fine to accommodate the seeming goodness of the inferences whose validity we wanted to explain by appeal to CSO (or by appeal to CT and/or VLAS) by maintaining that these inference-rules are valid when restricted to conditionals with non-disjunctive antecedents and consequents. In any case, Fine does not present any cases that make trouble for this fallback position. Insofar as Fine's new machinery provides a diagnosis of what goes wrong with the CSO-based arguments we have been considering, the diagnosis will thus have to turn that some of the relevant sentences are disjunctive (in the relevant contexts). For example, it would be natural for Fine to say that the antecedent of \ref{weekendsaturday} is disjunctive:
 \begin{prop}
-	\nitem \label{weekendsaturday}
+	\sitem[\ref*{weekendsaturday}]
 		If the tree had died during the weekend, it would have been alive on Saturday afternoon
 \end{prop}
 Disjunctive sentences behave in the semantics like explicit disjunctions. Thus if, for example, Fine said that the antecedent of \ref{weekendsaturday} was tantamount to the disjunction ‘Either the tree died on Saturday or the tree died on Sunday’, \ref{weekendsaturday} would turn out to be equivalent to \ref{satsatsunsat}:
@@ -918,8 +918,8 @@ On big problem we see with this account of \ref{weekendsaturday} is that, in the
 \end{prop}
 Moreover, there are other contexts where a sentence such as \ref{weekendsaturday} seems more or less straightforwardly true, even though Fine seems to predict that it's false. For example if there was no storm on Saturday but there was one on Sunday it would be quite natural to assert \ref{weekendsunday}:
 \begin{prop}
-	\nitem \label{weekendsunday}
-		If the tree had died during the weekend, it would have died on Sunday.
+	\sitem[\ref*{weekendsunday}]
+	If the tree had died during the weekend, it would have died on Sunday.
 \end{prop}
 The problem is not essentially due to the postulated semantic equivalence of ‘The tree died during the weekend’ to ‘The tree died on Saturday or Sunday’, since the same problematic issues arise even when we substitute that explicit disjunction into \ref{weekendsaturday} and \ref{weekendsunday}.
 
