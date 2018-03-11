@@ -56,7 +56,7 @@ If the entire case for hyperintensionality had to rest simply on examples like t
 		If Jack the Ripper fathered Winston Churchill, Jack the Ripper was Lewis Carroll
 	\end{prop}
 \end{prop}
-For the purposes of these examples, suppose that neither Randolph Churchill nor Lewis Carroll, two Ripper candidates from the literature, was in fact Jack the Ripper.
+(For the purposes of these examples, suppose that neither Randolph Churchill nor Lewis Carroll, two Ripper candidates from the literature, was in fact Jack the Ripper.)  
 
 Given the intimate connection between indicative conditionals and epistemic modals, this pattern of hyperintensionality-friendly judgments is no surprise.  Claims of hyperintensionality have ben widely accepted for attitude verbs like ‘know’ and ‘believe’, on the basis of examples like \chisholm{lois}{a--b}:
 \begin{prop}
@@ -87,30 +87,9 @@ Such claims seem equally well-motivated for epistemic modals.  For example, cons
 \end{prop}
 Even without a specific analysis of ‘must’ and ‘might’ in terms of ‘knows’ to hand, it would be bizarre to deny hyperintensionality for ‘must’ and ‘might’ while accepting some form of hyperintensionality for ‘know’ and ‘believe’.  But similarly, it would be bizarre to deny hyperintensionality for indicative conditionals while accepting it for ‘must’ and ‘might’, at least once was recognises the kinds of connections between them that we discussed in \autoref{chap:accessibility}.
 
+***
 
 
-*** 
-
-
-
-
-
-
-Putative examples of hyperintensionality 
-	(including *false* conditionals with impossible antecedents, which turn true when you replace the antecedent with the conjunction of the consequent with its own negation).  
-	- with counterfactuals
-			examples where it's merely a word-choice-influencing-context thing
-				If I resembled Madonna… versus If Madonna resembled me…
-				If I lived close to Madonna…
-			
-			standard examples
-			
-			If it were to turn out that Hesperus wasn't Phosphorus, then…
-			If we discovered tomorrow that Hesperus wasn't Phosphorus, that would [not] be very surprising
-			If we knew Superman wasn't Clark, we wouldn't be bothering to investigate this
-			If we knew Superman wasn't Clark, we would be much less busy than we actually are
-			If [theorist T] were right, then it would be that [impossible consequence of T]
-			
 	- with indicatives
 			If there's water in the glass but no hydrogen, nothing interesting is going on
 			If vixens aren't foxes, they aren't Martian spy robots either
@@ -123,9 +102,70 @@ Putative examples of hyperintensionality
 		whereas the Chance Equation does nothing comparable
 		So, dealing with the problem for indicatives is far more theoretically pressing!
 		
-	- Reasons for regarding ‘knows’ as hyperintensional seem to carry over to epistemic modals; if there's an intimate connection between them and indicatives, that also suggests we should expect hyperintensionality.  
 	
-\section{Impossible worlds}
+\section{Impossible worlds}  \label{sect:impossibleworlds}
+In the literature on counterfactuals, many have proposed that we should provide for hyperintensionality by retaining a world-based semantics, while expanding the domain of “worlds” to include possible worlds.  If, for example, propositions $q$ and $q'$ are true in the same possible worlds, but not in exactly the same worlds, it may be that the closest world where $p$ is true is one of the impossible worlds where $q$ is true but $q'$ is not.  For the small minority who follow \citet{LewisOPW} in thinking of possible worlds as concrete universes, the idea that there are also impossible worlds will pose a host of problems.  On the other hand, for those who (like Plantinga*** and Adams***) were all along thinking of possible worlds as something like sets of propositions, the idea that there are also impossible worlds looks prima facie harmless: impossible worlds can simply be sets of propositions for which it is not possible that they should be all and only the true propositions.%
+\footnote{There is no particular pressure to draw a further line whereby certain sets of propositions count neither as possible nor as impossible worlds, though of course we will still presumably want to impose contextually varying accessibility restrictions on the domain relevant to a particular utterance of a conditional.}  
+In this setting, one can simply identify truth at a world with membership.  (The idea that a proposition is true at a world when it is \emph{entailed} by the propositions in the world is far more problematic, since it would require an independently understood, non-modal notion of entailment amongst propositions in order to make any distinctions amongst worlds whose members could not all be true together.)
+
+In thinking through what can be achieved by an invocation of impossible worlds conceived of in this way, much depends on the underlying theory of propositions.  If we have a picture where modally equivalent propositions are identical, e.g.\ one where propositions are identified with sets of possible worlds, we can still construct impossible worlds along the lines just described and quantify over them in the semantics for conditionals; this will not secure any hyperintensionality, although it does allow for cases where conditionals with impossible antecedents differ in truth value.  More fine-grained pictures offer more promise for securing hyperintensionality, but one should not underestimate the difficulties in articulating such pictures without running into paradox.%
+\footnote{***Russell-Myhill}
+
+But regardless of how one thinks about propositions, the framework just described suggests that many of the principles of conditional logic that we have been endorsing up to now will require rethinking.  To begin with, notice that if we do not require impossible worlds to be closed under conjunction, we are liable to get counterexamples to Finite Agglomeration (‘If $P$, $Q$; if $P$, $Q'$; so if $P$, $Q$ and $Q'$’): this will fail when the closest accessible $P$-world contains the propositions expressed by $Q$ and $Q'$ but not their conjunctioon.  Similarly, if we allow that an impossible world may in some cases contain neither a proposition nor its negation, we are liable to get counterexamples to CEM (‘If $P$, $Q$ or if $P$, not $Q$’).  And finally, the rule of deduction in the consequent, which counts the argument from ‘If $P$, $Q$’ to ‘If $P$, $Q'$’ as valid whenever the argument from $Q$ to $Q'$ is, may also fail in an impossible-worlds setting, since unless $Q$ and $Q'$ express the very same proposition, the fact that $Q$ logically entails $Q'$ does not rule out the existence of impossible $Q$-worlds that are not $Q'$-worlds.  On the other hand, moving to an impossible-world semantics does nothing to threaten Identity, Modus Ponens, or CSO, since these principles do not trade on logical structure inside the main or subordinate clauses of conditionals, and so do not depend on any constraints that such structure might be thought to impose on the facts about truth at worlds.  Consider CSO for example.  If the closest $A$-world is a $B$-world and the closest $B$-world is an $A$-world, then the closest $A$-world \emph{is} the closest-$B$-world, whether impossible or not, and so if the closest $A$-world is a $C$-world the closest $B$-world is too.  
+
+Of course, use of the impossible worlds framework does not force one to give up on any particular logical validities, since there is always the option of saying that the accessible impossible worlds obey various further constraints such as closure under conjunction, or that worlds obeying such constraints are always closer than worlds that do not.  But the prima facie evidence suggests for indicative conditionals at least, there are in fact prima facie counterexamples to Finite Agglomeration, CEM, and Deduction in the Consequent, so that such constraints would not be well motivated.  One class of examples involves contexts where we take seriously the views of logicians who (wrongly, as we will assume) reject certain claims or inferences characteristic of classical logic.  Counterexamples to Deduction in the Consequent are particularly salient in this connection:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		If Graham Priest is right to think that this arrow is both moving and not moving, this arrow is both moving and not moving.
+		\aitem
+		If Graham Priest is right to think that this arrow is both moving and not moving, this arrow is moving, not moving, and made of peanut butter.
+	\end{prop}
+\end{prop}
+Another class of examples involve contexts where we take seriously the hypothesis that we have misunderstood certain logical words in our own language.  Consider:
+\begin{prop}
+	\nitem
+	If I have been the victim of a lifelong conspiracy to hide from me the fact that ‘and’ really means disjunction, then it's raining and it's not raining.
+\end{prop}	
+It feels like one could say something true by uttering this sentence, although assuming that it is not in fact raining the following doesn't seem to be true:  
+\begin{prop}
+	\nitem
+	If I have been the victim of a lifelong conspiracy to hide from me the fact that ‘and’ really means disjunction, then it's raining.
+\end{prop}
+Similar considerations threaten certain instances of CEM:
+\begin{prop}
+	\nitem
+	Either if I have been the victim of a lifelong conspiracy to hide from me the fact that ‘it is not the case that’ is really just a semantically inert operator like ‘it is true that’ then everyone is a tiger, or if I have been the victim of a lifelong conspiracy to hide from me the fact that ‘it is not the case that’ is really just a semantically inert operator like ‘it is true that’ then it is not the case that everyone is a tiger.
+\end{prop}
+and Finite Agglomeration (letting each of the premises be \ref{agglomerationpremise} and the conclusion \ref{agglomerationconclusion}):
+\begin{prop}
+	\nitem \label{agglomerationpremise}
+	If ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ then ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’.
+	\nitem \label{agglomerationconclusion}
+	If ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ then ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ and ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’.
+\end{prop}
+
+
+
+\end{prop}
+
+	
+
+\end{prop}
+
+
+
+
+
+
+
+Even confining our attention to indicative con
+
+
+*** Also for epistemic modals
+
+
 A possible solution: keep the form of analysis but have impossible worlds, perhaps constructed as sets of propositions.  
 	- Obviously lots of the details here will depend on what proposiitons are.
 	- One salient choice point for hyperintensional theory of propositions: is the proposition that Hesperus is bright = the proposition that Phosphorus is bright, etc.?  
@@ -205,6 +245,14 @@ If you had smoked, I'd have known immediately that you had the smoking gene
 Of course we can still say that accessibility for counterfactuals is *often* limited to the metaphysically possible worlds (typically as part of being limited much more narrowly to nomically possible worlds matching history up to a time).  
 
 Q: why isn't accessibility for indicatives limited like this?  One possible suggestion: we know that things are the way they actually are, so the only way to narrow in to a set of metaphysically possible worlds within the set of epistemically possible worlds is to narrow down to one (which is pointless).  (Or do the same thing with any contingent a priori knowledge.)
+
+	
+			If it were to turn out that Hesperus wasn't Phosphorus, then…
+			If we discovered tomorrow that Hesperus wasn't Phosphorus, that would [not] be very surprising
+			If we knew Superman wasn't Clark, we wouldn't be bothering to investigate this
+			If we knew Superman wasn't Clark, we would be much less busy than we actually are
+			If [theorist T] were right, then it would be that [impossible consequence of T]
+			
 
 
 
