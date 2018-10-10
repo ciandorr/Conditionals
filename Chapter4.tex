@@ -371,9 +371,6 @@ When carried over to epistemic modals and conditionals, this style of view will 
 	\end{prop}
 \end{prop}	
 
-
- 
-
 The Leibniz's-Law-driven worries about the logic have a somewhat different scope from those considered earlier (based on doubts about logic, including doubts about the meanings of logical vocabulary).  As we saw, doubts about logic or the meanings of words can be used to challenge CEM as well as Agglomeration, Deduction in the Consequent, and Substitution of Logically Equivalent Antecedents, but we see no distinctive Leibniz's Law-driven challenge to the validity of CEM.%
 \footnote{The Leibniz's Law style arguments can with some effort be applied to make trouble for Substitution of Logically Equivalent Antecedents.  Consider:
 	\begin{prop}
@@ -417,6 +414,8 @@ Starting with \citet{KaplanQI}, many philosophers who have recognised the need t
 \begin{itemize}
 	\item
 	Add Soames-style examples using ‘I’, ‘you’, ‘that’, etc.?  
+	\item
+	Add a note explaining why we are not doing the apparently easy thing where you use simple examples but assume that when an argument is valid knowledge of the premises gets you knowledge of the conclusion.  Answer: that assumption is problematic in this context. 
 \end{itemize}
 
 % Add more on the view that denies that two premises are both true in the same context - ‘context provides one guise per object’.  
@@ -455,82 +454,268 @@ Invoking logically impossible worlds understood as sets of propositions makes it
 These points are neutral with regard to the underlying theory of propositions, e.g.\ it will work even on the view that necessarily equivalent propositions are always identical.  By contrast, allowing for counterexamples to Substitution of Logically Equivalent Antecedents will obviously require pairing the view with a theory of propositions on which logically equivalent sentences do not express the same proposition.%
 \footnote{Some proponents of using impossible worlds in a closeness-theoretic semantics of conditionals have considered imposing what Nolan calls ‘Strangeness of Impossibility Constraint’ (***cite): every possible world is closer than any impossible world.  Some of our examples suggest that when indicatives are in question, this principle is false even on the weak interpretation where ‘possible’ means ‘metaphysically possible’ and ‘impossible’ means ‘logically impossible’.}
 
-On the other hand, moving to an impossible-world semantics does nothing to threaten Identity, Modus Ponens, or CSO, since these principles do not trade on logical structure inside the main or subordinate clauses of conditionals, and so do not depend on any constraints that such structure might be thought to impose on the facts about truth at worlds.  Consider CSO for example.  If the closest accessible $A$-world is a $B$-world and the closest accessible $B$-world is an $A$-world, then the closest accessible $A$-world \emph{is} the closest accessible $B$-world (whether it is logically impossible or not), and so if the closest $A$-world is a $C$-world the closest $B$-world is too.  
+The principles discussed in the previous paragraph all concern conditionals with certain particular kinds of logical complexity in their main or subordinate clauses; the fact that using logically impossible worlds in \ref{ourview} allows for counterexamples to these principles depends on the fact that truth at an impossible world can behave unusually with respect to the relevant logical operations.  But not all of the distinctive principles of [our logic] are like that: Identity, Modus Ponens, and CSO do not trade at all on logical structure inside of conditionals.  As a result, so long as we keep the structural constraints on closeness and accessibility: i.e. that \emph{being closer than} is necessarily a well-ordering, and that the actual world (= the set of all true propositions) is accessible and closer than all other worlds, these three principles will still come out valid.   Consider CSO for example.  If $B$ is true at the closest accessible $A$-world at which $A$ is true, and $A$ is true at the closest accessible $B$-world, then the closest accessible $A$-world \emph{is} the closest accessible $B$-world (whether it is logically impossible or not), and hence if $C$ is true at the closest accessible $A$-world, $C$ is true at the closest accessible $B$-world.
+
+This limitation means that allowing impossible worlds in \ref{ourview} (or indeed in \ref{lewis}) will not allow the view to avoid the Leibniz's Law objections to the standard logic. For arguments of this kind apply to CSO in very much the same way that they apply to other principles such as Deduction in the Consequent.  Consider:
+\begin{prop}
+    \nitem
+    \begin{prop}
+    \aitem \label{llone}
+	If no superheroes work at the Daily Planet and Superman is on the Daily Planet ledge, everyone who works at the Daily Planet is cheering.
+	\aitem \label{lltwo}
+	If everyone who works at the Daily Planet is cheering, then no superheroes work at the Daily Planet and Superman is on the Daily Planet ledge.
+	\aitem \label{llthree}
+	If no superheroes work at the Daily Planet and Clark Kent is on the Daily Planet ledge, some Daily Planet reporter is contemplating suicide. 
+%	\aitem
+%	...
+%	\aitem
+%	If no superheroes work at the Daily Planet and Superman is trying to rescue us, everyone at the Daily Planet is cheering.
+%	\aitem
+%	If everyone at the Daily Planet is cheering, then no superheroes work at the Daily Planet and Superman is trying to rescue us.  
+%	\aitem
+%	If no superheroes work at the Daily Planet and Clark Kent is trying to rescue us, we're all going to die. 
+    \end{prop}
+\end{prop}
+All three of these sentences seem clearly true if we fill in the context in the obvious way: the speaker doesn't know whether Superman works at the Daily Planet and knows that the only scenario where all the Daily Planet employees cheer would be the appearance of Superman on their ledge.  But proponents of Leibniz's Law will then think that \ref{llinstance} is true in the same context: 
+%has been captured by an enemy who could only be defeated by a superhero, and realises that any employees of the Daily Planet who aren't actively involved are are watching the episode on TV and cheering or not depending on whether they think the enemy will be defeated.  Then each of the above sentences seems true.  Given Leibniz's Law, 
+\begin{prop}
+    \nitem \label{llinstance}
+    If no superheroes work at the Daily Planet and Clark Kent is trying to rescue us, we're all going to die. 
+\end{prop}
+But applying CSO to \ref{llone}, \ref{lltwo} and \ref{llinstance} gives  \ref{cheeringdie}, which is obviously false in the circumstances:
+\begin{prop}
+	\nitem \label{cheeringdie}
+	If everyone who works at the Daily Planet is cheering, someone who works at the Daily Planet is contemplating suicide.	
+\end{prop}
+
+Of course, this argument against CSO will not be persuasive to those who deny that Leibniz's Law inferences those who  be resisted by denying the validity of Lebniz's Law.  But as we saw in the previous section, there are several ways to raise similar challenges without relying on Leibniz's Law.  One especially important way uses quantifying in.  If we add ‘Someone who loves Lois is such that’ in front of each of \ref{llone}--\ref{llthree} and replace ‘Superman’ and ‘Clark Kent’ with ‘he’, they remain plausible in the circumstances.  But the obviously false \ref{cheeringdie} follows from these given CSO, ‘At most one person loves Lois’, and relatively uncontroversial reasoning about counting (amounting to the application of Leibniz's Law to variables).  
+
+This argument against the validity of CSO seems just as strong as the arguments against the validity of Multi-Premise Closure from the previous section; there is something unsatisfying and unprincipled about a view that keeps CSO while rejecting those other principles on that basis.  The strategy of modifying \ref{ourview} by including logically impossible worlds in the domain of the closeness relation is thus ill-suited to handling the full array of challenges to [our logic].  
+
+Could one do better by combining the framework of logically impossible worlds with some other “world”-based account of conditionals?  Giving up the claim that the closeness relation is a well-ordering and switching to \ref{lewis} won't help, since the form of \ref{lewis} also guarantees the validity of CSO; similarly (\emph{a fortiori}) for \ref{strict}.  However, there is a kind of ”worlds” semantics for conditionals that is not inextricably committed to the validity of CSO, namely the selection function semantics originally introduce by \citet{StalnakerTC}.  In Stalnaker's approach, ’If P, Q’ is true just in case Q is true at the world \emph{selected} by the proposition that P: necessarily, each proposition selects exactly one world.  Although Stalnaker endorsed further axioms about selection which guaranteed CSO, and given which it is natural to pronounce ’$p$ selects $w$’ as ‘$w$ is the closest $p$-world’, others---notably \cite{BaconSTC}---have used the general framework while rejecting CSO and the axioms about selection that validate it.  The objection above does not apply to a semantics that uses logically impossible worlds (understood as sets of propositions) in a selection-function semantics.  But this semantics is completely informative.  Given any binary operator $O$ (that takes two propositions and makes a proposition), we can define a corresponding relation of $O$-selection relating propositions to sets of propositions as follows: proposition $p$ $O$-selects set of propositions $S$ just in case, for any proposition $q$, $q∈S$ iff $Opq$.  Given this definition, it follows that every proposition $O$-selects exactly one set of propositions, and that for any proposition $q$, $Opq$ is necessarily equivalent to the proposition that $q$ belongs to the set $O$-selected by $p$.  Thus, when the selection function semantics is understood in such a way that the items selected are impossible worlds construed as sets of propositions, it is nothing more than a trivial restating of the idea that the conditional corresponds to some binary operation on propositions or other.  Of course this objection doesn't mean that the semantics is \emph{incorrect}, but it does mean that the invocation of logically impossible worlds isn't doing any substantial explanatory work.  In the next section we will consider a different approach that promises to shed a bit more light on what's going on by borrowing some familiar ideas from the semantics of attitude reports.  
+
+
+%* Think about a selection-function based view that keeps the impossible framework but rejects CSO.  The selection function maps the proposition that no superheroes work at the DP and Superman is about to try to rescue us to a world that contains the proposition that everyone at the Daily Planet is cheering and the proposition that we're all going to die (though it may not contain their conjunction), and maps the proposition that everyone at the DP is cheering to a world that contains the proposition that no superheroes work at the DP and Superman is about to try to rescue us, but doesn't contain the proposition that we're all going to die.  
+
+
+
+
+\begin{itemize}
+    \item 
+    Address readers who think we are hung up on propositions and somehow want to use sentences instead of propositions.
+\end{itemize}
+
+
+%You know (under one guise) that Paderewski is rich and (other another) that he doesn't work. 
+
+%You know that Society S would never allow someone rich who doesn't work to be the guest of honour.
+
+%We want all of these to be true: 
+
+%If Paderewski is the guest of honor they are having a rich guest of honour
+
+%If they are having a rich guest of honour Paderewski is the guest of honour
+
+%If Paderewski is the guest of honor they are having a guest of honour who doesn't work
+
+%but not
+
+%If they are having a rich guest of honour they are having a guest of honour who doesn't work
+
+%given what we know about their policies
 
 
 %*Nolan's alleged counterexample to Identity: ‘If nothing at all had been the case, nothing at all would have been the case’.  
 
 
 
-This limitation of the impossible worlds framework suggests that it not up to the job of avoiding the “substitutivity-based” objections against the standard logic.  For those arguments straightforwardly attack CSO 
 
-\begin{prop}
-	\nitem
-	\begin{prop}
-		\aitem
-		If no superheroes work at the Daily Planet and Superman is about to try to rescue us, everyone at the Daily Planet is cheering.
-		\aitem
-		If everyone at the Daily Planet is cheering, then no superheroes work at the Daily Planet and Superman is about to try to rescue us.  
-		\aitem
-		If no superheroes work at the Daily Planet and Clark Kent is about to try to rescue us, we're all going to die. 
-		\aitem
-		If everyone at the Daily Planet is cheering, we're all going to die.	
-	\end{prop}
-\end{prop}
 
-* Think about a selection-function based view that keeps the impossible framework but rejects CSO.  The selection function maps the proposition that no superheroes work at the DP and Superman is about to try to rescue us to a world that contains the proposition that everyone at the Daily Planet is cheering and the proposition that we're all going to die (though it may not contain their conjunction), and maps the proposition that everyone at the DP is cheering to a world that contains the proposition that no superheroes work at the DP and Superman is about to try to rescue us, but doesn't contain the proposition that we're all going to die.  
 
-* Any theory of conditionals can be expressed in this form!  Just take all the propositions Q where, according to the theory, ‘if P, Q’ is true, and say that the selection function maps P to the impossible world that is the set of all those propositions.  
 		
-
-\begin{prop}
-	\nitem
-	\begin{prop}
-		\aitem
-		If the distinctness theorists are right and we're going to Hesperus we're going to a lovely planet where people have green skin
-		\aitem
-		If we're going to a lovely planet where people have green skin, the distinctness theorists are right and we're going to Hesperus.
-		\aitem
-		If the distinctness theorists are right and we're going to Phosphorus, we're going to a planet populated by nine foot tall monsters.
-		\aitem
-		If we're going to a lovely planet where people have green skin, we're going to a horrible planet populated by nine foot tall monsters.
-	\end{prop}
-\end{prop}
-
-
-Why this isn't really dependent on appealing to Leibniz's Law.
-
-You know (under one guise) that Paderewski is rich and (other another) that he doesn't work. 
-
-You know that Society S would never allow someone rich who doesn't work to be the guest of honour.
-
-We want all of these to be true: 
-
-If Paderewski is the guest of honour they are having a rich guest of honour
-
-If they are having a rich guest of honour Paderewski is the guest of honour
-
-If Paderewski is the guest of honour they are having a guest of honour who doesn't work
-
-but not
-
-If they are having a rich guest of honour they are having a guest of honour who doesn't work
-
-given what we know about their policies
 
 
 \section{Epistemic modals and indicative conditionals as guise-sensitive}
-Existential quantification over guises in attitude reports 
-	- choice point: occurrence-by-occurrence (Salmon, Soames) vs type-by-type (Kaplan, etc.)
+In thinking about what a more illuminating account of these phenomena might look like, it will be useful to begin by considering the situation with attitude reports.  A key observation from section *** was that in the familiar Lois-Clark scenario, \ref{firsteg} is true while \ref{secondeg} is false:  
+\begin{prop}
+    \nitem \label{firsteg}
+    Someone who loves Lois is such that Lois believes he flies and Lois believes he is a reporter.
+    \nitem \label{secondeg}
+    Lois believes that there is a reporter who flies.
+\end{prop}
+But Lois is no fool.  How is it that she fails to notice such an elementary logical consequence of the two things that she believes?  In thinking informally about this, one naturally wants to invoke some idea along the following lines: Lois has several different ways of thinking of this person who loves her (Superman).  She believes he flies by thinking of him in one of these ways; she believes he is a reporter by thinking of him in a different way.  But there is no single way of thinking about him such that when thinking about him in that way she think that he is a reporter who flies, and that's why she isn't in a position to conclude that there are any reporters who fly.  
 
-Toy models: 
-	“Descriptivist”/“Intensionalist” implementation
-		for each psychological verb we have an underlying relation to sets of worlds
-		A “guise” of $x$ is a property (optionally: a property necessarily instantiated by at most one thing) that $x$ instantiates
-	Mentalese implementation
-		A “guise” of $x$ is a property of Mentalese words
+This compelling informal gloss on the phenomenon is the inspiration for a long tradition of thinking about the truth conditions of sentences like \ref{firsteg}.  The idea of this tradition is that the truth conditions of certain belief (and other attitude) ascriptions---at least, ascriptions like the two embedded ascriptions in \ref{firsteg} where pronouns under ‘believes’ are bound by quantifiers above ‘believes’---can usefully be spelled out using existential quantification over something playing the role of “ways of thinking about an individual”, or to use a common expression “guises”.  For example, 
+\begin{prop}
+    \nitem \label{simple}
+    Someone who loves Lois such that Lois believes he flies.
+\end{prop}
+would be thought of as having truth conditions representable in a way conforming to the following scheme:
+\begin{prop}
+    \nitem
+    For some $x$: for some guise $g$: $g$ is of $x$ and …Lois…$g$….
+\end{prop}
+(We say ‘representable’ here to make it clear that we are not concerned with the question how these truth conditions are explained compositionally.)%
+\footnote{More generally, the thought is that for $x$ to believe that $y$ flies is for there to be some guise $g$ of $y$ such that …$x$…$g$…. So, for example, ‘Someone who loves Lois is such that Lois doesn't believe he flies’ is true just in case for some $x$ who loves Lois, there is \emph{no} guise $g$ of $x$ such that …Lois…$g$…: this sentence is thus incompatible with the combination of \ref{simple} and ‘Exactly one person loves Lois’.}
 
-The obvious extension of this to ‘might’ and ‘must’.  
+Kaplan's famous implementation of this structure, which is arguably the key inspiration for the subsequent tradition, appeals to a lot of Fregean ideology in filling in this schema: guises are Fregean senses, which can be “composed” to form Fregean thoughts: a Kaplanian spelling out of the schema would replace  ‘…Lois…$g$…’ with ‘Lois believes ($g$ + FLIES)’, where ‘FLIES’ stands for a Fregean sense of ‘flies’ and ‘+’ stands for the relevant composition operation.  But adherence to the general idea that attitude ascriptions introduce existential quantification over guises does not require anything like Frege's ambitious metaphysics of senses, and may also depart in various ways from various structural features of Kaplan's formulation.  For example, one might fill in the dots with a binary predication with ‘Lois’ as one argument and some expression containing ‘$g$’ as the other, but not think that the binary predicate in question is ‘believes’.  (Perhaps one can believe that $x$ flies by believing* ($g$ + FLIES) for some guise $g$ of $x$.)  One could also accept the schema without using a binary predicate at all to fill in the dots: one might instead use a ternary predicate, or some more intricate logical structure.
+
+Kaplan limits his invocation of existential quantification over guises to sentences involving quantifying in.  But as several authors have noted (especially Salmon and Soames ***), there is no good reason for restricting the deployment of guise quantification to sentences that quantify in.  For example, the occurrence of deictic pronouns in attitude reports seems plausibly to give rise to similar phenomena.  In the right circumstances, Superman could speak the truth by saying something like \ref{firstperson}:
+\begin{prop}
+    \nitem \label{firstperson}
+    Lois believes I am a terrible reporter and believes I am a great flyer.  
+\end{prop}
+Nevertheless ‘Lois believes that there areany flying reporters’ is straightforwardly false in the circumstances.  Or imagine the same speech made by us to Superman, substituting ‘you’ for ‘I’; or the same speech made by one of us to the other while pointing to Superman, substituting ‘he’ for ‘I’.  In these particular examples, one might be tempted to think that the speaker is not existentially quantifying over guises but somehow referring to two different specific guises.  But this treatment won't work in general: Superman can speak the truth by saying ‘Lois believes I broke the window of the phone booth’ in a case where he knows Lois either saw him going into the phone booth or coming out but doesn't know which, and hence doesn't know whether Lois would accept ‘Superman broke the window’ or ‘Clark broke the window’.  Similarly, it seems fine for Superman to utter something like \ref{phonebooth} under the same circumstances:
+\begin{prop}
+    \nitem \label{phonebooth}
+    Lois believes that I broke the window of a phone booth today, and Lois believes I broke the window of a phone booth yesterday.  
+\end{prop}
+
+Nor is the phenomenon confined to pronouns.  Drawing on Kripke (***), here is an example with a proper name:
+\begin{prop}
+    \nitem \label{pader1}
+    Peter believes that Paderewski is a world-class pianist and believes that Paderewski is a statesman
+    \nitem \label{pader2}
+    Peter believes that some statesmen are world-class pianists.
+\end{prop}
+In Kripke's story \ref{pader1} has a salient true reading, although \ref{pader2} is clearly false.  Again, in this particular case there is some temptation to think of the speaker as singling out particular guises rather than existentially quantifying, but this is absent in other cases:
+\begin{prop}
+    \nitem
+    Peter believes that Paderewski broke a window yesterday and believes that Paderewski broke a window today.
+\end{prop}
+Note that the acceptability of such reports does not depend on the subject (Peter) having two uses of the name ‘Paderewski’: the sentences are also fine, for example, in cases where Peter was introduced to Paderewski twice, didn't realise he was being introduced to the same person, and didn't hear his name on one or both occasions.  
+
+The phenomenon is also not something special having to do with singular terms: one can also have multiple guises for the sorts of entities (e.g. properties and relations) denoted by words in other categories.  For an example using a common noun, suppose Anna saw crickets during the day and thought they were pretty, and heard them during the night and thought they were annoying, but didn't realise that it was the same species, in which case \ref{crickets1} would be true even though \ref{crickets2} may still be false:
+\begin{prop}
+    \nitem \label{crickets2}
+    Anna thinks that all crickets are pretty and Anna thinks that all crickets are annoying
+    \nitem
+    Anna doesn't think that any pretty animals are annoying 
+\end{prop}
+For an example with a verb, imagine Fred has heard the word ‘ingest’ but thinks it's a medical word for ‘eat’ (in fact it includes drinking): then \ref{ingesting} may have a true reading even though \ref{ingesting2} does not:
+\begin{prop}
+    \nitem
+    \begin{prop}
+        \aitem \label{ingesting}
+    Fred is panicking because he thinks he has ingested poison, and he is also confused about the form we asked him to fill in because he thinks that ingesting something requires chewing it.
+    \aitem \label{ingest2}
+    Fred thinks he has chewed poison.
+        \end{prop}
+\end{prop}
+Given the generality of the phenomenon it seems reasonable to expect that it could, at least in principle, arise in every lexical category.  
+
+Given that quantification in general is subject to contextual domain restriction, it is to be expected that the domain of guises relevant to the truth conditions of an attitude report will vary from context to context.  To argue directly for the existence of this kind of context sensitivity, we could point to a sentence like \ref{contextual}, which can have both false and true uses even holding fixed that the singular term stands for Superman:
+\begin{prop}
+    \nitem \label{contextual}
+    Lois believes that I/you/he/Clark flies
+\end{prop}
+Context-sensitivity as regards the domains of guise quantifiers can also plausibly be invoked to explain celebrated differences such as the difference between \ref{superman} and \ref{clark}:
+\begin{prop}
+    \nitem \label{superman}
+    Lois believes that Superman flies
+    \nitem \label{clark}
+    Lois believes that Clark flies
+\end{prop}
+The guise-theoretic truth condition for these will be, respectively, of the forms
+\begin{prop}
+    \nitem \label{superman}
+    For some guise $g$ of Superman, …Lois…$g$…
+    \nitem \label{clark}
+    For some guise $g$ of Clark, …Lois…$g$…
+\end{prop}
+where the dots are filled in the same way.  Thus, given that Superman is Clark and so every guise of Superman is a guise of Clark, \ref{superman} and \ref{clark} will have the same truth value on any one way of fixing the domain of the quantifier.  But there is an obvious way to take the sting out of this, namely to say that the difference between the names somehow suggests different resolutions of context sensitivity natural, so that \ref{superman} is true on its most salient and natural interpretations, whereas \ref{clark} is false on its most salient and natural interpretations.  In general these kinds of effects do not seem very systematic, which is one reason it's attractive to think of them as a matter of the pragmatics of the resolution of context-sensitivity rather than assigning every word a complex semantic values involving not just its referent but also a property of guises of that referent, to be used in restricting the guise quantifier when the word occurs in an attitude report.%
+\footnote{Some prominent proponents of the existentially-quantified truth conditions, including Salmon, Soames, and Braun???, do not appeal to contextual restriction of the domain of guises, and in consequence end up with a view where assertions of negated attitude reports are very often literally false.  This often goes along with a parallel attitude about run-of-the-mill domain restriction of the ‘Every beer is in the fridge’ variety.  We will not here undertake the task of seeing how much of what we have to say can be adapted to this kind of framework.}
+
+Once we have taken account of the phenomenon of contextual domain restriction, we can also plausibly say that the contextually relevant domain of guises introduced by some word occurring under an attitude verb is often just a singleton, or at least to some collection of guises that are all interchangeable as far as the subject of the report is concerned.  When the guises are restricted in this way for every relevant word, the phenomenon whereby ‘$A$ believes that $P$ and $A$ believes that $Q$ but $A$ does not believe that $R$’ is true even though $R$ is an obvious logical consequence of $P$ and $Q$ and the referent of $A$ is competent at logic will not arise.
+
+
+% Quantifier domain restriction can also explain the felicity of sentences like the following:
+% \begin{prop}
+%     \nitem
+%     You'd have to be an idiot to believe of someone that you think is a reporter that they can fly, while still believing that all reporters are unexceptional.   
+% \end{prop}
+
+One important choice point in fleshing out the workings of the existentially quantified truth conditions involves sentences like \ref{twohes}, repeated from above:
+\begin{prop}
+    \nitem \label{twohes}
+    Someone who loves Lois is such that Lois believes he flies and he is a reporter.
+\end{prop}
+Note that here, by contrast with ***, the verb ‘believes’ only occurs once.%
+\footnote{Focus on readings of \ref{twohes} where it's not read as somehow short for ***.  The unintended readings can be screened off by switching from ‘believes’ to some other expression, like ‘be moderately confident that’, where there is clear distinction between bearing the attitude to a conjunction and bearing it to each conjunct even setting aside issues of guise-sensitivity.  ***Or have a more complicated logical form like existentially quantified conjunction***}
+Kaplan's approach to sentences like this, where a pronoun occurs more than once under some attitude verb bound by the same higher quantifier, introduced just one existential quantifier for each such pronoun: \ref{twohes} is thus false, since it requires there to be a single guise under which Lois attributes both flying and being a reporter to Superman.  But this seems too demanding, at least if it is extended expressions other than bound variables.  For example, it seems that Superman could speak the truth by uttering \ref{twois} even in a situation where Lois doesn't know that the stones and flowers were thrown at the same person:
+\begin{prop}
+    \nitem \label{twois}
+    Lois believes that someone threw a stone at me this week and threw flowers at me last week
+\end{prop}
+By contrast, on the approach of Salmon and Soames, every \emph{occurrence} of a name or externally bound variable under an attitude corresponds truth-conditionally to a separate existential quantifier.  Thus \ref{twois} can be true ***
+
+Many questions about the extent and implementation of guise-sensitivity in the truth-conditions of attitude ascriptions can be raised at the very abstract level we have been working at so far, staying entirely neutral about what guises are and how people need to be related to them to make attitude reports true.  But at least for the purposes of fixing ideas about how the same phenomena might play out when it comes to conditionals and modals, it will be helpful to present a more concrete model of the truth conditions of belief reports.  In this model the truth conditions of belief ascriptions are articulated in terms of a basic psychological relation between people and \emph{sets of worlds}, which we will call ‘doxising’ (in order not to beg any questions about how all this is to be implemented compositionally).%
+\footnote{One could in turn analyse doxising in terms of a “being doxastically possible for” relation between people and worlds, as in Hintikka ***: one doxises a set of worlds just in case it contains all the worlds that are doxastically possible for one.  But this is not essential, and is less plausible for other attitude such as ‘want’.  Some philosophers may be tempted to identify doxising with the notion of being the narrow content of one of one's beliefs (see Hawthorne and Yli-Vakkuri ***).  But given the way the truth conditions work, saying that intrinsic duplicates always doxise the same propositions would have the implausible consequence that if a person believes that $a$ is $F$, so does any intrinsic duplicate of that person, no matter how far away they may be from $a$.  There is a variant on the framework, due in essence to \citet{LewisADDDS}, that is somewhat more friendly to theorising about narrowness: in this version, doxising becomes a relation to properties, and guises become relations borne by the relevant objects to the subject of the attitude rather than properties of the objects.}
+A guise of an object is a property instantiated by that object.  For example, the “Clark Kent” guise of Superman might be identified with the property of being the unique bespectacled reporter named ‘Clark Kent’ who works for the Daily Planet, while the “Superman” guise might be the property of being the unique flying superhero allergic to Kryptonite.  We will assume that a property can be a guise only if it is impossible for it to be multiply instantiated (though it may be possible for it to be uninstantiated).  More generally, a guise an entity of a given type (e.g.\ a property, a relation, a propositional operator, a quantifier…) is a higher-order property instantiated by that entity, and necessarily instantiated by at most one entity. One believes that $a$ is $F$ just in case there is (in the contextually relevant domain of quantification) some guise $X$ of $a$, and some guise $Y$ of $F$, such that one doxises the set of worlds at which some object instantiating $X$ has some property instantiating $Y$.  Similarly, one believes that $aRa$ just in case there are guises $X$ and $Y$ of $a$ and $Z$ of $R$ such that one doxises the set of worlds at which some object instantiating $X$ bears $R$ to some object instantiating $Y$.%
+\footnote{This model thus sides with Salmon and Soames in preserving full Leibniz's Law when context is held fixed, and thus in according no semantic significance to multiple occurrences of the same variable or constant.}
+The same procedure applies to sentences with a more complex hierarchical structure: for example, suppose $*$ is a binary operator; $Q$ is a function from properties to propositions; $F$ is a property and $a$ is an object; then one believes that $Fa * QF$ just in case there are guises $\boldsymbol{*}$, $\mathbf{Q}$, $\mathbf{F}$, $\mathbf{F'}$ and $\mathbf{a}$ of $*$, $Q$, $F$, $F$, and $a$ such that one doxises the set of worlds at which there exist instances $*'$, $Q'$, $F'$, $F''$ and $a'$ of $\boldsymbol{*}$, $\mathbf{Q}$, $\mathbf{F}$, $\mathbf{F'}$ and $\mathbf{a}$ such that $F'a' *' Q'F''$ is true.  We trust the general procedure that generates such truth conditions is clear enough, at least as regards non-iterated reports.%
+\footnote{For a rigorous recursive definition and an exploration of how the truth conditions should be generalised to iterated reports, see Dorr MS***}  
+Note that it's consistent with this framework that some or all of the guises of a given entity (in the domain of the guise quantifiers in a given context) are trivial properties of the form \emph{being identical to $x$}, for some entity $x$.%
+\footnote{For example, if at a certain context the only guise of conjunction is \emph{being identical to conjunction}, and we take the doxising relation to be closed under the operation of intersecting sets of worlds, then ‘$A$ believes that $Fa$ and $Gb$’ will be true just in case ‘$A$ believes that $Fa$ and $A$ believes that $Gb$’ is true.}
+
+* Add footnote somewhere about iterated reports.  
+
+* discuss somewhere the Mentalese implementation: where a “guise” of $x$ is a Mentalese word referring to $x$?
+
+The idea the truth conditions of attitude reports in some way or other involves existential quantification over guises is a well-entrenched and successful framework for shedding light on their semantic and logical workings.  What has not to our knowledge been explored is the extent to which an analogous framework can shed light on the semantic behaviour of both epistemic modals and indicative conditionals.  Even setting aside the need to explain the failures of otherwise tempting logical principles which we considered earlier in this chapter, the close kinship between ‘must’ and ‘knows’ generates a prima facie presumption that ‘must’ will invoke guise quantification if ‘knows’ does, and the close kinship between ‘must’ and indicative conditionals generates a further prima facie presumption that indicative conditionals will invoke guise quantification if ‘must’ does.  
+
+Let's begin with ‘must’.  A guise-sensitive truth-condition for ‘$a$ must be $F$’ will look like this:
+\begin{prop}
+    \item
+    For some guise $g$ of $a$ and some guise $G$ of $F$, …$g$…$G$…
+\end{prop}
+Let's see what this looks like when filled out in a way parallel to the toy model of belief reports.  Just as that semantics invoked a primitive relation between believers and sets of worlds, we will assume that each context provides a property of worlds, which we'll call epistemic liveness; a set of worlds is “epistemically universal” just in case it contains all the epistemically live worlds.  We'll continue to assume that every world is epistemically live at itself.  Understanding guises of an entity to be properties of that entity (that necessarily have at most one instance), the truth condition of ‘$a$ must be $F$’ will be cashed out as follows:
+\begin{prop}
+    \item
+    For some guise $g$ of $a$ and some guise $G$ of $F$: at every epistemically live world, some instance of $g$ has some instance of $G$.
+\end{prop}
+Similarly for more complex sentences.  We can immediately see that this approach will invalidate many standard logical principles for ‘must’ for exactly the reasons presented in section 2 above.  Multi-premise closure will fail: for example,
+\begin{prop}
+    \nitem \label{2musts}
+    There is someone who must be a reporter and must be a superhero.
+\end{prop}
+will not logically entail
+\begin{prop}
+    \nitem \label{1must}
+    There must be a reporter who is a superhero.
+\end{prop}
+since it could be that the only witnessing pair of guises for \ref{2musts} is some pair of distinct properties that fail to be coinstantiated at some epistemically live world.  Indeed, given that we are going the way of Salmon and Soames rather than the way of Kaplan, single-premise closure will also fail, as \ref{1must} will not even follow from
+\begin{prop}
+    \nitem \label{singlepremmust}
+    Someone is such that it must be that he is a reporter and he is a superhero.
+\end{prop}
+The same point could be illustrated using examples without quantifying in: \ref{1must} will not be a consequence of
+\begin{prop}
+    \nitem \label{nonquant2musts}
+    I/you/he/Superman/Clark must be a reporter and I/you/he/Superman/Clark must be a superhero
+\end{prop}
+or of
+\begin{prop}
+    \nitem \label{nonquantsingleprem}
+    It must be that I am/you are/he is/Superman is/Clark is a reporter and I am/you are /he is/Superman is/Clark is a superhero
+\end{prop}
+Note however that the proposed truth-conditions do not disrupt the factivity of ‘must’, since the actual world is always epistemically live and guises are always uniquely instantiated at the actual world by the objects of which they are guises.  As a result, \ref{2musts}, \ref{singlepremmust}, \ref{nonquant2musts}, and \ref{nonquantsingleprem} will each still logically imply
+\begin{prop}
+    \nitem
+    There is a reporter who is a superhero.
+\end{prop}
+This undermines one source of resistance to the idea that the relevant premises do not logically imply \ref{1must}, since it puts the argument from them to \ref{1must} in the same category as the argument ‘It's either a zebra or a donkey, but it's not a zebra, so it must be a donkey’.  
+
+Although giving up on the idea that ‘must’ conforms to a normal modal logic might initially seem quite radical, once we consider the examples with the connection to attitude verbs firmly in view, these results seem like exactly what we should expect.  
+
+
+
+
+
+
+
+
+
 
 Why existential rather than universal?  
 
@@ -539,6 +724,25 @@ Extending to ‘if’.
 Intensionalist implementation: the closeness relation is on worlds - maybe it's the same closeness relation we also use for counterfactuals.  
 
 \section{Why it's often OK to ignore all of this and just work with the closest-worlds analysis for indicatives and the quantification-over-worlds analysis of ‘might’ and ‘must’}
+
+A worry: ‘It couldn't be $F$’ not equivalent to ‘It must be non-$F$’.
+
+\section{What becomes of all the stuff from the previous chapter in this setting?}
+
+A speech we'd like to have a salient true interpretation:
+
+For any rational person $x$, if
+\begin{prop}
+	\ritem
+	$x$ has credence 50\% that Superman = Clark
+	\ritem
+	$x$ has credence 1\% that the telescope is working and Superman = Clark
+	\ritem
+	$x$ has credence 10\% that the telescope is working
+\end{prop}
+then $x$ has credence 10\% that if the telescope is working, Superman = Clark
+
+Original way of formulating the worry about this (from conversation with Jeremy in LA): if your only credences that Superman = Clark are 100\% and 50\%, and you respect Leibniz's Law in your own reasoning (i.e. as regards your credence boxes or whatever), then you're not going to be able to get below 50\% on any proposition that entails that Superman ≠ Clark.  
 
 
 
@@ -566,23 +770,6 @@ Q: why isn't accessibility for indicatives limited like this?  One possible sugg
 			
 
 
-
-\section{What becomes of all the stuff from the previous chapter in this setting?}
-
-A speech we'd like to have a salient true interpretation:
-
-For any rational person $x$, if
-\begin{prop}
-	\ritem
-	$x$ has credence 50\% that Superman = Clark
-	\ritem
-	$x$ has credence 1\% that the telescope is working and Superman = Clark
-	\ritem
-	$x$ has credence 10\% that the telescope is working
-\end{prop}
-then $x$ has credence 10\% that if the telescope is working, Superman = Clark
-
-Original way of formulating the worry about this (from conversation with Jeremy in LA): if your only credences that Superman = Clark are 100\% and 50\%, and you respect Leibniz's Law in your own reasoning (i.e. as regards your credence boxes or whatever), then you're not going to be able to get below 50\% on any proposition that entails that Superman ≠ Clark.  
 
 
 
