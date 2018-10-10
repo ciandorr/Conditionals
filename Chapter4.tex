@@ -1,4 +1,3 @@
-%!TEX root=If.tex
 \documentclass[If.tex]{subfiles}
 
 \begin{document}
@@ -7,29 +6,45 @@
 
 \section{Hyperintensionality}
 \label{sect:hyperintensionality}
-It is time to face up to a serious worry about the account of conditionals we have spent the last three chapters defending: namely, that because it makes use of the semantic framework of possible worlds, it does not allow for so-called \emph{hyperintensionality}: cases where a true conditional can be turned into a false one by substituting for the main clause or the subordinate clause another clause true in exactly the same possible worlds.  Since the use of possible worlds is more fully entrenched in the theory of counterfactuals, it is not surprising that this kind of worry has been most fully discussed in connection with counterfactuals.  Given our emphasis on the context-sensitivity of conditionals, some putative examples of hyperintensionality are easy for us to explain away.  For example, consider 
+\begin{itemize}
+	\item
+	Change the beginning so we're not just assuming it's metaphysically possible worlds.
+	\item
+	Flag the upcoming logic section
+	\item
+	Make clear that it's not idiosyncratic to us
+	\item
+	Throw in an ‘actually’ example somewhere
+\end{itemize}
+
+
+It is time to face up to a serious worry about the account of conditionals we have spent the last three chapters defending: namely, that because it makes use of the semantic framework of possible worlds, it does not allow for so-called \emph{hyperintensionality}.  It does not, in other words, allow for cases where a true conditional can be turned into a false one by substituting for the main clause or the subordinate clause another clause true in exactly the same possible worlds.  
+
+Since the use of possible worlds is more fully entrenched in the theory of counterfactuals, it is not surprising that this kind of worry has been most fully discussed in connection with counterfactuals.  
+
+Given our emphasis on the context-sensitivity of conditionals, some putative examples of hyperintensionality are easy for us to explain away.  For example, consider 
 \begin{prop}
 	\nitem 
 	\begin{prop}
 		\aitem \label{taller}
-		If Tim Williamson was taller Kobe Bryant, they would both be extremely tall
+		If Tim Williamson was taller than Kobe Bryant, they would both be extremely tall
 		\aitem \label{shorter}
 		If Kobe Bryant was shorter than Tim Williamson, they would both be extremely tall
 	\end{prop}
 \end{prop}
-The first seems obviously true, the second obviously false.  But this is naturally accounted for simply by saying that the natural interpretations of \ref{taller} and \ref{shorter} involve different accessibility parameter---one where Bryant's height is held fixed in the case of \ref{taller}, one where Williamson's height is held fixed in the case of \ref{shorter}.  Of course, fleshing out this response would require saying more about why the differences in wording naturally trigger these different resolutions of context-sensitivity, but we won't get into that here.%
-\footnote{***Discuss literature on topic}
+The first seems obviously true, the second obviously false.  But this is naturally accounted for by saying that the natural interpretations of \ref{taller} and \ref{shorter} involve different accessibility parameters---one where Bryant's height is held fixed in the case of \ref{taller}, one where Williamson's height is held fixed in the case of \ref{shorter}.  Of course, fleshing out this response would require saying more about \emph{why} the differences in wording naturally trigger these different resolutions of context-sensitivity, but we won't attempt that here.%
+\footnote{***Discuss literature on “topic”}
 
-However there are other examples in the literature that aren't easily explained away by appeal to context-dependent accessibility (or for that matter some context-dependent account of closeness) on possible worlds.  These primarily involve counterfactuals whose antecedents look to be metaphysically impossible.  Here are some pairs of such counterfactuals that seem to differ in truth value:
+However there are other putative cases of hyperintensionality in the literature on counterfactuals that aren't easily explained away by appeal to context-dependendency in the choice of an accessibility relation (or for that matter some context-dependent account of closeness).  These primarily involve pairs of counterfactuals with the same consequent whose antecedents seem to be metaphysically impossible and which seem to differ in truth value, such as the following:
 \begin{prop}
-	\nitem
+	\nitem \label{hobbes}
 	\begin{prop}
 		\aitem
 		If Hobbes had squared the circle in 1650, cancer would have been eradicated by 1660 (cf. Nolan).
 		\aitem
 		If Hobbes had squared the circle and discovered a perfect cure for cancer in 1650, cancer would have been eradicated by 1660.  
 	\end{prop}
-	\nitem
+	\nitem \label{water}
 	\begin{prop}
 		\aitem
 		If the oceans had been filled with water but not H$_2$O, the oceans would have been filled with water
@@ -37,9 +52,9 @@ However there are other examples in the literature that aren't easily explained 
 		If the oceans had been filled with water but not H$_2$O, the oceans would have been filled with H$_2$O
 	\end{prop}
 \end{prop}
-Assuming with orthodoxy that the antecedents here are in fact metaphysically impossible, our theory as it stands judges all four of these sentences to be (vacuously) true no matter how the context-sensitivity of the conditional is resolved.  And switching to a theory where conditionals whose antecedent is true at no accessible world are automatically false rather than automatically true obviously doesn't help.  More generally, insofar as one goes for a theory according to which substitution of intensionally equivalent clauses doesn't affect truth at a context, it is hard to think of a natural way to account for the data using the kind of appeal to context-sensitivity that we suggested for \ref{taller} and \ref{shorter}.  
+Assuming with orthodoxy that the antecedents here are in fact metaphysically impossible, our theory as it stands judges all four of these sentences to be (vacuously) true no matter how the context-sensitivity of the conditional is resolved.  And switching to a theory where conditionals whose antecedent is true at no accessible world are automatically false rather than automatically true obviously doesn't help.  %More generally, insofar as one goes for a theory according to which substitution of intensionally equivalent clauses doesn't affect truth at a context, it is hard to think of a natural way to account for the data using the kind of appeal to context-sensitivity that we suggested for \ref{taller} and \ref{shorter}.  
 
-If the entire case for hyperintensionality had to rest simply on examples like these, we would not be particularly moved: the examples seem a bit tangential to the overall practice of counterfactual reasoning, and an error-theoretic approach on which the relevant judgments arise from our incautious extension of generally reliable heuristics, as suggested by \citet{WilliamsonCounterpossibls}, seems quite tenable.  However, once we turn from counterfactuals to indicatives, examples motivating hyperintensionality are readier to hand:  
+If the entire case for hyperintensionality had to rest simply on examples like \ref{hobbes} and \ref{water}, we would not be particularly moved.  The examples seem a bit tangential to the overall practice of counterfactual reasoning, and an error-theoretic approach on which the relevant judgments arise from our incautious extension of generally reliable heuristics, as suggested by \citet{WilliamsonCounterpossibls}, seems quite tenable.  However, once we turn from counterfactuals to indicatives, examples motivating hyperintensionality are readier to hand:  
 \begin{prop}
 	\nitem \label{ripper}
 	\begin{prop}
@@ -56,21 +71,39 @@ If the entire case for hyperintensionality had to rest simply on examples like t
 		If Jack the Ripper fathered Winston Churchill, Jack the Ripper was Lewis Carroll
 	\end{prop}
 \end{prop}
-(For the purposes of these examples, suppose that neither Randolph Churchill nor Lewis Carroll, two Ripper candidates from the literature, was in fact Jack the Ripper.)  
+(For the purposes of these examples, assume that neither Randolph Churchill nor Lewis Carroll, two Ripper candidates from the literature, was in fact Jack the Ripper.)  
 
-Given the intimate connection between indicative conditionals and epistemic modals, this pattern of hyperintensionality-friendly judgments is no surprise.  Claims of hyperintensionality have ben widely accepted for attitude verbs like ‘know’ and ‘believe’, on the basis of examples like \chisholm{lois}{a--b}:
+Given the intimate connection between indicative conditionals and epistemic modals, this pattern of hyperintensionality-friendly judgments is no surprise.  Claims of hyperintensionality have been widely accepted for attitude verbs like ‘know’ and ‘believe’.  One kind of motivation is provided by examples like \chisholm{lois}{a--b}, involving substitution of coreferential names:
 \begin{prop}
 	\nitem \label{lois}
 	\begin{prop}
-		\aitem
+		\aitem \label{superman}
 		Lois knows that Superman flies
-		\aitem
+		\aitem \label{clark}
 		Lois knows that Clark flies
 	\end{prop}
 \end{prop}
-Such claims seem equally well-motivated for epistemic modals.  For example, consider the following pairs of candidate speeches by Lois:
+Examples like these are quite controversial, since they put pressure not simply on intensionalism about mental content but on the standard logic for identity.  Some theorists [Salmon, Soames] have argued that sentences like \ref{superman} and \ref{clark} and their negations are often used nonliterally so that our ; others [Braun] have argued that we are simply subject to widespread error in our thinking about how these ascriptions work; still others [Crimmins and Perry?, Dorr] propose that the appearance of Leibniz's Law violation can be explained away by appeal to a shift in the resolution of context dependence, so that there is no single context in which \ref{superman} and \ref{clark} differ in truth value.  (We'll say a little more about how this might work in section ***.)  But even the theorists who deny that \ref{lois} provides an example of hyperintensionality have often accepted certain other kinds of examples:
 \begin{prop}
 	\nitem
+	\begin{prop}
+		\aitem
+		He thinks that there are gold atoms in the sample.
+		\aitem
+		He thinks there are atoms with atomic number 79 in the sample.
+	\end{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		He thinks that 1+1=2
+		\aitem
+		He thinks that [insert statement of Fermat's last theorem]
+	\end{prop}
+\end{prop}
+
+The considerations motivating hyperintensionality for attitude ascriptions seem to carry over equally well to epistemic modals.  For example, consider the following pairs:
+\begin{prop}
+	\nitem \label{supermanmight}
 	\begin{prop}
 		\aitem
 		Superman might not work as a reporter
@@ -80,42 +113,79 @@ Such claims seem equally well-motivated for epistemic modals.  For example, cons
 	\nitem
 	\begin{prop}
 		\aitem
-		There must be some interesting secrets to be learnt about Superman
+		Those gold atoms might not have atomic number 79
 		\aitem
-		There must be some interesting secrets to be learnt about Clark
+		Those gold atoms might not be gold atoms
+	\end{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		There might be an even number greater than two that is not the sum of two primes
+		\aitem
+		There might be an even number greater than two that is not even
 	\end{prop}
 \end{prop}
-Even without a specific analysis of ‘must’ and ‘might’ in terms of ‘knows’ to hand, it would be bizarre to deny hyperintensionality for ‘must’ and ‘might’ while accepting some form of hyperintensionality for ‘know’ and ‘believe’.  But similarly, it would be bizarre to deny hyperintensionality for indicative conditionals while accepting it for ‘must’ and ‘might’, at least once was recognises the kinds of connections between them that we discussed in \autoref{chap:accessibility}.
+(As with the case of attitudes, the theoretical pressure to preserve Leibniz's Law will make examples * and * somewhat less tendentious than \ref{supermanmight}.)  This point does not have to rest on some particular analysis of ‘must’ and ‘might’ in terms of ‘knows’ or any other attitude verbs: the analogy between the arguments for hyperintensionality in attitude verbs and the arguments for hyperintensionality in epistemic modals is so tight that it would be bizarre to accept the former while rejecting the latter.  
 
-***
-
-
-	- with indicatives
-			If there's water in the glass but no hydrogen, nothing interesting is going on
-			If vixens aren't foxes, they aren't Martian spy robots either
-			If I've been completely confused and really ‘and’ denotes logical disjunction, snow is white and snow is not white.
-			If I've been completely confused about ‘not’ and really it's synonymous with ‘possibly’, snow is white and snow is not white.
-			If the extension of ‘leg’ includes tails, then horses have five legs
-			If Graham Priest is right, an arrow in flight is both moving and stationary
-
-	- note that nonvacuity (hence hyperintensionality) is motivated by the Credence Equation
-		whereas the Chance Equation does nothing comparable
-		So, dealing with the problem for indicatives is far more theoretically pressing!
-		
-	
-\section{Impossible worlds}  \label{sect:impossibleworlds}
-In the literature on counterfactuals, many have proposed that we should provide for hyperintensionality by retaining a world-based semantics, while expanding the domain of “worlds” to include possible worlds.  If, for example, propositions $q$ and $q'$ are true in the same possible worlds, but not in exactly the same worlds, it may be that the closest world where $p$ is true is one of the impossible worlds where $q$ is true but $q'$ is not.  For the small minority who follow \citet{LewisOPW} in thinking of possible worlds as concrete universes, the idea that there are also impossible worlds will pose a host of problems.  On the other hand, for those who (like Plantinga*** and Adams***) were all along thinking of possible worlds as something like sets of propositions, the idea that there are also impossible worlds looks prima facie harmless: impossible worlds can simply be sets of propositions for which it is not possible that they should be all and only the true propositions.%
-\footnote{There is no particular pressure to draw a further line whereby certain sets of propositions count neither as possible nor as impossible worlds, though of course we will still presumably want to impose contextually varying accessibility restrictions on the domain relevant to a particular utterance of a conditional.}  
-In this setting, one can simply identify truth at a world with membership.  (The idea that a proposition is true at a world when it is \emph{entailed} by the propositions in the world is far more problematic, since it would require an independently understood, non-modal notion of entailment amongst propositions in order to make any distinctions amongst worlds whose members could not all be true together.)
-
-In thinking through what can be achieved by an invocation of impossible worlds conceived of in this way, much depends on the underlying theory of propositions.  If we have a picture where modally equivalent propositions are identical, e.g.\ one where propositions are identified with sets of possible worlds, we can still construct impossible worlds along the lines just described and quantify over them in the semantics for conditionals; this will not secure any hyperintensionality, although it does allow for cases where conditionals with impossible antecedents differ in truth value.  More fine-grained pictures offer more promise for securing hyperintensionality, but one should not underestimate the difficulties in articulating such pictures without running into paradox.%
-\footnote{***Russell-Myhill}
-
-But regardless of how one thinks about propositions, the framework just described suggests that many of the principles of conditional logic that we have been endorsing up to now will require rethinking.  To begin with, notice that if we do not require impossible worlds to be closed under conjunction, we are liable to get counterexamples to Finite Agglomeration (‘If $P$, $Q$; if $P$, $Q'$; so if $P$, $Q$ and $Q'$’): this will fail when the closest accessible $P$-world contains the propositions expressed by $Q$ and $Q'$ but not their conjunctioon.  Similarly, if we allow that an impossible world may in some cases contain neither a proposition nor its negation, we are liable to get counterexamples to CEM (‘If $P$, $Q$ or if $P$, not $Q$’).  And finally, the rule of deduction in the consequent, which counts the argument from ‘If $P$, $Q$’ to ‘If $P$, $Q'$’ as valid whenever the argument from $Q$ to $Q'$ is, may also fail in an impossible-worlds setting, since unless $Q$ and $Q'$ express the very same proposition, the fact that $Q$ logically entails $Q'$ does not rule out the existence of impossible $Q$-worlds that are not $Q'$-worlds.  On the other hand, moving to an impossible-world semantics does nothing to threaten Identity, Modus Ponens, or CSO, since these principles do not trade on logical structure inside the main or subordinate clauses of conditionals, and so do not depend on any constraints that such structure might be thought to impose on the facts about truth at worlds.  Consider CSO for example.  If the closest $A$-world is a $B$-world and the closest $B$-world is an $A$-world, then the closest $A$-world \emph{is} the closest-$B$-world, whether impossible or not, and so if the closest $A$-world is a $C$-world the closest $B$-world is too.  
-
-Of course, use of the impossible worlds framework does not force one to give up on any particular logical validities, since there is always the option of saying that the accessible impossible worlds obey various further constraints such as closure under conjunction, or that worlds obeying such constraints are always closer than worlds that do not.  But the prima facie evidence suggests for indicative conditionals at least, there are in fact prima facie counterexamples to Finite Agglomeration, CEM, and Deduction in the Consequent, so that such constraints would not be well motivated.  One class of examples involves contexts where we take seriously the views of logicians who (wrongly, as we will assume) reject certain claims or inferences characteristic of classical logic.  Counterexamples to Deduction in the Consequent are particularly salient in this connection:
+But given the intimate connections between epistemic modals and indicative conditionals that we argued for, any hyperintensionality in epistemic modals will carry over to indicative conditionals.  For recall that in \autoref{chap:accessibility} we argued for the validity of the following schema:
 \begin{prop}
+	\litem[Might-Preservation]
+	It might be that $P$.  If $P$, $Q$.  Therefore, it might be that $Q$. 
+\end{prop}
+If ‘might’ is hyperintensional, there are cases where two sentences $P$ and $Q$ are intensionally equivalent in some context, ‘It might be that $P$’ is true in that context, and ‘It might be that $Q$’ is false in that context.  But if instances of Might-Preservation are true in every context, then in any such case, ‘If $P$, $Q$’ is false in the relevant context.  Given that ‘If $P$, $P$’ is true in every context, we have a case of hyperintensionality in ‘If’.  
+
+%add footnote whenever we first talk about ‘degrees of confidence’ referring to Tim on ‘not at all confident’.
+
+Looking at examples reinforces these indirect argument:
+\begin{prop}
+	\nitem \label{supermanmight}
+	\begin{prop}
+		\aitem
+		If Clark isn't a superhero, Superman doesn't work as a reporter
+		\aitem
+		If Clark isn't a superhero, Clark doesn't work as a reporter
+	\end{prop}
 	\nitem
+	\begin{prop}
+		\aitem
+		If the claims in this article are correct, some gold atoms don't have atomic number 79
+		\aitem
+		If the claims in this article are correct, some gold atoms are not gold atoms
+	\end{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		If Goldbach's most famous conjecture is false, there is an even number greater than two that is not the sum of two primes
+		\aitem
+		If Goldbach's most famous conjecture is false, there is an even number greater than two that is not even
+	\end{prop}
+\end{prop}
+These examples put strong prima facie pressure on intensionalism, and are so similar to the attitudinal and modal cases that a split treatment looks highly unpromising.%
+\footnote{Discuss Williamson, ‘…congruential contexts’ paper: he appeals to a direct intuition of validity that is pretty weird.}
+
+We can further bolster these arguments by appealing to the connection between indicative conditionals and credences which we argued for in chapters \ref{chap:closeness} and \ref{chap:equation}.  If intensionalism for indicative conditionals is true, then presumably one can rationally have a high degree of confidence that it is true.  If so, then in any case where one is certain (or nearly certain) that if $B$, $C$, one's degree of confidence that if $A$, $C$ cannot be less than one's degree of confidence that necessarily $A$ is materially equivalent to $B$.  For example: if one is certain that if some gold atoms are not made of gold then some gold atoms are not made of gold, and 50-50 whether the existence of an gold atom not having atomic number 79 is necessarily equivalent to the existence of a gold atom that is not made of gold, one must be at least 50$\%$ confident that if there is a gold atom that does not have atomic number 79, there is a gold atom that is not made of gold. But such a high degree confidence flagrantly violates the Credence Equation, according to which you should have a low degree of confidence that if there is a gold atom that does not have atomic number 79, there is a gold atom that is not made of gold, given that your degree of confidence in its consequent should be much less than your degree of confidence in its antecedent.  
+
+The case for hyperintensionality in indicative conditionals is thus very strong, on both theoretical and case-based grounds.  By contrast, while there are some examples which motivate hyperintensionality for counterfactuals as discussed above, the theoretical motivations just considered do not carry over to counterfactuals.  The modals which connect to counterfactuals in the way that epistemic modals connect to counterfactuals seem to be broadly “objective” in character, and there is no straightforward way of carrying the above arguments for hyperintensionality in epistemic modals over to such modals, since metaphysically necessary equivalence is generally understood as requiring necessary equivalence in every “objective” sense of ‘necessarily’.  And the closest analogue of the Credence Equation for counterfactuals, namely the Chance Equation, does not support any argument for hyperintensionality, given that metaphysically necessary truths have chance 1.%
+\footnote{This is denied by *Salmon (recent paper), for bad reasons.}
+For these reasons, we think the challenge of hyperintensionality is most pressing for indicatives, and we will therefore confine our attention to indicatives for the next few sections.  In section * we will return to counterfactuals. 
+		
+	% - with indicatives
+	% 		If there's water in the glass but no hydrogen, nothing interesting is going on
+	% 		If vixens aren't foxes, they aren't Martian spy robots either
+	% 		If I've been completely confused and really ‘and’ denotes logical disjunction, snow is white and snow is not white.
+	% 		If I've been completely confused about ‘not’ and really it's synonymous with ‘possibly’, snow is white and snow is not white.
+	% 		If the extension of ‘leg’ includes tails, then horses have five legs
+	% 		If Graham Priest is right, an arrow in flight is both moving and stationary
+		
+		
+\section{Challenges to our logic}
+\label{challenges}
+
+The challenges discussed in the previous section might not seem so worrying for our framework: one might think that the appropriate lesson to draw from them is that, at least for indicative conditionals, the things that play the role of “worlds” in the semantics are not metaphysically possible worlds, but something else, for example “epistemically possible worlds”.  But the kinds of examples that we have been looking at can be adapted to mount a second, more worrisome challenge to the view as developed so far, since examples in a similar spirit seem to make trouble for a variety of the inference rules which are valid on that view.  Note that the derivation of those rules did not depend on assumption that worlds are metaphysically possible, but merely on the assumption that truth at a world is logically well behaved.  In this section we will consider challenges to three of the logical principles, namely Agglomeration, CEM, and Deduction in the Consequent.  As we explained in the previous section, our focus for now will be on indicatives.  
+
+One class of putative counterexamples examples involves contexts where we take seriously the views of logicians who---wrongly, as we will assume---reject certain claims or inferences characteristic of classical logic.  Counterexamples to Deduction in the Consequent are particularly salient in this connection:
+\begin{prop}
+	\nitem \label{priest}
 	\begin{prop}
 		\aitem
 		If Graham Priest is right to think that this arrow is both moving and not moving, this arrow is both moving and not moving.
@@ -123,82 +193,324 @@ Of course, use of the impossible worlds framework does not force one to give up 
 		If Graham Priest is right to think that this arrow is both moving and not moving, this arrow is moving, not moving, and made of peanut butter.
 	\end{prop}
 \end{prop}
-Another class of examples involve contexts where we take seriously the hypothesis that we have misunderstood certain logical words in our own language.  Consider:
+Bearing in mind that Deduction in the Consequent subsumes the principle that conditionals with tautologous consequents are always true as a special case, one can also make trouble by considering examples like:
 \begin{prop}
-	\nitem
-	If I have been the victim of a lifelong conspiracy to hide from me the fact that ‘and’ really means disjunction, then it's raining and it's not raining.
-\end{prop}	
-It feels like one could say something true by uttering this sentence, although assuming that it is not in fact raining the following doesn't seem to be true:  
-\begin{prop}
-	\nitem
-	If I have been the victim of a lifelong conspiracy to hide from me the fact that ‘and’ really means disjunction, then it's raining.
+	\nitem \label{intuitionism}
+	If intuitionism is the right philosophy of mathematics, then either there is an even number greater than two that isn't the sum of two primes or there isn't. 
 \end{prop}
-Similar considerations threaten certain instances of CEM:
+In this case there isn't a particularly strong temptation to think that the sentence is false, since the intuitionists do not think the consequent is false.  But the fact that intuitionists don't think the consequent true is already enough to prompt some disquiet about a logic that tells us that \ref{intuitionism} is true.  
+
+Similar considerations raise \emph{prima facie} trouble for the rule of Substitution of Logically Equivalent Antecedents:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		If this arrow is both moving, not moving, and made of peanut butter, then it's made of peanut butter.  
+		\aitem
+		If this arrow is both moving, not moving, and not made of peanut butter, then it's made of peanut butter.  
+	\end{prop}
+\end{prop}
+\footnote{**Go back to Nolan paper and complain that the things he's calling ‘logically impossible’ aren't logically impossible according to standard usage (i.e.\ using logical constants like ‘and’ etc.)}
+
+The problems are not confined to conditionals with logically or even metaphysically impossible antecedents.  For one thing, replacing the antecedents in \ref{priest} with something like ‘Graham Priest has made no mistakes’ does not diminish the temptation to assert \chisholm{priest}{a} and reject \chisholm{priest}{b}.  For another, similar concerns arise when we move from the esoteric views of logicians to more mundane sceptical hypotheses about the meanings of words in our own language:
+\begin{prop}
+	\nitem \label{andconspiracy1}
+	If I have been the victim of a lifelong conspiracy to hide from me the fact that ‘and’ really means disjunction, then I'm a tiger and I'm not a tiger.
+\end{prop}	
+It feels like one could say something true by uttering \ref{andconspiracy1}.
+But by Deduction in the Consequent, it implies the not at all tempting \ref{andconspiracy2}:
+\begin{prop}
+	\nitem \label{andconspiracy2}
+	If I have been the victim of a lifelong conspiracy to hide from me the fact that ‘and’ really means disjunction, then I'm a tiger.%
+	\footnote{In the literature on counterfactuals, some authors who are dubious about Deduction in the Consequent in general still think that Deduction in the Consequent holds in the restricted class of cases where the antecedent is metaphysically possible.  The above example also suggests that in the case of indicatives at least, this fallback position is also problematic.}
+\end{prop}
+We find examples like these more compelling than those that turn on sophisticated debates in logic, since the impulse to accept \ref{andconspiracy1} seems of a piece with the impulse to accept such conditionals as \ref{mundane}:
+\begin{prop}
+	\nitem \label{mundane}
+	If ‘zouave’ means ‘a broad straw hat worn by Romanian peasants’, then most zouaves are in Romania.  
+\end{prop}
+It is hard to see how one could draw a principled line between \ref{mundane} and \ref{andconspiracy1}: although ‘and’ would traditionally be counted as a “logical constant” and ‘zouave’ not, the history of attempts to define ‘logical constant’ does not inspire confidence that there is any sharp and relevant category in this vicinity.%
+\footnote{**discuss diagonalization**}  
+ 
+Similar techniques can be used to generate apparent counterexamples to CEM:
 \begin{prop}
 	\nitem
 	Either if I have been the victim of a lifelong conspiracy to hide from me the fact that ‘it is not the case that’ is really just a semantically inert operator like ‘it is true that’ then everyone is a tiger, or if I have been the victim of a lifelong conspiracy to hide from me the fact that ‘it is not the case that’ is really just a semantically inert operator like ‘it is true that’ then it is not the case that everyone is a tiger.
 \end{prop}
-and Finite Agglomeration (letting each of the premises be \ref{agglomerationpremise} and the conclusion \ref{agglomerationconclusion}):
+to Agglomeration: 
 \begin{prop}
-	\nitem \label{agglomerationpremise}
-	If ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ then ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’.
-	\nitem \label{agglomerationconclusion}
-	If ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ then ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ and ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’.
+	\nitem
+	\begin{prop}
+		\aitem \label{agglomerationpremise}
+		If ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ then ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’.
+		\aitem \label{agglomerationconclusion}
+		If ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ then ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’ and ‘$P$ and $Q$’ always means the same as ‘Either not-$P$ or not-$Q$’.%
+		\footnote{The relevant instance of Agglomeration here is the material conditional whose antecedent is the conjunction of two copies of \ref{agglomerationpremise} and whose consequent is \ref{agglomerationconclusion}.}
+	\end{prop}
+\end{prop}
+and to Substitution of Logically Equivalent Antecedents:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		If ‘or’ means \emph{and} and I'm not a human being or not a plumber, then I'm not a human being.
+		\aitem
+		If ‘or’ means \emph{and} and I'm not both a human being and a plumber, then I'm not a human being.  	
+	\end{prop}
 \end{prop}
 
 
+Note that these kinds of examples can be straightforwardly adapted to make trouble for a standard logic for epistemic modals.  For example, in the kind of context naturally invoked by an assertion of \ref{andconspiracy}, it is plausible that ‘I might the victim of a lifelong conspiracy to hide from me the fact that ‘and’ really means disjunction’ is true.  Even if merely considering such sceptical hypotheses isn't enough to induce a context where this comes out true, plausibly one could induce such a context by engaging in a suitably energetic campaign of deception or brainwashing.  But in any such context, there is a strong impulse to think that ‘It might be that I'm a tiger and I'm not a tiger’ is also true.
 
+
+%Note: when we first start saying ‘Leibniz's Law’, just define it so that it encompasses the inferences that Fregeans reject
+
+A different set of challenges to the logic turns on the combination of the relevant rules with Leibniz's Law.  Of course, the application of Leibniz's Law to indicative conditionals is already controversial in itself: many philosophers will want to say that ‘If Hesperus isn't Phosphorus, Hesperus isn't Hesperus’ is false although ‘If Hesperus isn't Phosphorus, Hesperus isn't Phosphorus’ is true.  There are various ways in which such a rejection of Leibniz's Law (or of inferences that look on the surface to like applications of Leibniz's Law) could be combined with some version of the ‘worlds’ framework.  However, as discussed in the previous section, there are also theoretical pressures to uphold the validity of these inferences, and techniques for defusing the putative counterexamples which were initially developed for attitude reports but can be adapted straightforwardly to the case of conditionals and epistemic modals.  In the case of attitudes, most proponents of views of this sort have taken them to make trouble for certain otherwise tempting claims about the logic of attitude reports.  Consider for example the following argument:
+\begin{prop}
+	\nitem	
+	\begin{prop}
+		% \nitem \label{believes1}
+		% Lois believes that Clark is a reporter and Lois believes that Superman flies.
+		\aitem \label{believes2}
+		Lois believes that Clark is a reporter and Superman flies.
+		\aitem \label{believes3}
+		Lois believes that Clark is a reporter and Clark flies.
+		% \nitem \label{believes4}
+		% Lois believes that Clark is a reporter who flies.
+		\aitem \label{believes5}
+		Lois believes that some reporter flies.	
+	\end{prop}
 \end{prop}
+The step from \ref{believes2} to \ref{believes3} is valid by Leibniz's Law.  Amongst those who accept the validity of this step, the dominant strategy is to also accept that \ref{believes2} is true at least in some contexts, embrace the surprising consequence that \ref{believes3} is true in these contexts (although perhaps not in the contexts it most naturally evokes), while denying that \ref{believes5} is true in the relevant contexts.  This package thus requires rejecting the validity of the inference from \ref{believes3} to \ref{believes5} and more generally the closure of belief ascriptions under logical implication.  (Of course there are other reasons for rejecting such closure having to do with worries about limitations of logical acuity.)  The dialectical situation with epistemic modals is parallel: if one accepts Leibniz's Law and thus the inference from \ref{must2} to \ref{must3}, there is pressure to think that there are contexts where \ref{must2} is true and \ref{must5} is false, and thus to reject the standard modal logic for ‘must’ which validates the argument from \ref{must3} to \ref{must5}:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		% \nitem \label{must1}
+		% Clark must be a reporter and Superman must fly.
+		\aitem \label{must2}
+		It must be that Clark is a reporter and Superman flies.
+		\aitem \label{must3}
+		It must be that Clark is a reporter and Clark flies.
+		% \nitem \label{must4}
+		% Clark must be a reporter who flies.
+		\aitem \label{must5}
+		It must be that some reporter flies.
+	\end{prop}
+\end{prop}
+Similarly, since proponents of this package will accept the following argument as sound (at least in some contexts), they will reject the standard logic for ‘might’ on which ‘might $P$’ is contradictory whenever $P$ is:
+\begin{prop}
+	\nitem	
+	\begin{prop}
+		\aitem
+		It might be that Superman flies and Clark doesn't fly
+		\aitem
+		It might be that Clark flies and Clark doesn't fly
+	\end{prop}
+\end{prop}
+Turning finally to conditionals, we can in a parallel way generate a Leibniz's-Law-driven argument for the invalidity of Deduction in the Consequent:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		% \nitem \label{must1}
+		% Clark must be a reporter and Superman must fly.
+		\aitem \label{if2}
+		If no superheroes work at the Daily Planet, Clark is a reporter and Superman flies.
+		\aitem \label{if3}
+		If no superheroes work at the Daily Planet, Clark is a reporter and Clark flies.
+		% \nitem \label{must4}
+		% Clark must be a reporter who flies.
+		\aitem \label{if5}
+		If no superheroes work at the Daily Planet, some reporter flies.
+	\end{prop}
+\end{prop}
+These examples put a different kind of pressure on deductive closure for ‘must’ and ‘if’ from those considered earlier.  
+
+This Leibniz's-Law-accepting package does not especially threaten the agglomeration principles, for the same reason that it does not threaten the closure of belief ascriptions under conjunction.  But there is a different approach to substitution of co-referring names in attitude ascriptions which is also naturally extended to epistemic modals and indicative conditionals, and  which does make a problem for agglomeration principles.  On this view, which goes back to Putnam (cite others: Richard, Fine, Pryor…), there is an important difference between using the same name twice in a single attitude ascription and using two names for the same person, with the result that Leibniz's Law fails: \ref{supermanclark} is true at least in some ordinary contexts, whereas \ref{clarkclark} is not:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem \label{supermanclark}
+		Lois believes that Superman flies and Clark is a reporter
+		\aitem \label{clarkclark}
+		Lois believes that Clark flies and Clark is a reporter
+	\end{prop}
+\end{prop}
+Roughly speaking: \ref{clarkclark} requires that there be some way of thinking of Superman such that Lois believes both that he flies and that he is a reporter under that way of thinking of him.  Although proponents of this view reject some Leibniz's Law inferences, they accept those which don't disrupt the pattern of recurrence of co-referring names for the same object.  So in particular they accept the implication from ‘Lois believes that Superman flies’ to ‘Lois believes that Clark flies’ (holding context fixed).  They thus hold that the step from (b) to (c) in the following argument fails to preserve truth in all contexts:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		Lois believes that Clark is a reporter and Lois believes that Superman flies
+		\aitem
+		Lois believes that Clark is a reporter and Lois believes that Clark flies
+		\aitem
+		Lois believes that Clark is a reporter and Clark flies
+	\end{prop}
+\end{prop}	
+When carried over to epistemic modals and conditionals, this style of view will involve rejecting the Agglomeration principles that validate the second steps of the following analogous arguments:
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		It must be that Clark is a reporter and it must be that Superman flies
+		\aitem
+		It must be that Clark is a reporter and it must be that Clark flies
+		\aitem
+		It must be that Clark is a reporter and Clark flies
+	\end{prop}
+\end{prop}	
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		If no superheroes work at the Daily Planet, Clark is a reporter who doesn't fly and if no superheroes work at the Daily Planet, Superman flies and is not a reporter.
+		\aitem
+		If no superheroes work at the Daily Planet, Clark is a reporter who doesn't fly and if no superheroes work at the Daily Planet, Clark flies and is not a reporter.
+		\aitem
+		If no superheroes work at the Daily Planet, Clark is a reporter who doesn't fly and Clark flies and is not a reporter.
+	\end{prop}
+\end{prop}	
+
+
+ 
+
+The Leibniz's-Law-driven worries about the logic have a somewhat different scope from those considered earlier (based on doubts about logic, including doubts about the meanings of logical vocabulary).  As we saw, doubts about logic or the meanings of words can be used to challenge CEM as well as Agglomeration, Deduction in the Consequent, and Substitution of Logically Equivalent Antecedents, but we see no distinctive Leibniz's Law-driven challenge to the validity of CEM.%
+\footnote{The Leibniz's Law style arguments can with some effort be applied to make trouble for Substitution of Logically Equivalent Antecedents.  Consider:
+	\begin{prop}
+		\aitem \label{aa}
+		If no superheroes work at the DP and Clark could bench press 300 pounds or Superman couldn't bench press 300 pounds, then either there's a strong non-superhero or a weak superhero. 
+		\aitem \label{bb}
+		If no superheroes work at the DP and Clark flies or Clark doesn't fly, then there's a flyer who isn't a superhero, or either there's a strong non-superhero or a weak superhero. 
+		\aitem \label{cc}
+		If no superheroes work at the DP, then either there's a strong non-superhero or a weak superhero. 
+	\end{prop}
+	\ref{aa} looks true, while \ref{cc} looks false, at least if we flesh out the story in the right way.  But given the validity of Leibniz's Law and the truth of ‘Clark is Superman’, \ref{bb} is true if \ref{aa} is, so \ref{bb} and \ref{cc} can be argued to differ in truth value despite having logically equivalent antecedents.}
+On the other hand, as we will see in the next section, the Leibniz's Law challenges also extend to CSO, whereas it is much tricker to motivate rejection of CSO using doubts about logic or the meanings of words.  
+
+Those who deny the validity of Leibniz's Law inferences involving substitution of coreferential proper names in non-extensional contexts won't regard the last group of arguments as problematic for the closure principles.  But the challenge cannot simply be avoided by adopting some Leibniz's-Law-blocking semantic account of proper names, since the same issues can be raised using examples where we quantify into attitude reports, epistemic modals, or conditionals and names are nowhere to be found.  In the case of belief ascriptions, the challenge to the combination of agglomeration and closure is quite well known, and can be raised using a quantifying-in analogue of the Leibniz's Law argument against that combination given earlier.
+\begin{prop}\nitem
+	\begin{prop}
+		\aitem \label{quant1}
+		Someone who loves Lois is such that Lois believes he flies.
+		\aitem \label{quant2}
+		Someone who loves Lois is such that Lois believes he is a reporter.
+		\aitem \label{quant3}
+		Exactly one person loves Lois.
+		\aitem \label{quant4}
+		Someone who loves Lois is such that Lois believes he flies and Lois believes he is a reporter.
+		\aitem \label{quant5}
+		Someone who loves Lois is such that Lois believes he flies and he is a reporter.
+		\aitem \label{quant6}
+		Someone who loves Lois is such that Lois believes he is a reporter who flies.
+		\aitem \label{quant7}
+		Lois believes that there is a reporter who flies.
+	\end{prop}
+\end{prop}
+In the circumstances, \ref{quant1} and \ref{quant2} are plausibly both true, and both true in the same context.%
+\footnote{Some deny this, e.g.\ Aloni.  *Talk here about them*}
+Let's also flesh out the circumstances in such a way that \ref{quant3} is clearly true.  Then \ref{quant4} seems to follow.  A natural formal reconstruction of this argument would involve an application of a version of Leibniz's Law: but this kind of application of Leibniz's Law is considerably less controversial than those invoked earlier, since the terms being substituted are simply bound variables rather than names.  \ref{quant7}, on the other hand, is blatantly false; so one of the steps from \ref{quant4} to \ref{quant7} must be invalid.  If it is the step from \ref{quant4} to \ref{quant5}, this can serve as a counterexample to agglomeration for ‘believes’; if it is the step from \ref{quant5} to \ref{quant6} or from \ref{quant6} to \ref{quant7}, it can serve as a counterexample to (single-premise) closure.  [***add something here, referring to earlier discussion of how inference rules apply to open sentences***]
+
+As before, this argument can be carried over to epistemic modals and indicative conditionals.  For a version targeting epistemic modals, replace every occurrence of ‘Lois believes that’ above with ‘it must be the case that’ (or delete ‘Lois believes that’ and insert ‘must’ in a more idiomatic way).  For a version targeting indicative conditionals, replace every occurrence of ‘Lois believes that’ with ‘if no superheroes work at the Daily Planet’.  In both cases, let's consider the truth-values of the sentences relative to a context where the speaker is, like Lois, ignorant of Superman's secret identity, but does think both that Superman loves Lois and that Clark loves Lois (and is thus unaware of the truth of \ref{quant3}).  In both of these versions, \ref{quant7} remains obviously false.  And so long as we were happy to endorse \ref{quant1} and \ref{quant2} as true (in a single context) in the original version with ‘believes’, there is strong pressure to say the same thing about the ‘must’ versions; and if we do say it about the ‘must’ versions, there is strong pressure to say it about the ‘if’ versions as well.  
+
+Starting with \citet{KaplanQI}, many philosophers who have recognised the need to block the ‘believes’ argument somewhere between step \ref{quant4} and step \ref{quant7} have thought of the phenomenon as something very distinctive arising only when quantifiers outside the scope of some intensional operator bind variables inside the scope of that operator.  *** 
+
+\begin{itemize}
+	\item
+	Add Soames-style examples using ‘I’, ‘you’, ‘that’, etc.?  
+\end{itemize}
+
+% Add more on the view that denies that two premises are both true in the same context - ‘context provides one guise per object’.  
 
 	
+	
+\section{Impossible worlds}  
+\label{sect:impossibleworlds}
+In the literature on counterfactuals, many have proposed that we should provide for hyperintensionality---specifically, for differences in truth value between counterfactuals with metaphysically necessarily equivalent antecedents---by retaining a world-based picture, while expanding the domain of “worlds” to include metaphysically impossible worlds.  Having done that, it is tempting also to posit “logically impossible” worlds in order to allow for the kinds of counterexamples to standard logical principles which were motivated in the previous section.  To play this role, logically impossible worlds would need to be logically ill-behaved in some respect: either certain logically valid sentences fail to be true at them, or certain logically contradictory sentences are true at them, or some sentences fail to be true at them even though their negations also fail to be true at them, or certain sentences which follow logically from sentences true at them fail to be true at them.  For the small minority who follow \citet{LewisOPW} in thinking of possible worlds as concrete universes, it looks extremely difficult to make sense of the idea that some worlds are logically impossible in any of these senses.%
+\footnote{***Quote Lewis on Australia?}
+On the other hand, for those who (like Plantinga*** and Adams***) were all along thinking of possible worlds as something like sets of propositions, there is no difficulty: impossible worlds can simply be sets of propositions for which it is not possible that they should be all and only the true propositions.%
+\footnote{There is no particular pressure to draw a further line whereby certain sets of propositions count neither as possible nor as impossible worlds, though of course we will still presumably want to impose contextually varying accessibility restrictions on the domain relevant to a particular utterance of a conditional.}  
+In this setting, one can simply identify truth at a world with membership.%
+\footnote{Some other authors have contemplated identifying worlds with individual propositions rather than sets of propositions, with truth at a world being identified with “entailment”.  This view has no difficulty with “gappy” worlds, since it's uncontroversial that both a proposition and its negation can fail to be entailed by some third proposition; on the other hand, to make any distinctions between worlds at which logical impossibilities are true one would need to understand the relevant “entailment” relation among propositions as failing to match up with the logical consequence relation among sentences in some highly non-standard way.}
 
+So, let's consider the theory that keeps the framework of our theory, namely 
+\begin{prop} 
+	\litem[\ref*{ourview}]
+	A conditional with antecedent $p$ and consequent $q$ is true iff either there is no accessible world at which $p$ is true, or the closest accessible world at which $p$ is true is a world at which $q$ is true. 
+\end{prop}
+while interpreting ‘world’ as applying to certain sets of propositions, including some sets which couldn't possibly have contained all and only true propositions.  (Of course, one could also adapt various other kinds of “worlds”-based theories of conditionals, such as \ref{lewis} and \ref{strict}, to a setting that includes impossible worlds.  And in a setting where one disavows the logical principles that we used to motivate \ref{ourview}, one would need to rethink the methodology for choosing between these options.  Very little of what we say below will turn on this particular choice point for the impossible world lover.)  
+
+In thinking through what can be achieved by this kind of theory, much depends on the underlying theory of propositions. For example, if we identify that proposition that Superman flies with the proposition that Clark flies, we will clearly not be able to permit cases where the substitution of ‘Superman flies’ for ‘Clark flies’ in the antecedent or consequent of a conditional makes a difference to its truth value.  But this still leaves the view with plenty of scope to explain the data considered in the last few sections.  Indeed, even if one adopts a coarse-grained theory of propositions on which metaphysically necessarily equivalent propositions are identical, one can still explain at least some of that data by admitting impossible worlds, understood as as sets of propositions, into the domain of the closeness relation.%
+\footnote{If we want to say that propositions are sets of \emph{possible} worlds, this construction will make impossible worlds be be several layers above possible worlds.}  
+For example, although such a view will not allow for hyperintensionality, it can still allow for differences in truth value between conditionals with impossible antecedents, since the closest world that contains the one and only impossible proposition may not contain every proposition.  
+
+Invoking logically impossible worlds understood as sets of propositions makes it possible to drop many of the controversial logical principles which follow from the ‘closest world’ analysis on a standard conception of worlds.  
+\begin{prop}
+	\ritem
+	By not requiring impossible worlds to be closed under conjunction, we can allow for counterexamples to Agglomeration (‘If $A$, $B$; if $A$, $C$; so if $A$, $B$ and $C$’): this will fail when the closest accessible $P$-world contains the propositions expressed by $B$ and $C$ but not their conjunction.
+	\ritem
+	We are free to reject instances of single-premise closure so long as the consequents of the premise and conclusion do not express the very same proposition.  
+	\ritem
+	If we allow that in some cases an impossible world can contain neither a proposition nor its negation, we can allow for counterexamples to CEM.  
+\end{prop}
+These points are neutral with regard to the underlying theory of propositions, e.g.\ it will work even on the view that necessarily equivalent propositions are always identical.  By contrast, allowing for counterexamples to Substitution of Logically Equivalent Antecedents will obviously require pairing the view with a theory of propositions on which logically equivalent sentences do not express the same proposition.%
+\footnote{Some proponents of using impossible worlds in a closeness-theoretic semantics of conditionals have considered imposing what Nolan calls ‘Strangeness of Impossibility Constraint’ (***cite): every possible world is closer than any impossible world.  Some of our examples suggest that when indicatives are in question, this principle is false even on the weak interpretation where ‘possible’ means ‘metaphysically possible’ and ‘impossible’ means ‘logically impossible’.}
+
+On the other hand, moving to an impossible-world semantics does nothing to threaten Identity, Modus Ponens, or CSO, since these principles do not trade on logical structure inside the main or subordinate clauses of conditionals, and so do not depend on any constraints that such structure might be thought to impose on the facts about truth at worlds.  Consider CSO for example.  If the closest accessible $A$-world is a $B$-world and the closest accessible $B$-world is an $A$-world, then the closest accessible $A$-world \emph{is} the closest accessible $B$-world (whether it is logically impossible or not), and so if the closest $A$-world is a $C$-world the closest $B$-world is too.  
+
+
+%*Nolan's alleged counterexample to Identity: ‘If nothing at all had been the case, nothing at all would have been the case’.  
+
+
+
+This limitation of the impossible worlds framework suggests that it not up to the job of avoiding the “substitutivity-based” objections against the standard logic.  For those arguments straightforwardly attack CSO 
+
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		If no superheroes work at the Daily Planet and Superman is about to try to rescue us, everyone at the Daily Planet is cheering.
+		\aitem
+		If everyone at the Daily Planet is cheering, then no superheroes work at the Daily Planet and Superman is about to try to rescue us.  
+		\aitem
+		If no superheroes work at the Daily Planet and Clark Kent is about to try to rescue us, we're all going to die. 
+		\aitem
+		If everyone at the Daily Planet is cheering, we're all going to die.	
+	\end{prop}
+\end{prop}
+
+* Think about a selection-function based view that keeps the impossible framework but rejects CSO.  The selection function maps the proposition that no superheroes work at the DP and Superman is about to try to rescue us to a world that contains the proposition that everyone at the Daily Planet is cheering and the proposition that we're all going to die (though it may not contain their conjunction), and maps the proposition that everyone at the DP is cheering to a world that contains the proposition that no superheroes work at the DP and Superman is about to try to rescue us, but doesn't contain the proposition that we're all going to die.  
+
+* Any theory of conditionals can be expressed in this form!  Just take all the propositions Q where, according to the theory, ‘if P, Q’ is true, and say that the selection function maps P to the impossible world that is the set of all those propositions.  
+		
+
+\begin{prop}
+	\nitem
+	\begin{prop}
+		\aitem
+		If the distinctness theorists are right and we're going to Hesperus we're going to a lovely planet where people have green skin
+		\aitem
+		If we're going to a lovely planet where people have green skin, the distinctness theorists are right and we're going to Hesperus.
+		\aitem
+		If the distinctness theorists are right and we're going to Phosphorus, we're going to a planet populated by nine foot tall monsters.
+		\aitem
+		If we're going to a lovely planet where people have green skin, we're going to a horrible planet populated by nine foot tall monsters.
+	\end{prop}
 \end{prop}
 
 
-
-
-
-
-
-Even confining our attention to indicative con
-
-
-*** Also for epistemic modals
-
-
-A possible solution: keep the form of analysis but have impossible worlds, perhaps constructed as sets of propositions.  
-	- Obviously lots of the details here will depend on what proposiitons are.
-	- One salient choice point for hyperintensional theory of propositions: is the proposition that Hesperus is bright = the proposition that Phosphorus is bright, etc.?  
-	- Use “Millianism” for the view that says yes to this much.  
-
-Developing this approach
-	- Two kinds of reasons for thinking that worlds aren't closed under conjunction, etc.
-		- far-out examples like the one above with ‘and’
-		- examples motivated by Millianism.  
-			- If people use ‘Hesperus’ to talk about a planet that's more massive than the one they use ‘Phosphorus’ to talk about, then Hesperus is 
-
-What this approach does to the logic:
-		Things like CC are threatened by worlds not closed under conjunction
-			Similarly CEM is threatened by worlds where negation is ill-behaved
-		But CSO is still guaranteed
-		
-Argument that Millians should reject CSO (for indicatives, when multiple guises are in play)
-
-If the distinctness theorists are right and we're going to Hesperus we're going to a lovely planet where people have green skin
-If we're going to a lovely planet where people have green skin, the distinctness theorists are right and we're going to Hesperus.
-If the distinctness theorists are right and we're going to Phosphorus, we're going to a planet populated by nine foot tall monsters.
-If we're going to a lovely planet where people have green skin, we're going to a horrible planet populated by nine foot tall monsters.
-
-Why this isn't really dependent on the Millian  that CSO can fail (when multiple guises are in play)
+Why this isn't really dependent on appealing to Leibniz's Law.
 
 You know (under one guise) that Paderewski is rich and (other another) that he doesn't work. 
+
 You know that Society S would never allow someone rich who doesn't work to be the guest of honour.
 
 We want all of these to be true: 
 
-If Paderewski is the guest of honor they are having a rich guest of honour
+If Paderewski is the guest of honour they are having a rich guest of honour
+
 If they are having a rich guest of honour Paderewski is the guest of honour
-If Paderewski is the guest of honor they are having a guest of honour who doesn't work
+
+If Paderewski is the guest of honour they are having a guest of honour who doesn't work
 
 but not
 
@@ -213,26 +525,25 @@ Existential quantification over guises in attitude reports
 
 Toy models: 
 	“Descriptivist”/“Intensionalist” implementation
-		for each psycholoogical verb we have an underlying relation to sets of worlds
-		A “guise” of $x$ is a property necessarily instantiated by at most one thing, that $x$ instantiates
+		for each psychological verb we have an underlying relation to sets of worlds
+		A “guise” of $x$ is a property (optionally: a property necessarily instantiated by at most one thing) that $x$ instantiates
 	Mentalese implementation
 		A “guise” of $x$ is a property of Mentalese words
 
-The obvious extension of this to ‘might’ and ‘must’
+The obvious extension of this to ‘might’ and ‘must’.  
 
 Why existential rather than universal?  
 
-Extending to ‘if’
+Extending to ‘if’.  
 
-Intensionalist version: the closeness relation is on worlds - maybe just the same closeness relation we use for counterfactuals.  
-
+Intensionalist implementation: the closeness relation is on worlds - maybe it's the same closeness relation we also use for counterfactuals.  
 
 \section{Why it's often OK to ignore all of this and just work with the closest-worlds analysis for indicatives and the quantification-over-worlds analysis of ‘might’ and ‘must’}
 
 
 
 \section{Counterfactuals too?}
-More examples (discussed on Friday) where counterfactuals seem similar to indicatives (on the score of hyperintensionality etc.)
+More examples where counterfactuals seem similar to indicatives (on the score of hyperintensionality etc.)
 
 (An alien who is allergic to H2O and has a detector...)
 If there hadn't been H2O in the pool I'd have plunged right in
@@ -260,12 +571,21 @@ Q: why isn't accessibility for indicatives limited like this?  One possible sugg
 
 A speech we'd like to have a salient true interpretation:
 
-For any rational person x such that
-	x has credence 50\% that Superman = Clark
-	x has credence 1\% that the telescope is working and Superman = Clark
-	x has credence 10\% that the telescope is working
+For any rational person $x$, if
+\begin{prop}
+	\ritem
+	$x$ has credence 50\% that Superman = Clark
+	\ritem
+	$x$ has credence 1\% that the telescope is working and Superman = Clark
+	\ritem
+	$x$ has credence 10\% that the telescope is working
+\end{prop}
+then $x$ has credence 10\% that if the telescope is working, Superman = Clark
 
-then x has credence 10\% that if the telescope is working Superman = Clark
+Original way of formulating the worry about this (from conversation with Jeremy in LA): if your only credences that Superman = Clark are 100\% and 50\%, and you respect Leibniz's Law in your own reasoning (i.e. as regards your credence boxes or whatever), then you're not going to be able to get below 50\% on any proposition that entails that Superman ≠ Clark.  
+
+
+
 
 
 

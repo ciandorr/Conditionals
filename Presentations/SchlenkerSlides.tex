@@ -1,0 +1,161 @@
+%!TEX TS-program = pdflatex
+
+\documentclass[xcolor=table, leqno]{beamer}
+\usepackage{colortbl}
+\usepackage{newerphilosophy}
+\usepackage{logic}
+
+\newcommand{\scomp}[2]{\comp #1 #2}
+\newcommand{\op}{\operatorname}
+\newcommand{\means}{\mathbf{M}}
+\newcommand{\refers}{\mathbf{R}}
+\newcommand{\comp}{\mathbf{C}}
+
+\newcommand{\modtrans}[1]{\lceil#1\rceil}
+
+\newcommand{\flushtext}[1]{\makebox[0em][r]{\text{(#1)}}}
+\newcommand{\flushmath}[1]{\makebox[0em][r]{\ensuremath{#1}}}
+
+
+\mode<presentation>
+{
+  \usetheme{Darmstadt}
+  \setbeamercovered{transparent}
+  
+%  \usetheme{Madrid}
+  \useoutertheme{smoothbars}
+  \setbeamertemplate{mini frames}{}
+}
+
+  \makeatletter
+  \setbeamertemplate{headline}
+  {%
+    \pgfuseshading{beamer@barshade}%
+    \ifbeamer@sb@subsection%
+      \vskip-9.75ex%
+    \else%
+      \vskip-7ex%
+    \fi%
+    \begin{beamercolorbox}[ht=2.25ex,dp=1.125ex]{section in head/foot}
+      %\insertnavigation{\paperwidth}
+		\insertsectionnavigationhorizontal{\dimexpr\paperwidth-0.6cm\relax}{}{}		
+    \end{beamercolorbox}%
+    \ifbeamer@sb@subsection%
+      \begin{beamercolorbox}[ht=2.125ex,dp=1.125ex,%
+        leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+        \usebeamerfont{subsection in head/foot}\insertsubsectionnavigationhorizontal{\dimexpr\paperwidth-0.6cm\relax}{}{}
+      \end{beamercolorbox}%
+    \fi%
+  }
+  \makeatother
+
+
+\usepackage[british]{babel}
+% or whatever
+
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{pxfonts}
+%\usepackage[LGRgreek]{mathastext}
+\usefonttheme[stillsansseriflarge,stillsansserifsmall]{serif}
+%\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\usepackage{myunicode}
+
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+
+\title%[Structure] % (optional, use only with long paper titles)
+{Conditionals under Determiner and Adverbial Quantifiers}
+
+% \subtitle
+% {Presentation Subtitle} % (optional)
+
+\author%[Author, Another] % (optional, use only with lots of authors)
+{Cian Dorr}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[NYU] % (optional, but mostly needed)
+{
+%  \inst{1}%
+  Department of Philosophy\\
+  New York University
+}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date%[Short Occasion] % (optional)
+{\date / Talk for Harvey's seminar}
+
+%\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+% \AtBeginSubsection[]
+% {
+%   \begin{frame}<beamer>{Outline}
+%     \tableofcontents[currentsection,currentsubsection]
+%   \end{frame}
+% }
+
+
+\begin{document}
+\setlength{\parskip}{0.3\baselineskip}
+\setlength{\topsep}{0in}
+\setlength{\itemsep}{0in}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+\section{A contrast}
+\subsection{Two kinds of sentences where ‘if’ occurs under a quantifier}
+\begin{frame}{Two kinds of sentences where ‘if’ occurs under a quantifier}
+Cases where ‘if’ seems interchangeable with a relative clause
+\begin{prop}
+	\nitem
+	Most people change their diet if they survive a cardiac arrest (Geurts 2005).
+	\nitem
+	Every query was answered if it came from a reputable address ()
+\end{prop}
+
+
+
+
+Straightforward cases:
+\begin{prop}
+	\nitem
+	Every student will succeed if he studies hard
+	\nitem
+	
+\end{prop}
+
+
+
+
+\end{frame}
+
+\end{document}
